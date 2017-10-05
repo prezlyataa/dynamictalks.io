@@ -1,0 +1,223 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-orange;
+}
+
+.header-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  padding: 4em 0 2em 0;
+
+  .column-1, .column-2, .column-3 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column-1 {
+
+    .logo-icon {
+      background: url("./images/logo.svg") no-repeat;
+      height: 36px;
+      width: 200px;
+      padding-bottom: 15%;
+    }
+
+    .date {
+      color: #FFFFFF;
+      text-transform: uppercase;
+
+      h2 {
+        font-size: 2em;
+        font-family: $font-family-opensans-regular;
+        font-weight: 300;
+      }
+
+      h3 {
+        @include font-family-opensans-bold;
+        font-size: 1.5em;
+
+      }
+    }
+
+  }
+
+  .column-2 {
+
+    h2 {
+      font-family: $font-family-opensans-regular;
+      font-size: 2.5em;
+      font-weight: 300;
+      letter-spacing: 6px;
+      text-align: center;
+      text-transform: uppercase;
+      padding-bottom: 15%;
+    }
+
+    .triangle {
+      background: url("./images/Triangle.svg") center no-repeat;
+      width: 60px;
+      height: 60px;
+      align-self: center;
+    }
+  }
+
+  .column-3 {
+
+    button {
+      width: 136px;
+      height: 36px;
+      border-radius: 40px;
+      background-color: #FFFFFF;
+      align-self: flex-end;
+
+      p {
+        font-family: $font-family-opensans-regular;
+        color: #000000;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.1em;
+      }
+
+    }
+
+    .address {
+      padding-top: 15%;
+
+      h3 {
+        color: $color-white;
+        font-family: $font-family-opensans-regular;
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: 300;
+
+        &:nth-child(2) {
+          @include font-family-opensans-bold;
+          font-weight: 700;
+        }
+      }
+
+    }
+  }
+}
+
+.speaker-block {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5em 0 6em 0;
+
+  .first-speaker, .second-speaker, .third-speaker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    width: 25%;
+    background-color: $color-grey;
+
+    img {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .name {
+      @include font-family-opensans-bold;
+
+      text-align: center;
+      color: $color-black;
+      font-size: 1.5em;
+      text-transform: uppercase;
+
+      span {
+        background: url("./images/Path 10 Copy 2.svg") center no-repeat;
+        width: 145px;
+        height: 15px;
+        display: inline-block;
+      }
+    }
+
+    p {
+      font-family: $font-family-opensans-regular;
+      color: $color-black;
+      font-size: 1.3em;
+
+    }
+
+  }
+
+  .first-speaker {
+    img {
+      background: url("./images/Oval 3 Copy.svg") no-repeat;
+      top: -80px;
+    }
+
+    p {
+      padding: 5%;
+    }
+
+    .text-wrapper {
+      position: relative;
+      display: inline-grid;
+      padding: 1em 1em 0 1em;
+      top: -80px;
+    }
+  }
+  .second-speaker {
+    img {
+      background: url('./images/Oval 3 Copy.svg') no-repeat;
+      bottom: -80px;
+    }
+    p {
+      padding: 5%;
+    }
+
+    .text-wrapper {
+      display: inline-grid;
+      position: relative;
+      display: inline-grid;
+      padding: 1em 1em 0 1em;
+    }
+  }
+
+  .third-speaker {
+    img {
+      background: url('./images/Oval 3 Copy.svg') no-repeat;
+      top: -80px;
+    }
+
+    p {
+      padding: 5%;
+    }
+
+    .text-wrapper {
+      position: relative;
+      display: inline-grid;
+      padding: 1em 1em 0 1em;
+      top: -80px;
+    }
+  }
+  .name {
+    text-align: center;
+  }
+
+}
