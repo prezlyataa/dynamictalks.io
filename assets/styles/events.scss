@@ -1,9 +1,10 @@
 @import "variables.scss";
-@import "mixins.scss";
 
 .events {
   width: 90%;
-  margin: 0 auto 70px;
+  margin: 0 auto;
+  padding: 50px 0 70px;
+  background-color: $color-white;
 
   &__header {
     display: flex;
