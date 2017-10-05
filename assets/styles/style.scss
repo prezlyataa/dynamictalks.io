@@ -4,6 +4,24 @@
 @import "speakers.scss";
 @import "events.scss";
 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-size: $html-font-size;
+}
+
+h1 {
+  color: $color-white;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
 
 * {
   margin: 0;
@@ -24,20 +42,21 @@ h1 {
   margin: 0 auto;
 }
 
-.register_btn button {
-  font-size: 0.9rem;
-  font-family: $font-family-opensans-regular;
-  padding: 8px 18px;
-  color: $color-black;
-  background-color: $color-white;
-  text-transform: uppercase;
-  border-radius: 40px;
-}
-
 .main {
   position: relative;
   background-color: $color-orange;
   height: 100vh;
+
+  .register_btn button {
+    font-size: 0.9rem;
+    font-family: $font-family-opensans-regular;
+    padding: 8px 18px;
+    color: $color-black;
+    background-color: $color-white;
+    text-transform: uppercase;
+    border-radius: 40px;
+  }
+
   &_content {
     padding-top: 53px;
     display: flex;
