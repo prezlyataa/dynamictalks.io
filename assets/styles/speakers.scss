@@ -221,3 +221,46 @@ section {
   }
 
 }
+
+
+@media only screen and (min-width: 1400px) and (max-width: 1590px){
+  .speaker-block{
+    padding: 2.5em 0 6em 0;
+  }
+}
+
+@media only screen and (min-width: 1230px) and (max-width: 1399px){
+  .speaker-block{
+    padding: 3em 0 6em 0;
+  }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1229px){
+  .speaker-block{
+    padding: 3em 0 6em 0;
+  }
+
+  .first-speaker, .second-speaker, .third-speaker{
+    width: 30% !important;
+  }
+
+  .second-speaker img{
+    bottom: -115px !important;
+  }
+
+}
+
+@media (min-width: 500px) and (max-width: 999px){
+  .speaker-block{
+    padding: 4em 0 6em 0;
+  }
+
+  .first-speaker, .second-speaker, .third-speaker{
+    width: 32% !important;
+  }
+}
+
+@media (min-width:400px) and (max-width: 499){
+  
+}
