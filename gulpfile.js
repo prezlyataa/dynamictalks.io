@@ -5,7 +5,7 @@ const gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
 
 /* pathConfig*/
-const sassWatchPath = './static/**/*.scss';
+const sassWatchPath = './assets/**/*.scss';
 /**/
 
 gulp.task('sass', () =>
@@ -20,7 +20,7 @@ gulp.task('sass', () =>
         }))
         .pipe(sourcemaps.write())
         .pipe(cleanCSS({compatibility: 'ie11'}))
-        .pipe(gulp.dest('./static/'))
+        .pipe(gulp.dest('./assets/'))
 );
 
 gulp.task('sass-watch', () => {
