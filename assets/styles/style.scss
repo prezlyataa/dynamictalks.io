@@ -1,6 +1,8 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "fonts.scss";
+@import "speakers.scss";
+
 
 * {
     margin: 0;
@@ -8,8 +10,12 @@
     border: 0;
 }
 
-body {
-    font-size: $body-font-size;
+html {
+    font-size: $html-font-size;
+}
+
+h1 {
+    color: $color-white;
 }
 
 .container {
@@ -27,10 +33,10 @@ body {
     border-radius: 40px;
 }
 
-.header {
+.main {
     position: relative;
     background-color: $color-orange;
-    .header_content {
+    &_content {
         padding-top: 53px;
         display: flex;
         flex-direction: row;
@@ -40,7 +46,7 @@ body {
             height: 36px;
         }
     }
-    .header_intro {
+    &_intro {
         position: relative;
         padding-top: 145px;
         .intro_text img {
@@ -72,33 +78,31 @@ body {
         left: 45%;
         height: 80%;
     }
-}
 
-@media (max-width: 1320px) {
-    .header {
-        .rhino img {
-            position: absolute;
-            top: 13%;
-            left: 43%;
-            height: 75%;
-        }
-    }
-}
-
-@media (max-width: 992px) {
-    .header {
-        .header_intro {
-            padding-top: 100px;
-            .sub_intro_text p {
-                font-size: 2em;
+    @media (max-width: 1320px) {
+        & {
+            .rhino img {
+                position: absolute;
+                top: 13%;
+                left: 43%;
+                height: 75%;
             }
+
+            &_intro {
+                padding-top: 100px;
+                .sub_intro_text p {
+                    font-size: 2em;
+                }
+            }
+
         }
+
     }
 }
 
 @media (max-width: 767px) {
-    .header {
-        .header_intro {
+    .main {
+        &_intro {
             .sub_intro_text p {
                 font-size: 1.6em;
                 letter-spacing: 0.7rem;
@@ -114,15 +118,15 @@ body {
     .register_btn button {
         font-size: 0.5rem;
     }
-    .header {
-        .header_content {
+    .main {
+        &_content {
             padding-top: 25px;
             .logo img {
                 width: 177px;
                 height: 32px;
             }
         }
-        .header_intro {
+        &_intro {
             padding-top: 85px;
             .sub_intro_text {
                 padding: 60px 0;
@@ -133,4 +137,3 @@ body {
         }
     }
 }
-
