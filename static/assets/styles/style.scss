@@ -1,5 +1,44 @@
-$white: #fff;
+@import "variables.scss";
+@import "mixins.scss";
+@import "fonts.scss";
 
-h1 {
-    color: $white;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
+
+body {
+    font-size: $body-font-size;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.register_btn button {
+    font-size: 0.9rem;
+    font-family: $font-family-opensans-regular;
+    padding: 8px 18px;
+    color: $color-black;
+    background-color: $color-white;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.header {
+    background-color: $color-orange;
+    .header_content {
+        padding-top: 53px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .logo img {
+            width: 197px;
+            height: 36px;
+        }
+    }
+}
+
+
