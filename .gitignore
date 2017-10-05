@@ -8,7 +8,7 @@
 node_modules/
 *.log
 *.log.*
-*.css
+*.scss
 .DS_Store
 package-lock.json
 
