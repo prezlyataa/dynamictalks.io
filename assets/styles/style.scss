@@ -1,6 +1,139 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "fonts.scss";
 @import "speakers.scss";
-$white: #fff;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: $html-font-size;
+}
 
 h1 {
-    color: $white;
+    color: $color-white;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.register_btn button {
+    font-size: 0.9rem;
+    font-family: $font-family-opensans-regular;
+    padding: 8px 18px;
+    color: $color-black;
+    background-color: $color-white;
+    text-transform: uppercase;
+    border-radius: 40px;
+}
+
+.main {
+    position: relative;
+    background-color: $color-orange;
+    &_content {
+        padding-top: 53px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .logo img {
+            width: 197px;
+            height: 36px;
+        }
+    }
+    &_intro {
+        position: relative;
+        padding-top: 145px;
+        .intro_text img {
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .sub_intro_text {
+            text-align: center;
+            padding: 75px 0 85px;
+            p {
+                @include font-family-opensans-bold();
+                text-transform: uppercase;
+                color: $color-white;
+                font-size: 3rem;
+                letter-spacing: 0.95rem;
+            }
+        }
+    }
+    .path_line img {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        left: 52%;
+    }
+    .rhino img {
+        position: absolute;
+        top: 13%;
+        left: 45%;
+        height: 80%;
+    }
+
+    @media (max-width: 1320px) {
+        & {
+            .rhino img {
+                position: absolute;
+                top: 13%;
+                left: 43%;
+                height: 75%;
+            }
+
+            &_intro {
+                padding-top: 100px;
+                .sub_intro_text p {
+                    font-size: 2em;
+                }
+            }
+
+        }
+
+    }
+}
+
+@media (max-width: 767px) {
+    .main {
+        &_intro {
+            .sub_intro_text p {
+                font-size: 1.6em;
+                letter-spacing: 0.7rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .register_btn {
+        padding-top: 7px;
+    }
+    .register_btn button {
+        font-size: 0.5rem;
+    }
+    .main {
+        &_content {
+            padding-top: 25px;
+            .logo img {
+                width: 177px;
+                height: 32px;
+            }
+        }
+        &_intro {
+            padding-top: 85px;
+            .sub_intro_text {
+                padding: 60px 0;
+                p {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
 }
