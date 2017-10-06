@@ -19,7 +19,7 @@ section {
   background-color: $color-orange;
 
   .rhino-left, .rhino-right {
-    background: url("./images/Bitmap.png") no-repeat;
+    background: url("../images/Bitmap.png") no-repeat;
     position: absolute;
     width: 100%;
     height: 40%;
@@ -54,7 +54,7 @@ section {
   .column-1 {
 
     .logo-icon {
-      background: url("./images/logo.svg") no-repeat;
+      background: url("../images/logo.svg") no-repeat;
       height: 36px;
       width: 200px;
       padding-bottom: 15%;
@@ -92,7 +92,7 @@ section {
     }
 
     .triangle {
-      background: url("./images/Triangle.svg") center no-repeat;
+      background: url("../images/Triangle.svg") center no-repeat;
       width: 60px;
       height: 60px;
       align-self: center;
@@ -172,7 +172,7 @@ section {
       z-index: 3;
 
       span {
-        background: url("./images/Path 10 Copy 2.svg") center no-repeat;
+        background: url("../images/Path_10_Copy_2.svg") center no-repeat;
         width: 145px;
         height: 15px;
         display: inline-block;
@@ -190,7 +190,7 @@ section {
 
   .first-speaker {
     img {
-      background: url("./images/Oval 3 Copy.svg") no-repeat;
+      background: url("../images/Oval_3.svg") no-repeat;
       top: -80px;
     }
 
@@ -209,7 +209,7 @@ section {
   }
   .second-speaker {
     img {
-      background: url('./images/Oval 3 Copy.svg') no-repeat;
+      background: url('../images/Oval_3.svg') no-repeat;
       bottom: -80px;
     }
     p {
@@ -228,7 +228,7 @@ section {
 
   .third-speaker {
     img {
-      background: url('./images/Oval 3 Copy.svg') no-repeat;
+      background: url('../images/Oval_3.svg') no-repeat;
       top: -80px;
     }
 

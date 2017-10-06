@@ -5,14 +5,18 @@
   "scripts": {
     "dev": "npm run build && npm run watch",
     "watch": "gulp sass-watch",
-    "build": "gulp sass"
+    "build": "gulp build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-cachebust": "0.0.8",
     "gulp-clean-css": "^3.9.0",
+    "gulp-inject-string": "^1.1.0",
+    "gulp-rev": "^8.0.0",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0"
   }

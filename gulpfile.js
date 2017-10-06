@@ -1,16 +1,16 @@
 const gulp = require('gulp'),
-    sourcemaps = require('gulp-sourcemaps'),
     sass = require('gulp-sass'),
+    CacheBuster = require('gulp-cachebust'),
     cleanCSS = require('gulp-clean-css'),
+    del = require('del'),
     autoprefixer = require('gulp-autoprefixer');
 
-/* pathConfig*/
-const sassWatchPath = './assets/**/*.scss';
-/**/
+const sassWatchPath = './styles/**/*.scss';
+
+const cachebust = new CacheBuster();
 
 gulp.task('sass', () =>
     gulp.src(sassWatchPath)
-        .pipe(sourcemaps.init())
         .pipe(sass({
             trace: true,
             verbose: true
@@ -18,11 +18,25 @@ gulp.task('sass', () =>
         .pipe(autoprefixer({
             browsers: ['last 2 versions']
         }))
-        .pipe(sourcemaps.write())
-        .pipe(cleanCSS({compatibility: 'ie11'}))
-        .pipe(gulp.dest('./assets/'))
+        .pipe(gulp.dest('./styles'))
 );
 
-gulp.task('sass-watch', () => {
-    gulp.watch(sassWatchPath, ['sass']);
-});
+
+gulp.task('copy', () =>
+    gulp.src('./styles/style.css')
+        .pipe(cleanCSS({compatibility: 'ie11'}))
+        .pipe(cachebust.resources())
+        .pipe(gulp.dest('./public/styles'))
+);
+
+gulp.task('build-html', () => 
+    gulp.src('./index.html')
+        .pipe(cachebust.references())
+        .pipe(gulp.dest('./'))
+);
+
+gulp.task('clean', () => del('public/styles/**', {force:true}));
+
+gulp.task('build', ['sass', 'clean', 'copy', 'build-html']);
+
+gulp.task('sass-watch', () => gulp.watch(sassWatchPath, ['build']));

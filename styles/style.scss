@@ -1,0 +1,25 @@
+@import "main.scss";
+@import "variables.scss";
+@import "speakers.scss";
+@import "events.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-size: $html-font-size;
+}
+
+body {
+  font-family: $font-family-opensans-regular;
+}
+
+h1 {
+  color: $color-white;
+}
+
+
+
