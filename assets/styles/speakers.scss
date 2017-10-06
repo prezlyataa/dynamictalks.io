@@ -18,23 +18,23 @@ section {
   flex-direction: column;
   background-color: $color-orange;
 
-  .rhino-left, .rhino-right{
+  .rhino-left, .rhino-right {
     background: url("./images/Bitmap.png") no-repeat;
     position: absolute;
     width: 100%;
     height: 40%;
-    top:20%;
+    top: 20%;
     z-index: 2;
 
   }
 
-  .rhino-right{
+  .rhino-right {
     transform: scaleX(-1);
   }
 
 }
 
-.speakers{
+.speakers {
   position: relative;
 }
 
@@ -195,6 +195,8 @@ section {
 
     p {
       padding: 5%;
+      font-size: $font-size-regular-res;
+
     }
 
     .text-wrapper {
@@ -211,6 +213,8 @@ section {
     }
     p {
       padding: 5%;
+      font-size: $font-size-regular-res;
+
     }
 
     .text-wrapper {
@@ -229,6 +233,8 @@ section {
 
     p {
       padding: 5%;
+      font-size: $font-size-regular-res;
+
     }
 
     .text-wrapper {
@@ -259,7 +265,7 @@ section {
       width: 30%;
     }
 
-    .second-speaker img{
+    .second-speaker img {
       bottom: -115px
     }
   }
@@ -278,7 +284,7 @@ section {
     }
   }
 
-  .rhino-left{
+  .rhino-left {
     width: 80%;
     height: 20%;
   }
@@ -297,17 +303,18 @@ section {
     }
   }
 
-  .rhino-right, .rhino-left{
+  .rhino-right, .rhino-left {
     display: none;
   }
 
 }
 
-@media only screen and (min-width: 650px) and (max-width: 815px){
-  .rhino-right, .rhino-left{
+@media only screen and (min-width: 650px) and (max-width: 815px) {
+  .rhino-right, .rhino-left {
     display: none !important;
   }
 }
+
 
 
 @media only screen and (min-width: 320px) and (max-width: 830px) {
@@ -368,9 +375,9 @@ section {
   }
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) {
 
-  .rhino-right, .rhino-left{
+  .rhino-right, .rhino-left {
     display: none !important;
   }
 }
