@@ -34,7 +34,7 @@ gulp.task('copy:style', () =>
 );
 
 gulp.task('copy:img', () =>
-    gulp.src('./assets/images/**.*')
+    gulp.src('./assets/images/**/*.*')
         .pipe(cachebust.resources())
         .pipe(gulp.dest(`${outputPath}/images`))
 );
@@ -60,4 +60,4 @@ gulp.task('clean', () => del([outputPath, 'index.html'], { force: true }));
 
 gulp.task('build', gulpsync.sync(['clean', 'sass', 'copy', 'replace-hash']));
 
-gulp.task('sass-watch', () => gulp.watch(sassWatchPath, ['build']));
+gulp.task('sass-watch', () => gulp.watch(sassWatchPattern, ['build']));

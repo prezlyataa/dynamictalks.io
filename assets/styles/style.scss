@@ -2,6 +2,9 @@
 @import "variables.scss";
 @import "speakers.scss";
 @import "events.scss";
+@import "organizers.scss";
+@import "main.scss";
+@import "tablet_header.scss";
 
 * {
   margin: 0;
@@ -9,17 +12,9 @@
   border: 0;
 }
 
-html {
-  font-size: $html-font-size;
-}
-
-body {
+body, html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
   font-family: $font-family-opensans-regular;
 }
-
-h1 {
-  color: $color-white;
-}
-
-
-
