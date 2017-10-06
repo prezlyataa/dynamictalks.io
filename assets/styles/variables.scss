@@ -5,3 +5,14 @@ $color-black: #000;
 $color-grey:rgba(248,248,248, 0.86);
 
 $html-font-size: 16px;
+
+
+
+
+
+$phone : '(max-width: 480px)';
+$tablet-portrait: '(max-width: 767px)';
+$tablet-landscape: '(min-width: 768px) and (max-width: 979px)';
+$desktop: "(min-width: 1024px)";
+$large-desktop: '(min-width: 1200px)';
+
