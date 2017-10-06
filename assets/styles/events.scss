@@ -7,7 +7,7 @@
   border-radius: 40px;
   background: $color-orange;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 55px;
   cursor: pointer;
   outline: none;
 }
@@ -44,7 +44,7 @@
 
 .section-column-1 {
   img {
-    margin-bottom: 20px;
+    margin-bottom: 55px;
   }
   .events-date {
     display: flex;
@@ -63,6 +63,9 @@
   @include respond-to($tablet-portrait) {
     text-align: center;
     margin-bottom: 40px;
+    img {
+      margin-bottom: 15px;
+    }
   }
 
 }
@@ -76,7 +79,7 @@
     letter-spacing: 6px;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 55px;
 
   }
 
@@ -91,10 +94,16 @@
   @include respond-to($tablet-landscape) {
     flex-basis: 800px;
     order: -1;
+    h2 {
+      margin-bottom: 15px;
+    }
   }
   @include respond-to($tablet-portrait) {
     order: -1;
     margin-bottom: 40px;
+    h2{
+      margin-bottom: 15px;
+    }
   }
 
   @include respond-to($tablet-portrait){
@@ -105,6 +114,7 @@
 
     h2{
       font-size: 1.8em;
+      margin-bottom: 15px;
     }
   }
 
@@ -135,6 +145,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 10px;
     button {
       order: 2;
     }
