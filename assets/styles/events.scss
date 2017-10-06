@@ -118,8 +118,13 @@
     flex-direction: column;
     margin-bottom: 20px;
     text-transform: uppercase;
+    color: $color-orange;
 
-    span:nth-child(2) {
+    h3{
+      font-weight: 300;
+    }
+
+    h3:nth-child(2) {
       font-weight: bold;
     }
 
