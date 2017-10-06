@@ -2,7 +2,7 @@
 @import "mixins.scss";
 
 .events {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   padding: 50px 0 70px;
   background-color: $color-white;
@@ -176,6 +176,10 @@
   &__text-wrap {
     flex-basis: 400px;
     margin-bottom: 70px;
+
+    p{
+      font-size:$font-size-regular-res;
+    }
   }
 
 }
