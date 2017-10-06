@@ -37,17 +37,6 @@
 
   width: 45%;
 
-  button {
-    width: 166px;
-    height: 36px;
-    border-radius: 40px;
-    background: $color-orange;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    cursor: pointer;
-    outline: none;
-  }
-
   @include respond-to($tablet-landscape) {
     width: auto;
     display: flex;
@@ -87,7 +76,6 @@
     text-transform: uppercase;
     margin-bottom: 30px;
 
-
   }
   a {
     margin: 0 15px;
@@ -96,7 +84,7 @@
     font-size: 1.5em;
   }
 
-  @include respond-to($tablet-landscape){
+  @include respond-to($tablet-landscape) {
     text-align: center;
   }
 
@@ -108,6 +96,7 @@
 
 .location {
   width: 45%;
+
   &__title {
     font-size: 1.1em;
     margin-bottom: 25px;
@@ -127,4 +116,16 @@
 .map-container {
   border: 10px solid $color-orange;
   height: 450px;
+}
+
+.btn {
+  padding: 8px 18px;
+  border-radius: 40px;
+  background: $color-orange;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  color: $color-black;
+  text-decoration: none;
+
 }
