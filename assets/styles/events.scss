@@ -1,39 +1,56 @@
 @import "variables.scss";
 @import "mixins.scss";
 
+.register-btn {
+  width: 136px;
+  height: 36px;
+  border-radius: 40px;
+  background: $color-orange;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
 .events {
   width: 85%;
   margin: 0 auto;
   padding: 50px 0 70px;
   background-color: $color-white;
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 1.25em;
+}
 
-    @include respond-to($phone) {
-      justify-content: center;
-    }
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1.5em;
+
+  @include respond-to($phone) {
+    justify-content: center;
+  }
+  @include respond-to($tablet-portrait) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+.section-column-1, .section-column-2, .section-column-3 {
+  @include respond-to($desktop){
+    width: 30%;
   }
 }
 
-.events-column-1, .events-column-2, .events-column-3 {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 200px;
-  justify-content: space-around;
-  min-height: 180px;
-
-}
-
-.events-column-1 {
+.section-column-1 {
+  img {
+    margin-bottom: 20px;
+  }
   .events-date {
     display: flex;
     flex-direction: column;
     color: $color-orange;
-    span {
+    h3 {
       font-size: 2em;
       font-family: $font-family-opensans-regular;
       font-weight: 300;
@@ -43,26 +60,28 @@
       font-weight: bold;
     }
   }
-
-  @include respond-to($phone) {
-    align-items: center;
-    flex-basis: 250px;
+  @include respond-to($tablet-portrait) {
+    text-align: center;
+    margin-bottom: 40px;
   }
-
 
 }
 
-.events-column-2 {
-  align-items: center;
-  span {
+.section-column-2 {
+  text-align: center;
+
+  h2 {
     font-size: 2.5em;
     font-weight: 300;
     letter-spacing: 6px;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 20px;
+
   }
 
   .circle-icon {
+    display: inline-block;
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -72,54 +91,53 @@
   @include respond-to($tablet-landscape) {
     flex-basis: 800px;
     order: -1;
-    flex-grow: 1;
-
+  }
+  @include respond-to($tablet-portrait) {
+    order: -1;
+    margin-bottom: 40px;
   }
 
-  @include respond-to($tablet-portrait) {
-    flex-basis: 800px;
-    order: -1;
-    flex-grow: 1;
+  @include respond-to($tablet-portrait){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
 
+    h2{
+      font-size: 1.8em;
+    }
   }
 
 }
 
-.events-column-3 {
+.section-column-3 {
+  text-align: right;
 
   .events-place {
-    text-align: right;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
     text-transform: uppercase;
+
     span:nth-child(2) {
       font-weight: bold;
     }
 
-    @include respond-to($phone) {
+  }
+
+  @include respond-to($tablet-portrait) {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    button {
+      order: 2;
+    }
+    .events-place {
       text-align: center;
-
     }
   }
 
-  @include  respond-to($phone){
-
-    button{
-      order:2;
-      align-self: center;
-    }
-
-  }
-
-}
-
-.register-btn {
-  width: 136px;
-  height: 36px;
-  border-radius: 40px;
-  align-self: flex-end;
-  background: $color-orange;
-  text-transform: uppercase;
 }
 
 .tabs {
@@ -127,8 +145,9 @@
 
   &__content {
     padding: 30px 100px;
-    @include respond-to($phone){
-      padding: 20px;
+
+    @include respond-to($tablet-portrait) {
+      padding: 30px;
     }
   }
 
@@ -177,9 +196,14 @@
     flex-basis: 400px;
     margin-bottom: 70px;
 
-    p{
-      font-size:$font-size-regular-res;
+    p {
+      font-size: $font-size-regular-res;
     }
   }
 
 }
+
+
+
+
+
