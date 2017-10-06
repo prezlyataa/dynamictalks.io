@@ -37,13 +37,14 @@ h1 {
   }
 
   .register_btn button {
-    font-size: .9rem;
     font-family: $font-family-opensans-regular;
     padding: 8px 18px;
     color: $color-black;
     background-color: $color-white;
     text-transform: uppercase;
     border-radius: 40px;
+    width: 136px;
+    height: 36px;
   }
 
   &_content {
