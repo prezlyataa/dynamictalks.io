@@ -169,7 +169,6 @@ section {
       font-size: 1.5em;
       text-transform: uppercase;
       position: relative;
-      z-index: 3;
 
       span {
         background: url("./images/Path 10 Copy 2.svg") center no-repeat;
@@ -400,6 +399,17 @@ section {
 @media only screen and (min-width: 1000px) and (max-width: 1500px)  {
   .speaker-block{
     padding: 3.5em 0 8em 0;
+
+    .second-speaker img{
+      bottom: -100px;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px){
+  .column-1, .column-2, .column-3{
+    width: 60% !important;
   }
 }
 
