@@ -38,7 +38,7 @@ section {
   position: relative;
 }
 
-.header-block {
+.header-block, .speaker-block {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -49,6 +49,7 @@ section {
   .column-1, .column-2, .column-3 {
     display: flex;
     flex-direction: column;
+    width: 30%;
   }
 
   .column-1 {
@@ -142,8 +143,6 @@ section {
 
 .speaker-block {
   display: flex;
-  justify-content: space-around;
-  width: 90%;
   margin: 0 auto;
   padding: 1.5em 0 6em 0;
 
@@ -152,7 +151,7 @@ section {
     flex-direction: column;
     align-items: center;
     background-color: gray;
-    width: 25%;
+    width: 30%;
     background-color: $color-grey;
 
     img {
@@ -311,9 +310,10 @@ section {
 }
 
 
-@media only screen and (min-width: 320px) and (max-width: 650px) {
+@media only screen and (min-width: 320px) and (max-width: 830px) {
   .header-block {
     flex-direction: column;
+    align-items: center;
 
     .column-1, .column-2, .column-3 {
       align-items: center
