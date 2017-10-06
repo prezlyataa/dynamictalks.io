@@ -13,7 +13,9 @@
 html {
   font-size: $html-font-size;
 }
-
+body{
+  font-family: $font-family-opensans-regular;
+}
 h1 {
   color: $color-white;
 }
@@ -23,10 +25,9 @@ h1 {
 .main {
   position: relative;
   background-color: $color-orange;
-  height: 100vh;
   overflow: hidden;
 
-  .container {
+  .container_dekstop {
     max-width: 90%;
     height: 100%;
     margin: 0 auto;
@@ -58,10 +59,10 @@ h1 {
     position: relative;
     padding-top: 145px;
 
-    .intro_text img {
+    .intro_text img{
       background-size: cover;
-      width: 100%;
       height: 100%;
+      width: 100%;
     }
 
     .sub_intro_text {
@@ -91,6 +92,7 @@ h1 {
     left: 45%;
     height: 80%;
   }
+
   @media (max-width: 1320px) {
     & {
       .rhino img {
@@ -98,7 +100,7 @@ h1 {
         top: 13%;
         left: 50%;
         height: 75%;
-        transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-10%, 0, 0);
       }
 
       &_intro {
@@ -110,13 +112,28 @@ h1 {
           font-size: 2em;
         }
       }
-
     }
-
   }
 }
+
+@media (max-width: 1070px) {
+  .main {
+    .rhino img {
+      top: 18%;
+      height: 70%;
+      transform: translate3d(-15%, 0, 0);
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .main {
+    &_content {
+      .logo a {
+        display: block;
+        text-align: center;
+      }
+    }
     &_intro {
       .sub_intro_text p {
         font-size: 1.6em;
@@ -125,19 +142,17 @@ h1 {
     }
   }
 }
+
 @media (max-width: 480px) {
-  .register_btn {
-    padding-top: 7px;
-  }
-
-  .register_btn button {
-    font-size: .5rem;
-  }
-
   .main {
     &_content {
       padding-top: 25px;
-
+      .register_btn {
+        padding-top: 7px;
+      }
+      .register_btn button {
+        font-size: .5rem;
+      }
       .logo img {
         width: 177px;
         height: 32px;
@@ -149,7 +164,6 @@ h1 {
 
       .sub_intro_text {
         padding: 60px 0;
-
         p {
           font-size: 1em;
         }

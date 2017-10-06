@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=0.25, initial-scale=1.0">
     <title>Dynamic talks</title>
-
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+
 <section class="main">
-    <div class="container">
+    <div class="container_dekstop">
         <div class="main_content">
             <div class="logo">
                 <a href="#"><img src="./assets/styles/images/logo@2x.png" alt="logo"></a>
@@ -22,10 +21,10 @@
         </div>
         <div class="main_intro">
             <div class="intro_text">
-                <img src="./assets/styles/images/intro_text.png" alt="intro-text">
+                <img src="assets/styles/images/intro_text.png" alt="img">
             </div>
             <div class="sub_intro_text">
-                <p>Приходи, будет &infin; ярко!</p>
+                <p>Приходь, буде &infin; яскраво!</p>
             </div>
         </div>
         <div class="path_line">
@@ -39,33 +38,35 @@
 
 <section class="events">
     <div class="events__header">
-        <img src="./assets/styles/images/logo.svg" alt="grid dynamics logo">
-        <span class="section-header-icon">Мероприятие</span>
-        <button class="register_btn">Регистрация</button>
-    </div>
-    <div class="meeting ">
-        <div class="meeting__city">
-            <span>Харьков</span>
-            <time>16.06 19:00</time>
+        <div class="events-column-1">
+            <img src="./assets/styles/images/logo.svg" alt="grid dynamics logo">
+            <div class="events-date">
+                <span>Львів</span>
+                <time>21.10.2017 11:00</time>
+            </div>
         </div>
-
-
-        <div class="meeting__place">
-            <span>Медиацентр "Время"</span>
-            <span>Platinum Plaza, 2етаж</span>
-            <span>ул. Сумская, 72</span>
+        <div class="events-column-2">
+            <span class="events-title">Meetup</span>
+            <div class="circle-icon"></div>
         </div>
-
+        <div class="events-column-3">
+            <button class="register-btn">Реєстрація</button>
+            <div class="events-place">
+                <span>Communa</span>
+                <span>м. Львів, вул. Галицька, 1, 2-й поверх</span>
+                <span>(на розі Площі Ринок)</span>
+            </div>
+        </div>
     </div>
 
     <div class="events__content">
         <div class="tabs">
             <div class="tabs__head">
                 <div class="tabs__item">
-                    <span>О событии</span>
+                    <span>Детальніше</span>
                 </div>
                 <div class="tabs__item">
-                    <span>Расписание</span>
+                    <span>Розклад</span>
                 </div>
             </div>
             <div class="tabs__content">
@@ -95,28 +96,32 @@
 </section>
 
 <section class="speakers">
+
+    <div class="rhino-left"></div>
+    <div class="rhino-right"></div>
+
     <div class="header-block">
 
         <div class="column-1">
             <div class="logo-icon"></div>
             <div class="date">
-                <h2>Харьков</h2>
-                <h3>16.06 19:00</h3>
+                <h2>Львів</h2>
+                <h3>21.10.2017 11:00</h3>
             </div>
         </div>
 
 
         <div class="column-2">
-            <h2>СПИКЕРЫ</h2>
+            <h2>Спікери</h2>
             <div class="triangle"></div>
         </div>
 
         <div class="column-3">
-            <button><p>регистрация</p></button>
+            <button><p>Реєстрація</p></button>
             <div class="address">
-                <h3>Медиацентр «ВРЕМЯ»</h3>
-                <h3>Platinum Plaza, 2 этаж</h3>
-                <h3>ул. Сумская, 72</h3>
+                <h3>Communa</h3>
+                <h3>м. Львів, вул. Галицька, 1, 2-й поверх</h3>
+                <h3>(на розі Площі Ринок)</h3>
             </div>
         </div>
 
@@ -124,13 +129,11 @@
 
 
     <div class="speaker-block">
-        <!--<div class="rhino-left"></div>-->
-        <!--<div class="rhino-right"></div>-->
 
         <div class="first-speaker">
             <img src="" alt="" class="portrait">
             <div class="text-wrapper">
-                <div class="name"><h3>Luis Oliver</h3><span></span></div>
+                <div class="name"><h3>Георгій Подсвєтов</h3><span></span></div>
                 <p>Okay, you’ve decided you want to make money with Affiliate Marketing. So, you join some affiliate
                     programs and start submitting free ads to newsletters and free advertising classifieds sites. You’re
                     going to make BIG money now — right?</p>
@@ -138,7 +141,7 @@
         </div>
         <div class="second-speaker">
             <div class="text-wrapper">
-                <div class="name"><h3>Brian Steele</h3><span></span></div>
+                <div class="name"><h3>Любомир Семків</h3><span></span></div>
                 <p>Okay, you’ve decided you want to make money with Affiliate Marketing. So, you join some affiliate
                     programs and start submitting free ads to newsletters and free advertising classifieds sites. You’re
                     going to make BIG money now — right?</p>
@@ -148,7 +151,7 @@
         <div class="third-speaker">
             <img src="" alt="" class="portrait">
             <div class="text-wrapper">
-                <div class="name"><h3>Ernest Carlson</h3><span></span></div>
+                <div class="name"><h3>Володимир Воєвідка</h3><span></span></div>
                 <p>Okay, you’ve decided you want to make money with Affiliate Marketing. So, you join some affiliate
                     programs and start submitting free ads to newsletters and free advertising classifieds sites. You’re
                     going to make BIG money now — right?</p>
@@ -157,6 +160,11 @@
     </div>
 
 </section>
+
+<footer>
+    <p>© 2017 Grid Dynamics International, Inc.</p>
+    <p>info@dynamictalks.io</p>
+</footer>
 
 </body>
 </html>
