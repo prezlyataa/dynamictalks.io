@@ -13,7 +13,9 @@
 html {
   font-size: $html-font-size;
 }
-
+body{
+  font-family: $font-family-opensans-regular;
+}
 h1 {
   color: $color-white;
 }
