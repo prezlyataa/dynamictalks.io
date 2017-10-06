@@ -151,14 +151,17 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: gray;
-    width: 30%;
+    width: 25%;
     background-color: $color-grey;
 
     img {
+      box-sizing: border-box;
       position: relative;
       width: 200px;
       height: 200px;
+      border-radius: 50%;
+
+      border: 12px solid $color-orange;
     }
 
     .name {
@@ -189,7 +192,6 @@ section {
 
   .first-speaker {
     img {
-      background: url("./images/Oval 3 Copy.svg") no-repeat;
       top: -80px;
     }
 
@@ -208,8 +210,7 @@ section {
   }
   .second-speaker {
     img {
-      background: url('./images/Oval 3 Copy.svg') no-repeat;
-      bottom: -80px;
+      bottom: -120px;
     }
     p {
       padding: 5%;
@@ -220,14 +221,12 @@ section {
     .text-wrapper {
       display: inline-grid;
       position: relative;
-      display: inline-grid;
       padding: 1em 1em 0 1em;
     }
   }
 
   .third-speaker {
     img {
-      background: url('./images/Oval 3 Copy.svg') no-repeat;
       top: -80px;
     }
 
