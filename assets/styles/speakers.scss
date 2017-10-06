@@ -330,10 +330,16 @@ section {
       .logo-icon {
         padding-bottom: 2%;
       }
+
+      h2, h3{
+        text-align: center;
+      }
+
     }
 
     .column-2 h2 {
       padding-bottom: 2%;
+      text-align: center;
     }
 
     .column-3 {
@@ -382,6 +388,18 @@ section {
   }
 }
 
+
+@media only screen and (min-width: 1500px) and (max-width: 2135px)  {
+  .speaker-block{
+    padding: 3.5em 0 6em 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1500px)  {
+  .speaker-block{
+    padding: 3.5em 0 6em 0;
+  }
+}
 
 footer{
   display: flex;
