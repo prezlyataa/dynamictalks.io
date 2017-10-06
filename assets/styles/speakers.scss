@@ -16,7 +16,7 @@ body, html {
 section {
   display: flex;
   flex-direction: column;
-  background-color: $color-orange;
+
 
   .rhino-left, .rhino-right {
     background: url("./images/Bitmap.png") no-repeat;
@@ -36,6 +36,7 @@ section {
 
 .speakers {
   position: relative;
+  background-color: $color-orange;
 }
 
 .header-block, .speaker-block {
@@ -168,7 +169,6 @@ section {
       font-size: 1.5em;
       text-transform: uppercase;
       position: relative;
-      z-index: 3;
 
       span {
         background: url("./images/Path 10 Copy 2.svg") center no-repeat;
@@ -323,17 +323,24 @@ section {
     align-items: center;
 
     .column-1, .column-2, .column-3 {
-      align-items: center
+      align-items: center;
+      padding-top: 2%;
     }
 
     .column-1 {
       .logo-icon {
         padding-bottom: 2%;
       }
+
+      h2, h3{
+        text-align: center;
+      }
+
     }
 
     .column-2 h2 {
       padding-bottom: 2%;
+      text-align: center;
     }
 
     .column-3 {
@@ -382,6 +389,37 @@ section {
   }
 }
 
+
+@media only screen and (min-width: 1500px) and (max-width: 2135px)  {
+  .speaker-block{
+    padding: 3.5em 0 6em 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1500px)  {
+  .speaker-block{
+    padding: 3.5em 0 8em 0;
+
+    .second-speaker img{
+      bottom: -100px;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px){
+  .column-1, .column-2, .column-3{
+    width: 60% !important;
+
+  }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 400px){
+  .first-speaker, .second-speaker, .third-speaker{
+    width: 100% !important;
+  }
+}
 
 footer{
   display: flex;
