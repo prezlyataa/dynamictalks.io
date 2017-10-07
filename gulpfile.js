@@ -7,8 +7,9 @@ const gulp = require('gulp'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer');
 
-const stylesPath = './assets/styles';
-const sassWatchPattern = `${stylesPath}/**/*.scss`;
+const assetsPath = './assets';
+const sassWatchPattern = `${assetsPath}/**/*.scss`;
+const htmlWatchPattern = './template.html';
 const outputPath = './dist';
 
 const cachebust = new CacheBuster();
@@ -22,19 +23,19 @@ gulp.task('sass', () =>
         .pipe(autoprefixer({
             browsers: ['last 3 versions']
         }))
-        .pipe(gulp.dest(stylesPath))
+        .pipe(gulp.dest(assetsPath))
 );
 
 
 gulp.task('copy:style', () =>
-    gulp.src(`${stylesPath}/style.css`)
+    gulp.src(`${assetsPath}/**/style.css`)
         .pipe(cleanCSS({ compatibility: 'ie11' }))
         .pipe(cachebust.resources())
-        .pipe(gulp.dest(`${outputPath}/styles`))
+        .pipe(gulp.dest(outputPath))
 );
 
 gulp.task('copy:img', () =>
-    gulp.src('./assets/images/**/*.*')
+    gulp.src(`${assetsPath}/images/**/*.*`)
         .pipe(cachebust.resources())
         .pipe(gulp.dest(`${outputPath}/images`))
 );
@@ -42,16 +43,16 @@ gulp.task('copy:img', () =>
 gulp.task('copy', ['copy:style', 'copy:img']);
 
 gulp.task('replace:html', () =>
-    gulp.src('./template.html')
+    gulp.src(htmlWatchPattern)
         .pipe(rename('index.html'))
         .pipe(cachebust.references())
         .pipe(gulp.dest('./'))
 );
 
 gulp.task('replace:css', () =>
-    gulp.src(`${outputPath}/styles/*.css`)
+    gulp.src(`${outputPath}/**/*.css`)
         .pipe(cachebust.references())
-        .pipe(gulp.dest(`${outputPath}/styles`))
+        .pipe(gulp.dest(outputPath))
 );
 
 gulp.task('replace-hash', ['replace:html', 'replace:css']);
@@ -60,4 +61,4 @@ gulp.task('clean', () => del([outputPath, 'index.html'], { force: true }));
 
 gulp.task('build', gulpsync.sync(['clean', 'sass', 'copy', 'replace-hash']));
 
-gulp.task('sass-watch', () => gulp.watch(sassWatchPattern, ['build']));
+gulp.task('sass-watch', () => gulp.watch([sassWatchPattern, htmlWatchPattern], ['build']));
