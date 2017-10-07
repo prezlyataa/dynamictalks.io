@@ -9,7 +9,7 @@ section {
 
 
   .rhino-left, .rhino-right {
-    background: url("./images/Bitmap.png") no-repeat;
+    background: url("../images/Bitmap.png") no-repeat;
     position: absolute;
     width: 100%;
     height: 40%;
@@ -46,10 +46,10 @@ section {
   .column-1 {
 
     .logo-icon {
-      background: url("./images/logo.svg") no-repeat;
+      background: url("../images/logo.svg") no-repeat;
       height: 36px;
       width: 200px;
-      padding-bottom: 15%;
+      padding-bottom: 10%;
     }
 
     .date {
@@ -80,11 +80,11 @@ section {
       letter-spacing: 6px;
       text-align: center;
       text-transform: uppercase;
-      padding-bottom: 15%;
+      padding-bottom: 10%;
     }
 
     .triangle {
-      background: url("./images/Triangle.svg") center no-repeat;
+      background: url("../images/Triangle.svg") center no-repeat;
       width: 60px;
       height: 60px;
       align-self: center;
@@ -113,7 +113,7 @@ section {
     }
 
     .address {
-      padding-top: 15%;
+      padding-top: 10%;
 
       h3 {
         color: $color-white;
@@ -163,7 +163,7 @@ section {
       position: relative;
 
       span {
-        background: url("./images/Path 10 Copy 2.svg") center no-repeat;
+        background: url("../images/Path_10_Copy_2.svg") center no-repeat;
         width: 145px;
         height: 15px;
         display: inline-block;
@@ -380,7 +380,7 @@ section {
 
 @media only screen and (min-width: 1500px) and (max-width: 2135px)  {
   .speaker-block{
-    padding: 3.5em 0 6em 0;
+    padding: 3.5em 0 8em 0;
   }
 }
 
