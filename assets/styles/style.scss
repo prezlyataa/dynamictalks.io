@@ -18,3 +18,29 @@ body, html {
   font-size: 16px;
   font-family: $font-family-opensans-regular;
 }
+
+.btn {
+  padding: 8px 18px;
+  display: inline-block;
+  border-radius: 40px;
+  font-size: 14px;
+  background-color: $color-white;
+  color: $color-black;
+  text-transform: uppercase;
+  line-height: 19px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &--yellow {
+    background-color: $color-orange;
+    margin-bottom: 55px;
+
+    &:hover {
+      background-color: rgba(255, 221, 89, 1);
+      box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+}
