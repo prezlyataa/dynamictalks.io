@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<section class="main">
+<section id="section-main" class="main">
     <div class="container_dekstop">
         <div class="main_content">
             <div class="logo">
@@ -36,6 +36,7 @@
             <img src="./dist/images/rhino.png" alt="rhino">
         </div>
     </div>
+
     <div class="container_tablet">
         <div class="tablet_content">
             <div class="logo">
@@ -57,6 +58,13 @@
                 <img src="./dist/images/path_line.png" alt="path_line">
             </div>
         </div>
+    </div>
+
+    <div class="section-controls">
+        <a class="active" href="#section-main"></a>
+        <a href="#section-events"></a>
+        <a href="#section-speakers"></a>
+        <a href="#section-organizers"></a>
     </div>
 </section>
 
@@ -85,81 +93,122 @@
             </div>
         </div>
     </div>
+    <div class="section-controls">
+        <a href="#section-main"></a>
+        <a class="active" href="#section-events"></a>
+        <a href="#section-speakers"></a>
+        <a href="#section-organizers"></a>
+    </div>
+</section>
 
-    <div class="events__content">
-        <div id="events-tabs" class="tabs">
-            <div class="tabs__head">
-                <div  class="tabs__item ">
-                    <span>Детальніше</span>
-                </div>
-                <div class="tabs__item">
-                    <span>Розклад</span>
+<section id="section-events">
+    <div class="events">
+        <div class="section-header">
+            <div class="section-column-1">
+                <a href="https://www.griddynamics.com" class="color_logo">
+                    <img src="./assets/images/logo-gd%20(1).svg" alt="grid dynamics logo">
+                    <span class="color_logo_name">Grid Dynamics</span>
+                </a>
+                <div class="events-date">
+                    <h3>Львів</h3>
+                    <time>21 жовтня, 2017</time>
                 </div>
             </div>
-            <div class="tabs__content">
-                <div class="tabs__text-content">
-                    <p class="tabs__title">5 reasons to choose a notebook over a computer desktop</p>
-                    <div class="tabs__content-container">
-                        <div class="tabs__text-wrap">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur corporis
-                                eos
-                                illo iste libero odio perspiciatis possimus quibusdam quisquam, rem saepe sequi. Aliquam
-                                aliquid, cum doloremque doloribus impedit iste minima modi, nemo neque quia sed
-                                voluptatem?
-                                Asperiores aspernatur blanditiis consectetur dolorem enim error exercitationem expedita
-                                inventore, itaque laboriosam modi molestiae neque nesciunt perspiciatis quam, quod
-                                veniam
-                                vitae voluptas voluptatibus!</p>
-                        </div>
-                        <div class="tabs__text-wrap">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur corporis
-                                eos
-                                illo iste libero odio perspiciatis possimus quibusdam quisquam, rem saepe sequi. Aliquam
-                                aliquid, cum doloremque doloribus impedit iste minima modi, nemo neque quia sed
-                                voluptatem?
-                                Asperiores aspernatur blanditiigit s consectetur dolorem enim error exercitationem
-                                expedita
-                                inventore, itaque laboriosam modi molestiae neque nesciunt perspiciatis quam, quod
-                                veniam
-                                vitae voluptas voluptatibus!</p>
-                        </div>
+            <div class="section-column-2">
+                <h2>Meetup</h2>
+                <span class="circle-icon"></span>
+            </div>
+            <div class="section-column-3">
+                <a href="https://goo.gl/forms/CcWPa8ynuWIgZG5H2" class="btn btn--yellow">Реєстрація</a>
+                <div class="events-place">
+                    <h3>Communa</h3>
+                    <h3>м. Львів, вул. Галицька 1, 2-й поверх</h3>
+                    <h3>(на розі Площі Ринок)</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="events__content">
+            <div id="events-tabs" class="tabs">
+                <div class="tabs__head">
+                    <div class="tabs__item active">
+                        <span>Детальніше</span>
+                    </div>
+                    <div class="tabs__item">
+                        <span>Розклад</span>
                     </div>
                 </div>
-                <div class="tabs__text-content">
-                    <p class="tabs__title">5 reasons to choose a notebook over a computer desktop</p>
-                    <div class="tabs__content-container">
-                        <div class="tabs__text-wrap">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur corporis
-                                eos
-                                illo iste libero odio perspiciatis possimus quibusdam quisquam, rem saepe sequi. Aliquam
-                                aliquid, cum doloremque doloribus impedit iste minima modi, nemo neque quia sed
-                                voluptatem?
-                                Asperiores aspernatur blanditiis consectetur dolorem enim error exercitationem expedita
-                                inventore, itaque laboriosam modi molestiae neque nesciunt perspiciatis quam, quod
-                                veniam
-                                vitae voluptas voluptatibus!</p>
+                <div class="tabs__content">
+                    <div class="tabs__text-content active">
+                        <p class="tabs__title">5 reasons to choose a notebook over a computer desktop</p>
+                        <div class="tabs__content-container">
+                            <div class="tabs__text-wrap">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur corporis
+                                    eos
+                                    illo iste libero odio perspiciatis possimus quibusdam quisquam, rem saepe sequi. Aliquam
+                                    aliquid, cum doloremque doloribus impedit iste minima modi, nemo neque quia sed
+                                    voluptatem?
+                                    Asperiores aspernatur blanditiis consectetur dolorem enim error exercitationem expedita
+                                    inventore, itaque laboriosam modi molestiae neque nesciunt perspiciatis quam, quod
+                                    veniam
+                                    vitae voluptas voluptatibus!</p>
+                            </div>
+                            <div class="tabs__text-wrap">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur corporis
+                                    eos
+                                    illo iste libero odio perspiciatis possimus quibusdam quisquam, rem saepe sequi. Aliquam
+                                    aliquid, cum doloremque doloribus impedit iste minima modi, nemo neque quia sed
+                                    voluptatem?
+                                    Asperiores aspernatur blanditiigit s consectetur dolorem enim error exercitationem
+                                    expedita
+                                    inventore, itaque laboriosam modi molestiae neque nesciunt perspiciatis quam, quod
+                                    veniam
+                                    vitae voluptas voluptatibus!</p>
+                            </div>
                         </div>
-                        <div class="tabs__text-wrap">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur corporis
-                                eos
-                                illo iste libero odio perspiciatis possimus quibusdam quisquam, rem saepe sequi. Aliquam
-                                aliquid, cum doloremque doloribus impedit iste minima modi, nemo neque quia sed
-                                voluptatem?
-                                Asperiores aspernatur blanditiigit s consectetur dolorem enim error exercitationem
-                                expedita
-                                inventore, itaque laboriosam modi molestiae neque nesciunt perspiciatis quam, quod
-                                veniam
-                                vitae voluptas voluptatibus!</p>
+                    </div>
+                    <div class="tabs__text-content">
+                        <p class="tabs__title">Some title</p>
+                        <div class="tabs__content-container">
+                            <div class="tabs__text-wrap">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur corporis
+                                    eos
+                                    illo iste libero odio perspiciatis possimus quibusdam quisquam, rem saepe sequi. Aliquam
+                                    aliquid, cum doloremque doloribus impedit iste minima modi, nemo neque quia sed
+                                    voluptatem?
+                                    Asperiores aspernatur blanditiis consectetur dolorem enim error exercitationem expedita
+                                    inventore, itaque laboriosam modi molestiae neque nesciunt perspiciatis quam, quod
+                                    veniam
+                                    vitae voluptas voluptatibus!</p>
+                            </div>
+                            <div class="tabs__text-wrap">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur corporis
+                                    eos
+                                    illo iste libero odio perspiciatis possimus quibusdam quisquam, rem saepe sequi. Aliquam
+                                    aliquid, cum doloremque doloribus impedit iste minima modi, nemo neque quia sed
+                                    voluptatem?
+                                    Asperiores aspernatur blanditiigit s consectetur dolorem enim error exercitationem
+                                    expedita
+                                    inventore, itaque laboriosam modi molestiae neque nesciunt perspiciatis quam, quod
+                                    veniam
+                                    vitae voluptas voluptatibus!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="section-controls">
+        <a href="#section-main"></a>
+        <a class="active" href="#section-events"></a>
+        <a href="#section-speakers"></a>
+        <a href="#section-organizers"></a>
     </div>
 </section>
 
-<section class="speakers">
+<section id="section-speakers" class="speakers">
 
     <div class="rhino-left"></div>
     <div class="rhino-right"></div>
@@ -190,7 +239,6 @@
         </div>
 
     </div>
-
 
     <div class="speaker-block">
 
@@ -237,31 +285,30 @@
         </div>
     </div>
 
+    <div class="section-controls">
+        <a href="#section-main"></a>
+        <a href="#section-events"></a>
+        <a class="active" href="#section-speakers"></a>
+        <a href="#section-organizers"></a>
+    </div>
 </section>
-<section class="organizers">
-    <div class="section-header">
-        <div class="section-column-1">
-            <a href="https://www.griddynamics.com" class="color_logo">
-                <img src="./assets/images/logo-gd%20(1).svg" alt="grid dynamics logo">
-                <span class="color_logo_name">Grid Dynamics</span>
-            </a>
-            <div class="events-date">
-                <h3>Львів</h3>
-                <time>21 жовтня, 2017</time>
-            </div>
-        </div>
-        <div class="section-column-2">
-            <h2>Партнери</h2>
-            <span class="square-icon"></span>
-        </div>
-        <div class="section-column-3">
-            <a href="https://goo.gl/forms/CcWPa8ynuWIgZG5H2" class="btn btn--yellow">Реєстрація</a>
 
-            <div class="events-place">
-                <h3>Communa</h3>
-                <h3>м. Львів, вул. Галицька 1, 2-й поверх</h3>
-                <h3>(на розі Площі Ринок)</h3>
+<section id="section-organizers">
+    <div class="organizers">
+        <div class="section-header">
+            <div class="section-column-1">
+                <a href="https://www.griddynamics.com" class="color_logo">
+                    <img src="./assets/images/logo-gd%20(1).svg" alt="grid dynamics logo">
+                    <span class="color_logo_name">Grid Dynamics</span>
+                </a>
+                <div class="events-date">
+                    <h3>Львів</h3>
+                    <time>21 жовтня, 2017</time>
+                </div>
             </div>
+            <div class="section-column-2">
+                <h2>Партнери</h2>
+                <span class="square-icon"></span>
         </div>
     </div>
     <div class="organizers-content">
@@ -278,24 +325,56 @@
                     your next breakaway project.
                 </p>
             </div>
-            <div class="socials">
-                <span>Ми в соцмережах</span>
-                <nav class="socials-links">
-                    <a target="_blank" href="https://twitter.com/griddynamics"><i class="fa fa-twitter"
-                                                                                  aria-hidden="true"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/griddynamics_ua/"><i class="fa fa-instagram"
-                                                                                            aria-hidden="true"></i></a>
-                    <a target="_blank" href="https://www.facebook.com/GridDynamics.Ukraine/"><i class="fa fa-facebook"
-                                                                                                aria-hidden="true"></i></a>
-                    <a target="_blank" href="https://www.youtube.com/channel/UCFX-U3YT1ANC907BzvhNn7Q"><i
-                            class="fa fa-youtube-play" aria-hidden="true"></i></a>
-                    <a target="_blank" href="https://plus.google.com/115302417170674279390"><i class="fa fa-google-plus"
-                                                                                               aria-hidden="true"></i></i>
-                    </a>
-                </nav>
-            </div>
-            <a target="_blank" href="https://www.griddynamics.com/careers" class="btn btn--yellow">Вакансії компанії</a>
+            <div class="section-column-3">
+                <a href="https://goo.gl/forms/CcWPa8ynuWIgZG5H2" class="btn btn--yellow">Реєстрація</a>
 
+                    <div class="events-place">
+                        <h3>Communa</h3>
+                        <h3>м. Львів, вул. Галицька, 1, 2-й поверх</h3>
+                        <h3>(на розі Площі Ринок)</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="organizers-content">
+                <div class="info">
+                    <div class="description">
+                        <p class="description__title">Grid Dynamics is a provider for scalable ecommerce platform solutions</p>
+                        <p class="description__text">
+                            Grid Dynamics is the engineering IT services company known for transformative, mission-critical
+                            cloud solutions for retail, finance and technology sectors. We architected some of the busiest
+                            e-commerce services on the Internet and have never had an outage during the peak season.
+                            Founded in 2006 and headquartered in San Ramon, California with offices throughout the US and
+                            Eastern Europe, we focus on big data analytics, scalable omnichannel services, DevOps, and cloud
+                            enablement. Let our world-class engineers, armed with proven industry-specific blueprints, deliver
+                            your next breakaway project.
+                        </p>
+                    </div>
+                    <div class="socials">
+                        <span>Ми в соцмережах</span>
+                        <nav class="socials-links">
+                            <a target="_blank" href="https://twitter.com/griddynamics"><i class="fa fa-twitter"
+                                                                                        aria-hidden="true"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/griddynamics_ua/"><i class="fa fa-instagram"
+                                                                                                    aria-hidden="true"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/GridDynamics.Ukraine/"><i class="fa fa-facebook"
+                                                                                                        aria-hidden="true"></i></a>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCFX-U3YT1ANC907BzvhNn7Q"><i
+                                    class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                            <a target="_blank" href="https://plus.google.com/115302417170674279390"><i class="fa fa-google-plus"
+                                                                                                    aria-hidden="true"></i></i>
+                            </a>
+                        </nav>
+                    </div>
+                    <a target="_blank" href="https://www.griddynamics.com/careers" class="btn btn--yellow">Вакансії компанії</a>
+                </div>
+                <div class="location">
+                    <h2 class="location__title">Місце проведення</h2>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764.9802696644165!2d24.030777855351012!3d49.84103095620553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6dca0c9b13%3A0x2797b7e6a216b902!2sHalytska+St%2C+1%2C+L&#39;viv%2C+Lviv+Oblast!5e0!3m2!1sen!2sua!4v1507292702049"
+                                width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
         </div>
         <div class="location">
             <h2 class="location__title">Місце проведення</h2>
@@ -306,12 +385,19 @@
             </div>
         </div>
     </div>
+    <div class="section-controls">
+        <a href="#section-main"></a>
+        <a href="#section-events"></a>
+        <a href="#section-speakers"></a>
+        <a class="active" href="#section-organizers"></a>
+    </div>
 </section>
-<footer>
 
+<footer>
     <p>© 2017 Grid Dynamics International, Inc.</p>
     <a href="mailto:info@dynamictalks.io">info@dynamictalks.io</a>
-
 </footer>
+
+<script src="./dist/js/main.js"></script>
 </body>
 </html>
