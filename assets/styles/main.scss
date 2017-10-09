@@ -13,6 +13,17 @@
     margin: 0 auto;
   }
 
+  .register_btn button {
+    font-family: $font-family-opensans-regular;
+    padding: 8px 18px;
+    color: $color-black;
+    background-color: $color-white;
+    text-transform: uppercase;
+    border-radius: 40px;
+    width: 136px;
+    height: 36px;
+  }
+
   &_content {
     padding-top: 53px;
     display: flex;
@@ -111,3 +122,4 @@
     }
   }
 }
+
