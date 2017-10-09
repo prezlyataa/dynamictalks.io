@@ -174,6 +174,15 @@ section {
         text-transform: none;
       }
 
+      .special-guest {
+        font-family: $font-family-opensans-regular;
+        margin-bottom: 20px;
+        color: $color-orange;
+        font-size: 0.7em;
+        text-align: left;
+        text-transform: none;
+      }
+
       span {
         background: url("../images/Path_10_Copy_2.svg") center no-repeat;
         width: 145px;
@@ -196,7 +205,7 @@ section {
       top: -80px;
     }
 
-    p {
+    p, ul {
       padding: 5%;
       font-size: $font-size-regular-res;
 
@@ -213,7 +222,7 @@ section {
     img {
       bottom: -80px;
     }
-    p {
+    p, ul {
       padding: 5%;
       font-size: $font-size-regular-res;
 
@@ -231,7 +240,7 @@ section {
       top: -80px;
     }
 
-    p {
+    p, ul {
       padding: 5%;
       font-size: $font-size-regular-res;
 

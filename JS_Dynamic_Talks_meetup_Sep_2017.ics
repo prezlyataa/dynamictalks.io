@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//www.marudot.com//iCal Event Maker
+X-WR-CALNAME:JS Dynamic Talks meetup
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Asia/Beirut
+TZURL:http://tzurl.org/zoneinfo-outlook/Asia/Beirut
+X-LIC-LOCATION:Asia/Beirut
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0300
+TZNAME:EEST
+DTSTART:19700329T000000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0200
+TZNAME:EET
+DTSTART:19701025T000000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20171009T140029Z
+UID:20171009T140029Z-338532228@marudot.com
+DTSTART;TZID="Asia/Beirut":20171021T110000
+DTEND;TZID="Asia/Beirut":20171021T160000
+SUMMARY:JS Dynamic Talks meetup
+URL:http%3A%2F%2Fdynamictalks.io
+DESCRIPTION:10:30 - Registration starts\n11:00 - Introduction\, few words about meetup\n11:15 - What skill set and experienced required for front end engineer to be a Tech Lead on the project By Georgiy Podsvyetov\n12:30 - Coffee\n12:45 - What you should to know about logging when developing web-applications and prepraing for production rollout. With examples based on ELK stack. By Volodymyr Voyevidka\n14:00 - Beer & snacks\n14:30 - (Special guest) Why navigation systems with all modern technologies still sucks sometimes in finding locations. By Lyubomyr Semkiv\n16:00 - Networking session
+LOCATION:вул. Галицька 1\, м. Львів\, коворкінг Communa\, 2-й поверх (на розі площі Ринок)
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:JS Dynamic Talks meetup
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
