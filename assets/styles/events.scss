@@ -42,6 +42,18 @@
   }
 }
 
+.color_logo {
+  display: inline-block;
+  position: relative;
+  &_name {
+    position: absolute;
+    font-size: 20px;
+    color: $color-black;
+    top: 12px;
+    left: 55px;
+  }
+}
+
 .section-column-1 {
   img {
     margin-bottom: 55px;
