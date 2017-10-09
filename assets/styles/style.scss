@@ -56,6 +56,10 @@ section {
 
     z-index: 100;
 
+    @include respond-to($phone){
+      display: none;
+    }
+
     a {
       width: 12px;
       height: 12px;
