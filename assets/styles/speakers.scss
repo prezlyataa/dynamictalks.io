@@ -436,6 +436,11 @@ footer{
 
   p+p{
     color: $color-orange;
+
+    a, a:hover, a:active, a:visited, a:focus{
+      text-decoration: none;
+      color: $color-orange;
+    }
   }
 }
 
