@@ -101,6 +101,7 @@
   @include respond-to($tablet-portrait) {
     order: -1;
     margin-bottom: 40px;
+
     h2 {
       margin-bottom: 15px;
     }
@@ -191,6 +192,7 @@
       text-transform: uppercase;
       color: $color-orange;
     }
+
 
     &:hover {
       border-bottom: 4px solid $color-orange;
