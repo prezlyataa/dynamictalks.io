@@ -101,6 +101,11 @@ section {
       align-self: flex-end;
       position: relative;
       z-index: 3;
+      cursor: pointer;
+
+      &:hover{
+        box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.2);
+      }
 
       p {
         font-family: $font-family-opensans-regular;
@@ -436,5 +441,4 @@ footer{
     }
   }
 }
-
 
