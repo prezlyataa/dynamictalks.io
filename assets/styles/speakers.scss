@@ -93,11 +93,7 @@ section {
 
   .column-3 {
 
-    button {
-      width: 136px;
-      height: 36px;
-      border-radius: 40px;
-      background-color: #FFFFFF;
+    a {
       align-self: flex-end;
       position: relative;
       z-index: 3;
@@ -337,7 +333,8 @@ section {
     }
 
     .column-3 {
-      button {
+      a {
+
         align-self: center
       }
 
@@ -427,8 +424,9 @@ footer{
     color:$color-black;
   }
 
-  p+p{
+  a{
     color: $color-orange;
+    text-decoration: none;
   }
 }
 
