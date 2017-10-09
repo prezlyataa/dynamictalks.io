@@ -9,6 +9,7 @@ const gulp = require('gulp'),
 
 const assetsPath = './assets';
 const sassWatchPattern = `${assetsPath}/**/*.scss`;
+const jsWatchPattern = `${assetsPath}/**/*.js`;
 const htmlWatchPattern = './template.html';
 const outputPath = './dist';
 
@@ -34,13 +35,19 @@ gulp.task('copy:style', () =>
         .pipe(gulp.dest(outputPath))
 );
 
+gulp.task('copy:js', () =>
+    gulp.src(`${assetsPath}/**/main.js`)
+        .pipe(cachebust.resources())
+        .pipe(gulp.dest(outputPath))
+);
+
 gulp.task('copy:img', () =>
     gulp.src(`${assetsPath}/images/**/*.*`)
         .pipe(cachebust.resources())
         .pipe(gulp.dest(`${outputPath}/images`))
 );
 
-gulp.task('copy', ['copy:style', 'copy:img']);
+gulp.task('copy', ['copy:style', 'copy:img', 'copy:js']);
 
 gulp.task('replace:html', () =>
     gulp.src(htmlWatchPattern)
@@ -55,10 +62,16 @@ gulp.task('replace:css', () =>
         .pipe(gulp.dest(outputPath))
 );
 
-gulp.task('replace-hash', ['replace:html', 'replace:css']);
+gulp.task('replace:js', () =>
+    gulp.src(`${outputPath}/**/*.js`)
+        .pipe(cachebust.references())
+        .pipe(gulp.dest(outputPath))
+);
+
+gulp.task('replace-hash', ['replace:html', 'replace:css', 'replace:js']);
 
 gulp.task('clean', () => del([outputPath, 'index.html'], { force: true }));
 
 gulp.task('build', gulpsync.sync(['clean', 'sass', 'copy', 'replace-hash']));
 
-gulp.task('sass-watch', () => gulp.watch([sassWatchPattern, htmlWatchPattern], ['build']));
+gulp.task('sass-watch', () => gulp.watch([sassWatchPattern, jsWatchPattern, htmlWatchPattern], ['build']));

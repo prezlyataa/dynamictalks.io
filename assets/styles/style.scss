@@ -44,3 +44,43 @@ body, html {
     }
   }
 }
+
+section {
+  position: relative;
+
+  & .section-controls {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 100;
+
+    a {
+      width: 12px;
+      height: 12px;
+      margin-bottom: 9px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:after {
+        width: 6px;
+        height: 6px;
+        content: ' ';
+        display: inline-block;
+        opacity: 0.36;
+        border-radius: 50%;
+        background: $color-black;
+      }
+
+      &.active {
+        &:after {
+          width: 12px;
+          height: 12px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

@@ -191,10 +191,11 @@
       font-weight: bold;
       text-transform: uppercase;
       color: $color-orange;
+      pointer-events: none;
     }
 
-
-    &:hover {
+    &:hover,
+    &.active {
       border-bottom: 4px solid $color-orange;
       cursor: pointer;
       span {
@@ -215,6 +216,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    display: none;
+
+    &.active {
+      display: block;
+    }
   }
 
   &__text-wrap {
