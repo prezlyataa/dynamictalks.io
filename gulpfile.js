@@ -1,28 +1,64 @@
 const gulp = require('gulp'),
-    sourcemaps = require('gulp-sourcemaps'),
+    gulpsync = require('gulp-sync')(gulp),
     sass = require('gulp-sass'),
+    CacheBuster = require('gulp-cachebust'),
     cleanCSS = require('gulp-clean-css'),
+    del = require('del'),
+    rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer');
 
-/* pathConfig*/
-const sassWatchPath = './assets/**/*.scss';
-/**/
+const assetsPath = './assets';
+const sassWatchPattern = `${assetsPath}/**/*.scss`;
+const htmlWatchPattern = './template.html';
+const outputPath = './dist';
+
+const cachebust = new CacheBuster();
 
 gulp.task('sass', () =>
-    gulp.src(sassWatchPath)
-        .pipe(sourcemaps.init())
+    gulp.src(sassWatchPattern)
         .pipe(sass({
             trace: true,
             verbose: true
         }).on('error', sass.logError))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions']
+            browsers: ['last 3 versions']
         }))
-        .pipe(sourcemaps.write())
-        .pipe(cleanCSS({compatibility: 'ie11'}))
-        .pipe(gulp.dest('./assets/'))
+        .pipe(gulp.dest(assetsPath))
 );
 
-gulp.task('sass-watch', () => {
-    gulp.watch(sassWatchPath, ['sass']);
-});
+
+gulp.task('copy:style', () =>
+    gulp.src(`${assetsPath}/**/style.css`)
+        .pipe(cleanCSS({ compatibility: 'ie11' }))
+        .pipe(cachebust.resources())
+        .pipe(gulp.dest(outputPath))
+);
+
+gulp.task('copy:img', () =>
+    gulp.src(`${assetsPath}/images/**/*.*`)
+        .pipe(cachebust.resources())
+        .pipe(gulp.dest(`${outputPath}/images`))
+);
+
+gulp.task('copy', ['copy:style', 'copy:img']);
+
+gulp.task('replace:html', () =>
+    gulp.src(htmlWatchPattern)
+        .pipe(rename('index.html'))
+        .pipe(cachebust.references())
+        .pipe(gulp.dest('./'))
+);
+
+gulp.task('replace:css', () =>
+    gulp.src(`${outputPath}/**/*.css`)
+        .pipe(cachebust.references())
+        .pipe(gulp.dest(outputPath))
+);
+
+gulp.task('replace-hash', ['replace:html', 'replace:css']);
+
+gulp.task('clean', () => del([outputPath, 'index.html'], { force: true }));
+
+gulp.task('build', gulpsync.sync(['clean', 'sass', 'copy', 'replace-hash']));
+
+gulp.task('sass-watch', () => gulp.watch([sassWatchPattern, htmlWatchPattern], ['build']));

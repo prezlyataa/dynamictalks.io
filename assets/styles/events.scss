@@ -101,7 +101,8 @@
   @include respond-to($tablet-portrait) {
     order: -1;
     margin-bottom: 40px;
-    h2{
+
+    h2 {
       margin-bottom: 15px;
     }
   }
@@ -146,6 +147,10 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: 10px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     button {
       order: 2;
     }
@@ -165,6 +170,12 @@
     @include respond-to($tablet-portrait) {
       padding: 30px;
     }
+  }
+
+  &__content-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   &__head {
@@ -218,8 +229,3 @@
   }
 
 }
-
-
-
-
-
