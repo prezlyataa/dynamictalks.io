@@ -237,17 +237,50 @@
       font-size: 25px;
       font-weight: 500;
     }
-    .tabs__content-container {
-      .schedule li{
-        list-style: none;
-        margin: 10px;
-        letter-spacing: 1.5px;
-        .underline {
-          font-size: 9px;
-          letter-spacing: 4px;
+
+    .schedule{
+      list-style-type: none;
+
+      li{
+        font-family: $font-family-opensans-regular;
+        font-size: 1.2em;
+
+        span{
+          font-weight: 500;
+          padding-left: 2em;
+          font-size: 1em;
+        }
+
+        .time{
+          font-weight: 700;
+        }
+        .line-timetable{
+          text-align: center;
+          display: flex;
+
+          .text{
+            display: flex;
+            width:100%;
+            justify-content: center;
+            flex-direction: column;
+          }
+        }
+
+        .underline{
+          background: url("../images/Path_10_Copy_2.svg") center no-repeat;
+          width: 145px;
+          height: 15px;
+          display: block;
+          position: relative;
+          left:50%;
+          transform: translate(-50%);
+          padding: 0.5em 0 0.5em 0;
         }
       }
+
     }
+
+
   }
 
   &__text-wrap {
@@ -259,4 +292,47 @@
     }
   }
 
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 3000px) {
+  .schedule{
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1500px) {
+  .schedule {
+    width: 80%;
+  }
+
+  .tabs__content {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .tabs__content{
+    padding: 0;
+
+    .schedule li {
+      .line-timetable{
+        display: flex;
+        flex-direction: column;
+
+        .text{
+          padding: 0 0.2em 0 0.2em;
+        }
+      }
+
+      span{
+        padding-left: 0;
+      }
+    }
+
+
+  }
+
+  .tabs__text-content .schedule li{
+    width:80%;
+    margin:0 auto;
+  }
 }
