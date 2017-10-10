@@ -21,6 +21,11 @@ section {
 
   .rhino-right {
     transform: scaleX(-1);
+    right: 0;
+  }
+
+  .rhino-left{
+    left: 0;
   }
 
 }
@@ -358,10 +363,8 @@ section {
 
     .column-3 {
       a {
-
         align-self: center
       }
-
       .address {
         padding-top: 15%;
         width: 170%;
