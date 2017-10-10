@@ -330,8 +330,8 @@
     width: 80%;
   }
 
-  .tabs-info p{
-    padding:1em 5em !important;
+  .tabs__content-container .tabs-info p{
+    padding:1em 5em;
   }
 }
 
@@ -344,8 +344,8 @@
     padding: 0;
   }
 
-  .tabs-info p{
-    padding:1em 4em !important;
+  .tabs__content-container .tabs-info p{
+    padding:1em 4em;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 900px) {
@@ -378,11 +378,11 @@
     margin:0 auto;
   }
 
-  .tabs-info{
+  .tabs__content-container .tabs-info{
     flex-direction: column;
 
     p{
-      padding: 1em 2em !important;
+      padding: 1em 2em;
     }
   }
 }
