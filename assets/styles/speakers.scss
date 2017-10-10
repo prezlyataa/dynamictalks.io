@@ -13,7 +13,7 @@ section {
     position: absolute;
     width: 100%;
     height: 40%;
-    top: 20%;
+    top: 65%;
     z-index: 2;
     pointer-events: none;
 
@@ -21,6 +21,11 @@ section {
 
   .rhino-right {
     transform: scaleX(-1);
+    right: 0;
+  }
+
+  .rhino-left{
+    left: 0;
   }
 
 }
