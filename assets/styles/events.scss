@@ -56,20 +56,22 @@
 
 .add_to_us {
   text-align: center;
-  h3 {
-    padding: 25px 0 10px;
-  }
-  &_links {
-    a {
-      display: inline-block;
-      img {
-        width: 35px;
-        height: 35px;
-        margin: 0 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+
+    &_links {
+      a {
+        display: inline-block;
+        img {
+          width: 35px;
+          height: 35px;
+          margin: 0 8px 0;
+        }
       }
     }
   }
-}
 
 .section-column-1 {
   img {
