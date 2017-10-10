@@ -436,19 +436,37 @@ section {
   }
 }
 
-footer{
+footer {
   display: flex;
   width: 85%;
   justify-content: space-between;
+  align-items: center;
   margin:0 auto;
   padding: 2em 0 2em 0;
+  .footer_links {
+    display: flex;
+    align-items: center;
+    a {
+      display: inline-block;
+    }
+    .slack_logo img {
+      height: 30px;
+      width: 30px;
+      padding-right: 25px;
+    }
+    .facebook_logo img {
+      height: 30px;
+      width: 30px;
+      padding-right: 25px;
+    }
+  }
 
-  p{
+  p {
     font-family: $font-family-opensans-regular;
     color:$color-black;
   }
 
-  a{
+  a {
     color: $color-orange;
     text-decoration: none;
 
@@ -456,17 +474,22 @@ footer{
       text-decoration: none;
       color: $color-orange;
     }
-
   }
 }
 
 @media only screen and (max-width: 820px) {
-  footer{
+  footer {
     flex-direction: column;
     align-items: center;
 
     p{
       text-align: center;
     }
+
+    .footer_links {
+      order: -1;
+      padding-bottom: 15px;
+    }
   }
 }
+
