@@ -54,6 +54,23 @@
   }
 }
 
+.add_to_us {
+  text-align: center;
+  h3 {
+    padding: 25px 0 10px;
+  }
+  &_links {
+    a {
+      display: inline-block;
+      img {
+        width: 35px;
+        height: 35px;
+        margin: 0 8px 0;
+      }
+    }
+  }
+}
+
 .section-column-1 {
   img {
     margin-bottom: 55px;
@@ -308,6 +325,9 @@
   .tabs__content {
     padding: 0;
   }
+  .add_to_us {
+    padding-bottom: 20px;
+  }
 }
 @media only screen and (min-width: 320px) and (max-width: 900px) {
   .tabs__content{
@@ -329,6 +349,9 @@
     }
 
 
+  }
+  .add_to_us {
+    padding-bottom: 20px;
   }
 
   .tabs__text-content .schedule li{
