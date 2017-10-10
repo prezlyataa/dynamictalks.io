@@ -21,6 +21,11 @@ section {
 
   .rhino-right {
     transform: scaleX(-1);
+    right: 0;
+  }
+
+  .rhino-left{
+    left: 0;
   }
 
 }

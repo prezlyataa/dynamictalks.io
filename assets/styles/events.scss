@@ -185,6 +185,16 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
+    .tabs-info{
+      display: flex;
+
+      p{
+        padding: 0;
+      }
+    }
+
+
   }
 
   &__head {
@@ -240,7 +250,7 @@
 
     .schedule{
       list-style-type: none;
-
+      padding-top: 2em;
       li{
         font-family: $font-family-opensans-regular;
         font-size: 1.2em;
@@ -281,6 +291,7 @@
     }
 
 
+
   }
 
   &__text-wrap {
@@ -298,6 +309,10 @@
   .schedule{
     width: 80%;
   }
+
+  .tabs-info p{
+    padding:1em 5em !important;
+  }
 }
 
 @media only screen and (min-width: 900px) and (max-width: 1500px) {
@@ -307,6 +322,10 @@
 
   .tabs__content {
     padding: 0;
+  }
+
+  .tabs-info p{
+    padding:2em 4em !important;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 900px) {
@@ -335,4 +354,14 @@
     width:80%;
     margin:0 auto;
   }
+
+  .tabs-info{
+    flex-direction: column;
+
+    p{
+      padding: 1em 2em !important;
+    }
+  }
 }
+
+
