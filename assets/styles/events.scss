@@ -267,14 +267,14 @@
         }
 
         .underline{
-          background: url("../images/Path_10_Copy_2.svg") center no-repeat;
-          width: 145px;
-          height: 15px;
+          color: $color-orange;
           display: block;
           position: relative;
           left:50%;
           transform: translate(-50%);
-          padding: 0.5em 0 0.5em 0;
+          letter-spacing: 0.7em;
+          padding-bottom: 1em;
+          padding-left: 0;
         }
       }
 
