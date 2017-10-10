@@ -56,9 +56,11 @@
 
 .add_to_us {
   text-align: center;
-  h3 {
-    padding: 25px 0 10px;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
   &_links {
     a {
       display: inline-block;
