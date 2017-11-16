@@ -10,10 +10,6 @@ export const CN = 'registration-button';
 
 export default class RegistrationButton extends Component {
 
-  static propTypes = {
-    ...Button.propTypes
-  };
-
   static defaultProps = {
     theme: BUTTON_THEME.YELLOW
   };

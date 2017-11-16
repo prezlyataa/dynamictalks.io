@@ -28,7 +28,7 @@ export default class Section extends Component {
     /**
      * shape - shape to show below the title
      */
-    shape: PropTypes.oneOf([SHAPE.TRIANGLE]),
+    shape: PropTypes.oneOf([SHAPE.TRIANGLE, SHAPE.CIRCLE, SHAPE.SQUARE]),
 
     /**
      * showDateAndLocation - determines is date and location line is visible
