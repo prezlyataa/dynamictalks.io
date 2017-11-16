@@ -1,0 +1,346 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+/*.line-meetup {*/
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1.5em;
+
+    @include respond-to($phone) {
+      justify-content: center;
+    }
+    @include respond-to($tablet-portrait) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+
+  .section-column-1, .section-column-2, .section-column-3 {
+    @include respond-to($desktop) {
+      width: 30%;
+    }
+  }
+
+  .add_to_us {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    &_links {
+      a {
+        display: inline-block;
+        img {
+          width: 35px;
+          height: 35px;
+          margin: 0 8px 0;
+        }
+      }
+    }
+  }
+
+  .section-column-1 {
+    img {
+      margin-bottom: 55px;
+    }
+
+    @include respond-to($tablet-portrait) {
+      text-align: center;
+      margin-bottom: 40px;
+      img {
+        margin-bottom: 15px;
+      }
+    }
+
+  }
+
+  .section-column-2 {
+    text-align: center;
+
+    h2 {
+      font-size: 2.5em;
+      font-weight: 300;
+      letter-spacing: 6px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 55px;
+
+    }
+
+    .circle-icon {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 4px solid $color-orange;
+    }
+
+    @include respond-to($tablet-landscape) {
+      flex-basis: 800px;
+      order: -1;
+      h2 {
+        margin-bottom: 15px;
+      }
+    }
+    @include respond-to($tablet-portrait) {
+      order: -1;
+      margin-bottom: 40px;
+
+      h2 {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include respond-to($tablet-portrait) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: auto;
+
+      h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+      }
+    }
+
+  }
+
+  .section-column-3 {
+    text-align: right;
+
+    .events-place {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: $color-orange;
+
+      h3 {
+        font-weight: 300;
+      }
+
+      h3:nth-child(2) {
+        font-weight: bold;
+      }
+
+    }
+
+    @include respond-to($tablet-portrait) {
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      button {
+        order: 2;
+      }
+      .events-place {
+        text-align: center;
+      }
+    }
+
+  }
+
+  .tabs {
+    background-color: #F8F8F8;
+
+    &__content {
+      padding: 30px 100px;
+
+      @include respond-to($tablet-portrait) {
+        padding: 30px;
+      }
+    }
+
+    &__content-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .tabs-info {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          padding: 0;
+        }
+      }
+
+    }
+
+    &__head {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__item {
+      flex-basis: 50%;
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 4px solid transparent;
+
+      span {
+        font-size: 1.125em;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $color-orange;
+        pointer-events: none;
+      }
+
+      &:hover,
+      &.active {
+        border-bottom: 4px solid $color-orange;
+        cursor: pointer;
+        span {
+          color: $color-black;
+        }
+      }
+    }
+
+    &__title {
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: 300;
+      margin-bottom: 30px;
+      text-transform: capitalize;
+    }
+
+    &__text-content {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+      .tabs__title {
+        font-size: 25px;
+        font-weight: 500;
+      }
+
+      .schedule {
+        list-style-type: none;
+        padding-top: 2em;
+        li {
+          font-family: $font-family-opensans-regular;
+          font-size: 1.2em;
+
+          span {
+            font-weight: 500;
+            padding-left: 2em;
+            font-size: 1em;
+          }
+
+          .time {
+            font-weight: 700;
+          }
+          .line-timetable {
+            text-align: center;
+            display: flex;
+
+            .text {
+              display: flex;
+              width: 100%;
+              justify-content: center;
+              flex-direction: column;
+            }
+          }
+
+          .underline {
+            color: $color-orange;
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            letter-spacing: 0.7em;
+            padding-bottom: 1em;
+            padding-left: 0;
+          }
+        }
+
+      }
+
+    }
+
+    &__text-wrap {
+      flex-basis: 400px;
+      margin-bottom: 70px;
+
+      p {
+        font-size: $font-size-regular-res;
+      }
+    }
+
+  }
+
+  @media only screen and (min-width: 1500px) and (max-width: 3000px) {
+    .schedule {
+      width: 80%;
+    }
+
+    .tabs__content-container .tabs-info p {
+      padding: 1em 5em;
+      max-width: 1100px;
+    }
+  }
+
+  @media only screen and (min-width: 900px) and (max-width: 1500px) {
+    .schedule {
+      width: 80%;
+    }
+
+    .tabs__content {
+      padding: 0;
+    }
+
+    .tabs__content-container .tabs-info p {
+      padding: 1em 4em;
+      max-width: 800px;
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 900px) {
+    .tabs__content {
+      padding: 0;
+
+      .schedule li {
+        .line-timetable {
+          display: flex;
+          flex-direction: column;
+
+          .text {
+            padding: 0 0.2em 0 0.2em;
+          }
+        }
+
+        span {
+          padding-left: 0;
+        }
+      }
+
+    }
+    .add_to_us {
+      padding-bottom: 20px;
+    }
+
+    .tabs__text-content .schedule li {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .tabs__content-container .tabs-info {
+      flex-direction: column;
+
+      p {
+        padding: 1em 2em;
+      }
+    }
+  }
+/*
+}
+*/

@@ -1,0 +1,32 @@
+@import "~src/variables.scss";
+@import "~src/mixins.scss";
+
+
+.button {
+  height: 20px;
+  padding: 8px 18px;
+  display: inline-block;
+  border-radius: 40px;
+  font-size: 14px;
+  color: $color-black;
+  text-transform: uppercase;
+  line-height: 19px;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &--yellow {
+    background-color: $color-orange;
+    margin-bottom: 55px;
+
+    &:hover {
+      background-color: rgba(255, 221, 89, 1);
+    }
+  }
+
+  &--white {
+    background-color: $color-white;
+  }
+}

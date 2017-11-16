@@ -7,6 +7,8 @@ import introText from 'src/images/intro_text.png';
 import tabletIntroText from 'src/images/tablet_intro_text.png';
 import rhino from 'src/images/rhino.png';
 import pathLine from 'src/images/path_line.png';
+import { Logo, LOGO_THEME } from 'src/components/Logo';
+import { RegistrationButton, BUTTON_THEME } from 'src/components/RegistrationButton';
 import './Top.scss';
 
 
@@ -42,27 +44,11 @@ export default class Events extends Component {
       >
         <div className="container_dekstop">
           <div className="main_content">
-            <div className="logo">
-              <a
-                data-gtag="gd-logo-main"
-                href="https://www.griddynamics.com"
-                id="gd-logo-main"
-                target="_blank"
-              >
-                <img
-                  alt="Grid Dynamics"
-                  src={logo}
-                />
-              </a>
-            </div>
-            <div className="register_btn">
-              <a className="btn"
-                data-gtag="register-main-desktop"
-                href="https://goo.gl/forms/CcWPa8ynuWIgZG5H2"
-                id="register-main-desktop"
-                target="_blank"
-              >Реєстрація</a>
-            </div>
+
+            <Logo theme={LOGO_THEME.BW}/>
+
+            <RegistrationButton theme={BUTTON_THEME.WHITE}/>
+
           </div>
           <div className="main_intro">
             <div className="intro_text">

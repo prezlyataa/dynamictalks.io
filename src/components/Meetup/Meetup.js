@@ -2,16 +2,19 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
-import logo from 'src/images/logo-gd1.svg';
+import { EventDate } from 'src/components/EventDate';
+import { EventPlace } from 'src/components/EventPlace';
+import { Logo } from 'src/components/Logo';
+import { RegistrationButton } from 'src/components/RegistrationButton';
 import slack from 'src/images/slack_icon.png';
 import facebook from 'src/images/facebook-logo.png';
-import './Events.scss';
+import './Meetup.scss';
 
 
-export const CN = 'events';
+export const CN = 'line-meetup';
 
 
-export default class Events extends Component {
+export default class Meetup extends Component {
 
   static propTypes = {
 
@@ -40,39 +43,19 @@ export default class Events extends Component {
         <div className="events">
           <div className="section-header">
             <div className="section-column-1">
-              <a className="color_logo"
-                data-gtag="gd-logo-details"
-                href="https://www.griddynamics.com"
-                id="gd-logo-details"
-                target="_blank"
-              >
-                <img
-                  alt="grid dynamics logo"
-                  src={logo}
-                />
-                <span className="color_logo_name">Grid Dynamics</span>
-              </a>
-              <div className="events-date">
-                <h3>Львів</h3>
-                <time>21 жовтня, 2017</time>
-              </div>
+              <Logo/>
+
+              <EventDate/>
             </div>
             <div className="section-column-2">
               <h2>Meetup</h2>
               <span className="circle-icon"/>
             </div>
             <div className="section-column-3">
-              <a className="btn btn--yellow"
-                data-gtag="register-details"
-                href="https://goo.gl/forms/CcWPa8ynuWIgZG5H2"
-                id="register-details"
-                target="_blank"
-              >Реєстрація</a>
-              <div className="events-place">
-                <h3>Communa</h3>
-                <h3>м. Львів, вул. Галицька 1, 2-й поверх</h3>
-                <h3>(на розі Площі Ринок)</h3>
-              </div>
+
+              <RegistrationButton/>
+              <EventPlace/>
+
             </div>
           </div>
 

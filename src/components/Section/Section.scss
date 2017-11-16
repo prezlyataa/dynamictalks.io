@@ -1,0 +1,22 @@
+@import "~src/variables.scss";
+@import "~src/mixins.scss";
+
+
+.section {
+  position: relative;
+  padding: 50px 0 70px;
+
+
+  &__inner {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  &--white {
+    background-color: $color-white;
+  }
+
+  &--yellow {
+    background-color: $color-orange;
+  }
+}

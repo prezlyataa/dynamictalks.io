@@ -2,11 +2,10 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
-
+import { Section, SHAPE } from 'src/components/Section';
 import Podsvetov from 'src/images/speakers/podsvyetov.jpg';
 import Semkiv from 'src/images/speakers/semkiv.jpg';
 import Voyevidka from 'src/images/speakers/volodymyr_voyevidka.jpg';
-
 import './Speakers.scss';
 
 
@@ -36,59 +35,27 @@ export default class Speakers extends Component {
     const {className} = this.props;
 
     return (
-
-      <section className={cx(CN, className)}
-        id="section-speakers"
+      <Section
+        className={cx(CN, className)}
+        shape={SHAPE.TRIANGLE}
+        showDateAndLocation
+        title="СПІКЕРИ"
       >
 
         <div className="rhino-left"/>
         <div className="rhino-right"/>
 
-        <div className="header-block">
 
-          <div className="column-1">
-            <a data-gtag="gd-logo-speakers"
-              href="https://www.griddynamics.com"
-              id="gd-logo-speakers"
-              target="_blank"
-            ><div className="logo-icon"/></a>
-            <div className="date">
-              <h2>Львів</h2>
-              <time>21 жовтня, 2017</time>
-            </div>
-          </div>
-
-
-          <div className="column-2">
-            <h2>Спікери</h2>
-            <div className="triangle"/>
-          </div>
-
-          <div className="column-3">
-            <a className="btn"
-              data-gtag="register-speakers"
-              href="https://goo.gl/forms/CcWPa8ynuWIgZG5H2"
-              id="register-speakers"
-              target="_blank"
-            >Реєстрація</a>
-            <div className="address">
-              <h3>Communa</h3>
-              <h3>м. Львів, вул. Галицька 1, 2-й поверх</h3>
-              <h3>(на розі Площі Ринок)</h3>
-            </div>
-          </div>
-
-        </div>
 
         <div className="speaker-block">
 
           <div className="first-speaker">
             <a href="https://www.griddynamics.com"
-              target="_blank"
+               target="_blank"
             >
               <img alt=""
-                className="portrait"
-                src={Podsvetov}
+                   className="portrait"
+                   src={Podsvetov}
               />
             </a>
             <div className="text-wrapper">
@@ -121,14 +88,14 @@ export default class Speakers extends Component {
               </ul>
             </div>
             <img alt=""
-              className="portrait"
-              src={Semkiv}
+                 className="portrait"
+                 src={Semkiv}
             />
           </div>
           <div className="third-speaker">
             <img alt=""
-              className="portrait"
-              src={Voyevidka}
+                 className="portrait"
+                 src={Voyevidka}
             />
             <div className="text-wrapper">
               <div className="name">
@@ -137,7 +104,7 @@ export default class Speakers extends Component {
                 <span/>
               </div>
               <p>«What you should know about logging when developing web-applications and preparing for production rollout.
-            With examples based on Elastic Stack.»</p>
+                With examples based on Elastic Stack.»</p>
               <ul>
                 <li>What you should think of when you design logging approach</li>
                 <li>How to construct log records</li>
@@ -147,15 +114,7 @@ export default class Speakers extends Component {
           </div>
         </div>
 
-        <div className="section-controls">
-          <a href="#section-main" />
-          <a href="#section-events" />
-          <a className="active"
-            href="#section-speakers"
-          />
-          <a href="#section-organizers" />
-        </div>
-      </section>
+      </Section>
     );
   }
 }

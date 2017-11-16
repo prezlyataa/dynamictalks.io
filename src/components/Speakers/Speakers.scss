@@ -35,112 +35,9 @@ section {
   background-color: $color-orange;
 }
 
-.header-block, .speaker-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 85%;
-  margin: 0 auto;
-  padding: 4em 0 2em 0;
-
-  .column-1, .column-2, .column-3 {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-  }
-
-  .column-1 {
-
-    .logo-icon {
-      background: url("../../images/logo.svg") no-repeat;
-      height: 36px;
-      width: 200px;
-      padding-bottom: 10%;
-    }
-
-    .date {
-      color: #FFFFFF;
-      text-transform: uppercase;
-
-      h2 {
-        font-size: 2em;
-        font-family: $font-family-opensans-regular;
-        font-weight: 300;
-      }
-
-      h3 {
-        @include font-family-opensans-bold;
-        font-size: 1.5em;
-
-      }
-    }
-
-  }
-
-  .column-2 {
-
-    h2 {
-      font-family: $font-family-opensans-regular;
-      font-size: 2.5em;
-      font-weight: 300;
-      letter-spacing: 6px;
-      text-align: center;
-      text-transform: uppercase;
-      padding-bottom: 10%;
-    }
-
-    .triangle {
-      background: url("assets/Triangle.svg") center no-repeat;
-      width: 60px;
-      height: 60px;
-      align-self: center;
-    }
-  }
-
-  .column-3 {
-
-    a {
-      align-self: flex-end;
-      position: relative;
-      z-index: 3;
-      cursor: pointer;
-
-      &:hover{
-        box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.2);
-      }
-
-      p {
-        font-family: $font-family-opensans-regular;
-        color: #000000;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 1.1em;
-      }
-
-    }
-
-    .address {
-      padding-top: 10%;
-
-      h3 {
-        color: $color-white;
-        font-family: $font-family-opensans-regular;
-        text-align: right;
-        text-transform: uppercase;
-        font-weight: 300;
-
-        &:nth-child(2) {
-          @include font-family-opensans-bold;
-          font-weight: 700;
-        }
-      }
-
-    }
-  }
-}
-
 .speaker-block {
   display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 1.5em 0 6em 0;
 
@@ -277,7 +174,6 @@ section {
 @media only screen and (min-width: 1040px) and (max-width: 1245px) {
   .speaker-block {
     padding: 2.5em 0 8em 0;
-    width: 80%;
 
     .first-speaker, .second-speaker, .third-speaker {
       width: 30%;
