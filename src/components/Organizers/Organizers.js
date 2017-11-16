@@ -35,8 +35,8 @@ export default class Organizers extends Component {
       <Section
         className={cx(CN, className)}
         shape={SHAPE.SQUARE}
-        theme={SECTION_THEME.WHITE}
         showDateAndLocation
+        theme={SECTION_THEME.WHITE}
         title="Партнери"
       >
         <div className="organizers-content">

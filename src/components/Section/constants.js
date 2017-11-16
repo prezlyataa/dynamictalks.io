@@ -5,5 +5,6 @@ export const SECTION_THEME = {
 
 export const SHAPE = {
   TRIANGLE: 'triangle',
-  SQUARE: 'square'
+  SQUARE: 'square',
+  CIRCLE: 'circle'
 };
