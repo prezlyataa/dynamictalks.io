@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Top } from '../Top';
-import { Events } from '../Events';
+import { Meetup } from '../Meetup';
 import { Speakers } from '../Speakers';
 import { Organizers } from '../Organizers';
 import { Footer } from '../Footer';
@@ -13,7 +13,7 @@ export default class App extends Component {
     return (
       <div>
         <Top/>
-        <Events/>
+        <Meetup/>
         <Speakers/>
         <Organizers/>
         <Footer/>
