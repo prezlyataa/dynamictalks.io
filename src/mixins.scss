@@ -1,0 +1,10 @@
+@mixin font-family-opensans-bold() {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+@mixin respond-to($media) {
+  @media only screen and #{$media} {
+    @content;
+  }
+}
