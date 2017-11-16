@@ -4,5 +4,6 @@ export const SECTION_THEME = {
 };
 
 export const SHAPE = {
-  TRIANGLE: 'triangle'
-}
+  TRIANGLE: 'triangle',
+  SQUARE: 'square'
+};
