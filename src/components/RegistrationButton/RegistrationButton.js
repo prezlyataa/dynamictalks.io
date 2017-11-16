@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
 import '../Button/Button.scss';

@@ -50,12 +50,14 @@ export default class Speakers extends Component {
         <div className="speaker-block">
 
           <div className="first-speaker">
-            <a href="https://www.griddynamics.com"
-               target="_blank"
+            <a
+              href="https://www.griddynamics.com"
+              target="_blank"
             >
-              <img alt=""
-                   className="portrait"
-                   src={Podsvetov}
+              <img
+                alt=""
+                className="portrait"
+                src={Podsvetov}
               />
             </a>
             <div className="text-wrapper">
@@ -87,15 +89,17 @@ export default class Speakers extends Component {
                 <li>Pitfalls, constraints and limitations of developing global navigation software</li>
               </ul>
             </div>
-            <img alt=""
-                 className="portrait"
-                 src={Semkiv}
+            <img
+              alt=""
+              className="portrait"
+              src={Semkiv}
             />
           </div>
           <div className="third-speaker">
-            <img alt=""
-                 className="portrait"
-                 src={Voyevidka}
+            <img
+              alt=""
+              className="portrait"
+              src={Voyevidka}
             />
             <div className="text-wrapper">
               <div className="name">

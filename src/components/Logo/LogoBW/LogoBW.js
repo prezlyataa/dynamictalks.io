@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
-import logo from 'src/images/logo-gd1.svg';
+import { Anchor } from 'src/components/Anchor';
 import './LogoBW.scss';
 
 
@@ -32,15 +32,14 @@ export default class LogoBW extends Component {
     const {className} = this.props;
 
     return (
-      <a
+      <Anchor
         className={cx(CN, className)}
-        data-gtag="gd-logo-speakers"
         href="https://www.griddynamics.com"
         id="gd-logo-speakers"
         target="_blank"
       >
         <div className="logo-icon"/>
-      </a>
+      </Anchor>
     );
   }
 }
