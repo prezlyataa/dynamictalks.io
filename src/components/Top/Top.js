@@ -7,6 +7,7 @@ import tabletIntroText from 'src/images/tablet_intro_text.png';
 import rhino from 'src/images/rhino.png';
 import pathLine from 'src/images/path_line.png';
 import { Section } from 'src/components/Section';
+import { Clock } from 'src/components/Clock/index';
 import './Top.scss';
 
 
@@ -33,9 +34,13 @@ export default class Events extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      deadline: 'November 1, 2017, 10:00',
+      timeMessage: 'Event has already started!'
+    };
+
     autoBind(this);
   }
-
 
   render() {
     const {className, id} = this.props;
@@ -46,6 +51,12 @@ export default class Events extends Component {
         id={id}
       >
         <div className="container_dekstop">
+
+          <Clock
+            deadline={this.state.deadline}
+            timeMessage={this.state.timeMessage}
+          />
+
           <div className="main_intro">
             <div className="intro_text">
               <img
@@ -74,7 +85,6 @@ export default class Events extends Component {
         <div className="container_tablet">
           <div className="tablet_content">
 
-
             <div className="rhino_img">
               <img
                 alt="img"
@@ -88,6 +98,11 @@ export default class Events extends Component {
                 src={tabletIntroText}
               />
             </div>
+
+            <Clock
+              deadline={this.state.deadline}
+              timeMessage={this.state.timeMessage}
+            />
 
             <div className="sub_intro_text">
               <p>Приходь, буде &infin; яскраво!</p>

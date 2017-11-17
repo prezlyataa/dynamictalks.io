@@ -9,6 +9,7 @@
 
   .container_dekstop {
     width: 100%;
+    padding-top: 10px;
   }
 
   &_content {
@@ -20,7 +21,7 @@
 
   &_intro {
     position: relative;
-    padding-top: 145px;
+    padding-top: 100px;
 
     .intro_text img{
       background-size: cover;
