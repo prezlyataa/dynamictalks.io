@@ -30,12 +30,12 @@ export default class Events extends Component {
     super(props);
 
     this.state = {
-      deadline: 'November 25, 2017, 10:00'
+      deadline: 'November 1, 2017, 10:00',
+      timeMessage: 'Event has already started!'
     };
 
     autoBind(this);
   }
-
 
   render() {
     const {className} = this.props;
@@ -43,7 +43,12 @@ export default class Events extends Component {
     return (
       <Section className={cx(CN, className)}>
         <div className="container_dekstop">
-          <Clock deadline={this.state.deadline}/>
+
+          <Clock
+            deadline={this.state.deadline}
+            timeMessage={this.state.timeMessage}
+          />
+
           <div className="main_intro">
             <div className="intro_text">
               <img
@@ -72,7 +77,6 @@ export default class Events extends Component {
         <div className="container_tablet">
           <div className="tablet_content">
 
-
             <div className="rhino_img">
               <img
                 alt="img"
@@ -86,7 +90,12 @@ export default class Events extends Component {
                 src={tabletIntroText}
               />
             </div>
-            <Clock deadline={this.state.deadline}/>
+
+            <Clock
+              deadline={this.state.deadline}
+              timeMessage={this.state.timeMessage}
+            />
+
             <div className="sub_intro_text">
               <p>Приходь, буде &infin; яскраво!</p>
             </div>

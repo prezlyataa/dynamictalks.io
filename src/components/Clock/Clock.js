@@ -1,7 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Clock.scss';
 
 export class Clock extends React.Component {
+
+  static propTypes = {
+    deadline: PropTypes.string,
+    timeMessage: PropTypes.string
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -76,7 +83,7 @@ export class Clock extends React.Component {
     } else {
       return (
         <div className='started-block'>
-          <span className='started-event'>Event has already started!</span>
+          <span className='started-event'>{this.props.timeMessage}</span>
         </div>
       );
     }
