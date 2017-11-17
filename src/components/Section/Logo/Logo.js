@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
-import { LogoBW } from 'src/components/Logo/LogoBW';
-import { LogoColored } from 'src/components/Logo/LogoColored';
+import { LogoBW } from 'src/components/Section/Logo/LogoBW/index';
+import { LogoColored } from 'src/components/Section/Logo/LogoColored/index';
 
 
 export const LOGO_THEME = {

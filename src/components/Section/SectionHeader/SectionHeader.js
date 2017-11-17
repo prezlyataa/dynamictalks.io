@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
-import { Logo, LOGO_THEME } from 'src/components/Logo';
-import { EventDate, ED_THEME } from 'src/components/EventDate';
-import { EventPlace, EP_THEME } from 'src/components/EventPlace';
-import { RegistrationButton, BUTTON_THEME } from 'src/components/RegistrationButton';
+import { Logo, LOGO_THEME } from 'src/components/Section/Logo';
+import { EventDate, ED_THEME } from 'src/components/Section/EventDate';
+import { EventPlace, EP_THEME } from 'src/components/Section/EventPlace';
+import { RegistrationButton, BUTTON_THEME } from 'src/components/Section/RegistrationButton';
 import { SECTION_THEME, SHAPE } from '../constants';
 import './SectionHeader.scss';
 
@@ -21,6 +21,11 @@ export default class SectionHeader extends Component {
      * className - classes which can be passed from parent
      */
     className: PropTypes.string,
+
+    /**
+     * id - id of the section
+     */
+    id: PropTypes.string,
 
     /**
      * shape - shape to show below the title
@@ -81,6 +86,7 @@ export default class SectionHeader extends Component {
   render() {
     const {
       className,
+      id,
       title,
       shape,
       showDateAndLocation
@@ -103,7 +109,10 @@ export default class SectionHeader extends Component {
 
 
         <div className={`${CN}__col ${CN}__col--right`}>
-          <RegistrationButton theme={themes.regButtonTheme}/>
+          <RegistrationButton
+            id={id}
+            theme={themes.regButtonTheme}
+          />
           { showDateAndLocation && <EventPlace theme={themes.eventPlaceTheme}/> }
         </div>
       </div>

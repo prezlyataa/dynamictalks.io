@@ -21,6 +21,11 @@ export default class Events extends Component {
      * className - classes which can be passed from parent
      */
     className: PropTypes.string,
+
+    /**
+     * id - id of the section
+     */
+    id: PropTypes.string
   };
 
   static defaultProps = {};
@@ -33,10 +38,13 @@ export default class Events extends Component {
 
 
   render() {
-    const {className} = this.props;
+    const {className, id} = this.props;
 
     return (
-      <Section className={cx(CN, className)}>
+      <Section
+        className={cx(CN, className)}
+        id={id}
+      >
         <div className="container_dekstop">
           <div className="main_intro">
             <div className="intro_text">

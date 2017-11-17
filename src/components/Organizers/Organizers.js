@@ -17,6 +17,11 @@ export default class Organizers extends Component {
      * className - classes which can be passed from parent
      */
     className: PropTypes.string,
+
+    /**
+     * id - id of the section
+     */
+    id: PropTypes.string
   };
 
   static defaultProps = {};
@@ -29,11 +34,12 @@ export default class Organizers extends Component {
 
 
   render() {
-    const {className} = this.props;
+    const {className, id} = this.props;
 
     return (
       <Section
         className={cx(CN, className)}
+        id={id}
         shape={SHAPE.SQUARE}
         showDateAndLocation
         theme={SECTION_THEME.WHITE}
