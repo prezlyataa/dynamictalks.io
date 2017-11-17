@@ -88,7 +88,10 @@ const config = {
     }),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new ExtractTextPlugin({ filename: './styles/style.css', disable: false, allChunks: true }),
-    new CopyWebpackPlugin([{ from: 'images', to: 'images' }]),
+    new CopyWebpackPlugin([
+      { from: 'images', to: 'images' },
+      { from: 'public', to: './'}
+    ]),
     new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
     new webpack.HotModuleReplacementPlugin(),
   ],
