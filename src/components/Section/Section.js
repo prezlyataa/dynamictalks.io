@@ -80,7 +80,6 @@ export default class Section extends Component {
       >
         <div className={`${CN}__inner`}>
           <SectionHeader
-            className={className}
             id={id}
             shape={shape}
             showDateAndLocation={showDateAndLocation}
