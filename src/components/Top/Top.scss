@@ -52,8 +52,8 @@
 
   .rhino img {
     position: absolute;
-    top: 13%;
-    left: 46%;
+    top: 14%;
+    left: 43%;
     height: 84%;
   }
 
@@ -61,9 +61,9 @@
     & {
       .rhino img {
         position: absolute;
-        top: 13%;
-        left: 50%;
-        height: 75%;
+        top: 15%;
+        left: 46%;
+        height: 80%;
         transform: translate3d(-10%, 0, 0);
       }
 
@@ -83,8 +83,9 @@
 @media (max-width: 1070px) {
   .main {
     .rhino img {
-      top: 18%;
-      height: 70%;
+      top: 20%;
+      left: 50%;
+      height: 65%;
       transform: translate3d(-15%, 0, 0);
     }
   }
