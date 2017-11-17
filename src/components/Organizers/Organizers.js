@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
 import { Section, SHAPE, SECTION_THEME } from 'src/components/Section';
+import { Button } from 'src/components/Button';
+import { Anchor } from 'src/components/Anchor';
 import './Organizers.scss';
 
 
@@ -95,23 +97,25 @@ export default class Organizers extends Component {
           </a>*/}
               </nav>
             </div>
-            <a
-              className="btn btn--yellow"
-              data-gtag="gd-job"
+            <Button
               href="https://www.griddynamics.com/careers"
               id="gd-job"
               target="_blank"
-            >Вакансії компанії</a>
+            >
+              Вакансії компанії
+            </Button>
           </div>
           <div className="location">
             <div className="place_event">
               <h2 className="location__title">Місце проведення</h2>
-              <a
+              <Anchor
                 className="calendar_event"
                 data-gtag="download-calendar-organizers"
                 href="/JS_Dynamic_Talks_meetup_Sep_2017.ics"
                 id="download-calendar-organizers"
-              >Скачати подію для календаря</a>
+              >
+                Скачати подію для календаря
+              </Anchor>
             </div>
 
             <div className="map-container">
