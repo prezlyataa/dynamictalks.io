@@ -81,3 +81,27 @@
 
   }
 }
+
+
+@media only screen and (max-width: 767px) {
+  .section-header {
+    flex-direction: column;
+    &__col {
+      width: 100%;
+      align-items: center;
+
+      .event-date, .event-place h3 {
+        text-align: center;
+      }
+
+      &--middle {
+        order: -1;
+      }
+
+      &--left {
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
