@@ -7,4 +7,4 @@ git add .
 git commit -m "v$PACKAGE_VERSION"
 git tag "v$PACKAGE_VERSION"
 git push --tags
-git subtree push --prefix dist origin gh-pages --force
+git subtree push --prefix dist origin gh-pages
