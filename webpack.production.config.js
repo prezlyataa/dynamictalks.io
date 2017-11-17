@@ -43,7 +43,7 @@ const config = {
     new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify('production') } }),
     new ExtractTextPlugin({ filename: './[name].[hash].css', disable: false, allChunks: true }),
     new CopyWebpackPlugin([
-      { from: './images/!*', to: './images/[name].[hash].[ext]' },
+      { from: './images/!*', to: 'images/[name].[hash].[ext]' },
       { from: './public', to: './'}
     ]),
   ],
