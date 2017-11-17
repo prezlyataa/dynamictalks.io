@@ -97,13 +97,13 @@ export default class Organizers extends Component {
           </a>*/}
               </nav>
             </div>
-            <Button
+            <a
+              className="button button--yellow vacancies-btn"
+              data-gtag="gd-job"
               href="https://www.griddynamics.com/careers"
               id="gd-job"
               target="_blank"
-            >
-              Вакансії компанії
-            </Button>
+            >Вакансії компанії</a>
           </div>
           <div className="location">
             <div className="place_event">

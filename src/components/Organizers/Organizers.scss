@@ -71,6 +71,10 @@
 
     }
 
+    &-links {
+      justify-content: center;
+    }
+
     a {
       margin: 0 15px;
       text-decoration: none;
@@ -86,6 +90,10 @@
       text-align: center;
     }
 
+  }
+
+  .vacancies-btn {
+    margin-bottom: 40px;
   }
 
   .location {
