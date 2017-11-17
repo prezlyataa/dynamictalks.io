@@ -58,40 +58,40 @@ export default class Clock extends Component {
 
     if (done) {
       return (
-        <div className='started-block'>
-          <span className='started-event'>{this.props.timeMessage}</span>
+        <div className="started-block">
+          <span className="started-event">{this.props.timeMessage}</span>
         </div>
       );
     }
 
 
     return (
-      <div className='time-counter'>
-        <div className='times'>
-          <div className='clocks'>
+      <div className="time-counter">
+        <div className="times">
+          <div className="clocks">
             {this.doublenum(days)}
           </div>
-          <div className='clock-desc'>
+          <div className="clock-desc">
             <span>днів</span>
           </div>
         </div>
-        <div className='times'>
-          <div className='clocks'>
+        <div className="times">
+          <div className="clocks">
             {this.doublenum(hours)}
           </div>
-          <div className='clock-desc'>
+          <div className="clock-desc">
             <span>годин</span>
           </div>
         </div>
-        <div className='times'>
-          <div className='clocks'>
+        <div className="times">
+          <div className="clocks">
             {this.doublenum(minutes)}
           </div>
-          <div className='clock-desc'>
+          <div className="clock-desc">
             <span>хвилин</span>
           </div>
         </div>
-        <div className='to-start'>
+        <div className="to-start">
           <span>до початку</span>
         </div>
       </div>
