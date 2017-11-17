@@ -21,6 +21,11 @@ export default class Speakers extends Component {
      * className - classes which can be passed from parent
      */
     className: PropTypes.string,
+
+    /**
+     * id - id of the section
+     */
+    id: PropTypes.string
   };
 
   static defaultProps = {};
@@ -33,11 +38,12 @@ export default class Speakers extends Component {
 
 
   render() {
-    const {className} = this.props;
+    const {className, id} = this.props;
 
     return (
       <Section
         className={cx(CN, className)}
+        id={id}
         shape={SHAPE.TRIANGLE}
         showDateAndLocation
         title="СПІКЕРИ"

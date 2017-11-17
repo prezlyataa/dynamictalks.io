@@ -26,6 +26,11 @@ export default class Section extends Component {
     className: PropTypes.string,
 
     /**
+     * id - id of the section
+     */
+    id: PropTypes.string,
+
+    /**
      * shape - shape to show below the title
      */
     shape: PropTypes.oneOf([SHAPE.TRIANGLE, SHAPE.CIRCLE, SHAPE.SQUARE]),
@@ -61,6 +66,7 @@ export default class Section extends Component {
     const {
       className,
       children,
+      id,
       shape,
       showDateAndLocation,
       title,
@@ -68,10 +74,14 @@ export default class Section extends Component {
     } = this.props;
 
     return (
-      <section className={cx(CN, className, `${CN}--${theme}`)}>
+      <section
+        className={cx(CN, className, `${CN}--${theme}`)}
+        id={id}
+      >
         <div className={`${CN}__inner`}>
           <SectionHeader
             className={className}
+            id={id}
             shape={shape}
             showDateAndLocation={showDateAndLocation}
             theme={theme}
