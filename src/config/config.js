@@ -16,7 +16,8 @@ export const config = {
   },
 
   externalEndpoints: {
-    registrationUrl: 'https://goo.gl/forms/x9AwECPkGUwCQm4Y2'
+    registrationUrl: 'https://goo.gl/forms/x9AwECPkGUwCQm4Y2',
+    materialsUrl: 'https://dynamictalks.io/js-meetup-2-materials'
   },
 
   speakers: [

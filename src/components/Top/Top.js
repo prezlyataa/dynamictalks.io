@@ -39,10 +39,6 @@ export default class Events extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      timeMessage: 'Event has already started!'
-    };
-
     autoBind(this);
   }
 
@@ -59,7 +55,7 @@ export default class Events extends Component {
 
           <Clock
             deadline={config.eventDate.time}
-            timeMessage={this.state.timeMessage}
+            materialsUrl={config.externalEndpoints.materialsUrl}
           />
 
           <div className="main_intro">
@@ -105,8 +101,8 @@ export default class Events extends Component {
             </div>
 
             <Clock
-              deadline={this.state.deadline}
-              timeMessage={this.state.timeMessage}
+              deadline={config.eventDate.time}
+              materialsUrl={config.externalEndpoints.materialsUrl}
             />
 
             <div className="sub_intro_text">

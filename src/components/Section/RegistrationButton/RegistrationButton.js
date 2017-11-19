@@ -51,7 +51,7 @@ export default class RegistrationButton extends Component {
       <Button
         className={cx(CN, className)}
         href={config.externalEndpoints.registrationUrl}
-        id={`${id}-register-btn`}
+        id={`${id}-register`}
         target="_blank"
         theme={theme}
       >

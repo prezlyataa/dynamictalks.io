@@ -36,12 +36,13 @@ export default class Button extends Component {
 
 
   render() {
-    const {className, theme, ...restProps} = this.props;
+    const {className, theme, id, ...restProps} = this.props;
 
     return (
       <Anchor
         className={cx(CN, className, `${CN}--${theme}`)}
         {...restProps}
+        id={`btn-${id}`}
       />
     );
   }
