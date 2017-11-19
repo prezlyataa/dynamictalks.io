@@ -33,6 +33,11 @@ export default class Anchor extends Component {
     id: PropTypes.string.isRequired,
 
     /**
+     * onClick - on click callback
+     */
+    onClick: PropTypes.func,
+
+    /**
      * target - The target attribute specifies where to open the linked document:
      */
     target: PropTypes.oneOf(['_blank', '_self', '_parent', '_top'])
@@ -46,6 +51,13 @@ export default class Anchor extends Component {
     super(props);
 
     autoBind(this);
+  }
+
+
+  onClick() {
+    const { onClick } = this.props;
+
+    onClick && onClick();
   }
 
 
@@ -64,6 +76,7 @@ export default class Anchor extends Component {
         data-gtag={id}
         href={href}
         id={id}
+        onClick={this.onClick()}
         target={target}
       >
         {children}

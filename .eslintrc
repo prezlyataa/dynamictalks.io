@@ -13,7 +13,8 @@
     "sinon"   : false,
     "appConfig": false,
     "__DEV__"   : true,
-    "__PROD__"  : false
+    "__PROD__"  : false,
+    "gtag": false
   },
   "plugins": [
     "react"

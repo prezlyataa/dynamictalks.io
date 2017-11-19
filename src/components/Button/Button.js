@@ -34,6 +34,17 @@ export default class Button extends Component {
     autoBind(this);
   }
 
+  onClick() {
+    const { id, href, onClick } = this.props;
+
+    {// Tealium tracking
+      if(typeof gtag !== 'undefined') {
+        gtag('event', 'button_click', { id, href });
+      }
+    }// === Tealium tracking
+
+    onClick && onClick();
+  }
 
   render() {
     const {className, theme, id, ...restProps} = this.props;
@@ -41,6 +52,7 @@ export default class Button extends Component {
     return (
       <Anchor
         className={cx(CN, className, `${CN}--${theme}`)}
+        onClick={this.onClick}
         {...restProps}
         id={`btn-${id}`}
       />
