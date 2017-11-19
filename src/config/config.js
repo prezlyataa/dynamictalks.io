@@ -17,7 +17,9 @@ export const config = {
 
   externalEndpoints: {
     registrationUrl: 'https://goo.gl/forms/x9AwECPkGUwCQm4Y2',
-    materialsUrl: 'https://dynamictalks.io/js-meetup-2-materials'
+    materialsUrl: 'https://dynamictalks.io/js-meetup-2-materials',
+    vacanciesUrl: 'https://www.griddynamics.com/careers',
+    icalUrl: '/JS_Dynamic_Talks_meetup_Dec_2017.ics'
   },
 
   speakers: [

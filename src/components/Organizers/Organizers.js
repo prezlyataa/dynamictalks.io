@@ -4,7 +4,7 @@ import autoBind from 'react-autobind';
 import cx from 'classnames';
 import { Section, SHAPE, SECTION_THEME } from 'src/components/Section';
 import { Button } from 'src/components/Button';
-import { Anchor } from 'src/components/Anchor';
+import { ICalButton } from 'src/components/Organizers/ICalButton';
 import './Organizers.scss';
 
 
@@ -100,30 +100,20 @@ export default class Organizers extends Component {
                     className="fa fa-facebook"
                   />
                 </a>
-                {/*<a target="_blank" href="https://www.youtube.com/channel/UCFX-U3YT1ANC907BzvhNn7Q">
-              <i className="fa fa-youtube-play" aria-hidden="true"></i></a>
-          <a target="_blank" href="https://plus.google.com/115302417170674279390">
-              <i className="fa fa-google-plus" aria-hidden="true"></i>
-          </a>*/}
               </nav>
             </div>
+
             <Button
-              href="https://www.griddynamics.com/careers"
+              href={config.externalEndpoints.vacanciesUrl}
               id="gd-job"
               target="_blank"
             >Вакансії компанії</Button>
+
           </div>
           <div className="location">
             <div className="place_event">
               <h2 className="location__title">Місце проведення</h2>
-              <Anchor
-                className="calendar_event"
-                data-gtag="download-calendar-organizers"
-                href="/JS_Dynamic_Talks_meetup_Sep_2017.ics"
-                id="download-calendar-organizers"
-              >
-                Скачати подію для календаря
-              </Anchor>
+              <ICalButton config={config}/>
             </div>
 
             {/* eslint-disable */}
