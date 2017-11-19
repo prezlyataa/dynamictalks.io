@@ -18,6 +18,11 @@ export default class Footer extends Component {
      * className - classes which can be passed from parent
      */
     className: PropTypes.string,
+
+    /**
+     * config - configuration object
+     */
+    config: PropTypes.object.isRequired,
   };
 
   static defaultProps = {};

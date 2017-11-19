@@ -4,18 +4,23 @@
 
 .speaker {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   width: 30%;
+  padding-bottom: 200px;
   background-color: $color-grey;
 
-  img {
-    box-sizing: border-box;
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 12px solid $color-orange;
+  .portrait {
+    position: absolute;
+
+    img {
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 12px solid $color-orange;
+    }
   }
 
   .name {
@@ -33,6 +38,8 @@
     }
 
     .position {
+      margin-top: 5px;
+
       font-family: $font-family-opensans-regular;
       font-size: 0.6em;
       text-transform: none;
@@ -59,50 +66,38 @@
     font-family: $font-family-opensans-regular;
     color: $color-black;
     font-size: 1.3em;
+  }
 
+  p, ul {
+    padding: 10px 20px;
+    font-size: $font-size-regular-res;
+  }
+
+  .text-wrapper {
+    position: relative;
+    display: inline-grid;
+    display: -ms-inline-grid;
+    padding: 1em 1em 0 1em;
   }
 
 
   &--top {
-    img {
-      top: -80px;
-    }
+    padding-top: 130px;
 
-    p, ul {
-      padding: 5%;
-      font-size: $font-size-regular-res;
-
-    }
-
-    .text-wrapper {
-      position: relative;
-      display: inline-grid;
-      display: -ms-inline-grid;
-      padding: 1em 1em 0 1em;
+    .portrait {
       top: -80px;
     }
   }
 
   &--bottom {
-    img {
+    .portrait {
       bottom: -80px;
-    }
-    p, ul {
-      padding: 5%;
-      font-size: $font-size-regular-res;
-
-    }
-
-    .text-wrapper {
-      display: inline-grid;
-      display: -ms-inline-grid;
-      position: relative;
-      padding: 1em 1em 0 1em;
     }
   }
 
   @media only screen and (min-width: 1040px) and (max-width: 1245px) {
     width: 30%;
+    padding-bottom: 240px;
 
     &--bottom img {
       bottom: -115px
@@ -117,43 +112,20 @@
     }
   }
 
-  @media only screen and (min-width: 650px) and (max-width: 820px) {
-    width: 32%;
 
-    &--bottom img {
-      bottom: -115px
-    }
-
-  }
-
-
-  @media only screen and (min-width: 320px) and (max-width: 830px) {
+  @media only screen and (max-width: 830px) {
     width: 100%;
     align-self: center;
     margin-bottom: 3%;
+    padding-bottom: 100px;
 
     &--bottom {
-      .text-wrapper {
-        order: 2;
-        top: -80px
-      }
+      padding-top: 130px;
 
-      img {
-        top: -80px
+      .portrait {
+        top: -80px;
+        bottom: auto;
       }
     }
-  }
-
-  @media only screen and (min-width: 1000px) and (max-width: 1500px)  {
-    padding: 3.5em 0 8em 0;
-
-    &--bottom img{
-      bottom: -100px;
-    }
-
-  }
-
-  @media only screen and (min-width: 320px) and (max-width: 400px){
-    width: 100% !important;
   }
 }

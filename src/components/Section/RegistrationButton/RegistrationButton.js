@@ -18,6 +18,11 @@ export default class RegistrationButton extends Component {
     className: PropTypes.string,
 
     /**
+     * config - configuration object
+     */
+    config: PropTypes.object.isRequired,
+
+    /**
      * id - id of the section
      */
     id: PropTypes.string,
@@ -35,13 +40,18 @@ export default class RegistrationButton extends Component {
 
 
   render() {
-    const {className, id, theme} = this.props;
+    const {
+      className,
+      id,
+      theme,
+      config
+    } = this.props;
 
     return (
       <Button
         className={cx(CN, className)}
-        href="https://goo.gl/forms/CcWPa8ynuWIgZG5H2"
-        id={`${id}-register-btn`}
+        href={config.externalEndpoints.registrationUrl}
+        id={`${id}-register`}
         target="_blank"
         theme={theme}
       >

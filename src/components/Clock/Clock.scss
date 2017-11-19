@@ -37,13 +37,6 @@
   }
 }
 
-.started-event {
-  font-size: 20px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  background: $color-white;
-}
-
 
 @media (max-width: 767px) {
   .time-counter {
@@ -60,10 +53,6 @@
   .started-block {
     text-align: center;
     padding: 20px 0;
-
-    .started-event {
-      font-size: 18px;
-    }
   }
 }
 

@@ -74,13 +74,13 @@ export default class Speaker extends Component {
 
     return (
       <Anchor
+        className="portrait"
         href={link}
         id={`speaker--${name}`}
         target="_blank"
       >
         <img
           alt={name}
-          className="portrait"
           src={imageSrc}
         />
       </Anchor>

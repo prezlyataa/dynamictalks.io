@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Button, BUTTON_THEME } from 'src/components/Button';
 import './Clock.scss';
 
 export default class Clock extends Component {
@@ -12,9 +13,9 @@ export default class Clock extends Component {
     deadline: PropTypes.string,
 
     /**
-     * timeMessage - message to show after deadline passed
+     * materialsUrl - url with presentation materials
      */
-    timeMessage: PropTypes.string
+    materialsUrl: PropTypes.string
   };
 
   constructor(props) {
@@ -59,7 +60,14 @@ export default class Clock extends Component {
     if (done) {
       return (
         <div className="started-block">
-          <span className="started-event">{this.props.timeMessage}</span>
+          <Button
+            href={this.props.materialsUrl}
+            id="materials"
+            target="_blank"
+            theme={BUTTON_THEME.WHITE}
+          >
+            Матеріали
+          </Button>
         </div>
       );
     }

@@ -21,6 +21,11 @@ export default class Meetup extends Component {
     className: PropTypes.string,
 
     /**
+     * config - configuration object
+     */
+    config: PropTypes.object.isRequired,
+
+    /**
      * id - id of the section
      */
     id: PropTypes.string
@@ -34,13 +39,34 @@ export default class Meetup extends Component {
     autoBind(this);
   }
 
+  renderAgenda() {
+    const { config } = this.props;
+
+    return config
+      .agenda
+      .map(({time, description}, index) => (
+        <li key={index}>
+          <span className="line-timetable">
+            <span className="time">{time}</span>
+            <span className="text">{description}
+              <span className="underline">_______</span>
+            </span>
+          </span>
+        </li>
+      ));
+  }
 
   render() {
-    const {className, id} = this.props;
+    const {
+      className,
+      config,
+      id
+    } = this.props;
 
     return (
       <Section
         className={cx(CN, className)}
+        config={config}
         id={id}
         shape={SHAPE.CIRCLE}
         showDateAndLocation
@@ -65,22 +91,7 @@ export default class Meetup extends Component {
               <div className="tabs__text-content  active">
                 <div className="tabs__content-container">
                   <ul className="schedule">
-                    <li><span className="line-timetable"><span className="time">10:30</span><span className="text">Реєстрація<span className="underline">_______</span></span></span>
-                    </li>
-                    <li><span className="line-timetable"><span className="time">11:00</span><span className="text">Відкриття, декілька слів про ідею івенту<span className="underline">_______</span></span></span>
-                    </li>
-                    <li><span className="line-timetable"><span className="time">11:15</span><span className="text">Доповідь «What skill set and experience required to be a Tech Lead on the project (front-end)» (Георгій Подсвєтов)<span className="underline">_______</span></span></span>
-                    </li>
-                    <li><span className="line-timetable"><span className="time">12:30</span><span className="text">Кава<span className="underline">_______</span></span></span>
-                    </li>
-                    <li><span className="line-timetable"><span className="time">12:45</span><span className="text">Доповідь «What you should know about logging when developing web-applications and preparing for production rollout. With examples based on Elastic Stack.» (Володимир Воєвідка)<span className="underline">_______</span></span></span>
-                    </li>
-                    <li><span className="line-timetable"><span className="time">14:00</span><span className="text">Напої та снеки<span className="underline">_______</span></span></span>
-                    </li>
-                    <li><span className="line-timetable"><span className="time">14:15</span><span className="text">Доповідь «Why navigation systems with all modern technologies still sucks sometimes in finding locations.» (Любомир Семків)<span className="underline">_______</span></span></span>
-                    </li>
-                    <li><span className="line-timetable"><span className="time">15:30</span><span className="text">Networking<span className="underline">_______</span></span></span>
-                    </li>
+                    {this.renderAgenda()}
                   </ul>
                 </div>
               </div>

@@ -24,6 +24,11 @@ export default class Events extends Component {
     className: PropTypes.string,
 
     /**
+     * config - configuration object
+     */
+    config: PropTypes.object.isRequired,
+
+    /**
      * id - id of the section
      */
     id: PropTypes.string
@@ -34,27 +39,23 @@ export default class Events extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      deadline: 'November 1, 2017, 10:00',
-      timeMessage: 'Event has already started!'
-    };
-
     autoBind(this);
   }
 
   render() {
-    const {className, id} = this.props;
+    const {className, id, config} = this.props;
 
     return (
       <Section
         className={cx(CN, className)}
+        config={config}
         id={id}
       >
         <div className="container_dekstop">
 
           <Clock
-            deadline={this.state.deadline}
-            timeMessage={this.state.timeMessage}
+            deadline={config.eventDate.time}
+            materialsUrl={config.externalEndpoints.materialsUrl}
           />
 
           <div className="main_intro">
@@ -100,8 +101,8 @@ export default class Events extends Component {
             </div>
 
             <Clock
-              deadline={this.state.deadline}
-              timeMessage={this.state.timeMessage}
+              deadline={config.eventDate.time}
+              materialsUrl={config.externalEndpoints.materialsUrl}
             />
 
             <div className="sub_intro_text">

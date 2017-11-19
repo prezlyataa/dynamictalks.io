@@ -8,10 +8,11 @@
 
   .rhino-left, .rhino-right {
     background: url("assets/Bitmap.png") no-repeat;
+    background-size: contain;
     position: absolute;
     width: 100%;
-    height: 40%;
-    top: 65%;
+    height: 425px;
+    bottom: 0;
     z-index: 2;
     pointer-events: none;
 
@@ -51,9 +52,8 @@
       padding: 3.5em 0 8em 0;
     }
 
-    .rhino-left {
-      width: 80%;
-      height: 20%;
+    .rhino-left, .rhino-right {
+      height: 300px;
     }
   }
 
@@ -76,7 +76,7 @@
 
 
 
-  @media only screen and (min-width: 320px) and (max-width: 830px) {
+  @media only screen and (max-width: 830px) {
     .speaker-block {
       flex-direction: column;
       padding-top: 4.5em;

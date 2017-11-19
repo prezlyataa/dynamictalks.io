@@ -4,7 +4,7 @@ import autoBind from 'react-autobind';
 import cx from 'classnames';
 import { Section, SHAPE, SECTION_THEME } from 'src/components/Section';
 import { Button } from 'src/components/Button';
-import { Anchor } from 'src/components/Anchor';
+import { ICalButton } from 'src/components/Organizers/ICalButton';
 import './Organizers.scss';
 
 
@@ -19,6 +19,11 @@ export default class Organizers extends Component {
      * className - classes which can be passed from parent
      */
     className: PropTypes.string,
+
+    /**
+     * config - configuration object
+     */
+    config: PropTypes.object.isRequired,
 
     /**
      * id - id of the section
@@ -36,11 +41,16 @@ export default class Organizers extends Component {
 
 
   render() {
-    const {className, id} = this.props;
+    const {
+      className,
+      config,
+      id
+    } = this.props;
 
     return (
       <Section
         className={cx(CN, className)}
+        config={config}
         id={id}
         shape={SHAPE.SQUARE}
         showDateAndLocation
@@ -90,42 +100,27 @@ export default class Organizers extends Component {
                     className="fa fa-facebook"
                   />
                 </a>
-                {/*<a target="_blank" href="https://www.youtube.com/channel/UCFX-U3YT1ANC907BzvhNn7Q">
-              <i className="fa fa-youtube-play" aria-hidden="true"></i></a>
-          <a target="_blank" href="https://plus.google.com/115302417170674279390">
-              <i className="fa fa-google-plus" aria-hidden="true"></i>
-          </a>*/}
               </nav>
             </div>
+
             <Button
-              href="https://www.griddynamics.com/careers"
+              href={config.externalEndpoints.vacanciesUrl}
               id="gd-job"
               target="_blank"
             >Вакансії компанії</Button>
+
           </div>
           <div className="location">
             <div className="place_event">
               <h2 className="location__title">Місце проведення</h2>
-              <Anchor
-                className="calendar_event"
-                data-gtag="download-calendar-organizers"
-                href="/JS_Dynamic_Talks_meetup_Sep_2017.ics"
-                id="download-calendar-organizers"
-              >
-                Скачати подію для календаря
-              </Anchor>
+              <ICalButton config={config}/>
             </div>
 
-            <div className="map-container">
-              <iframe
-                allowFullScreen
-                frameBorder="0"
-                height="450"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764.9802696644165!2d24.030777855351012!3d49.84103095620553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6dca0c9b13%3A0x2797b7e6a216b902!2sHalytska+St%2C+1%2C+L&#39;viv%2C+Lviv+Oblast!5e0!3m2!1sen!2sua!4v1507292702049"
-                style={{border:0}}
-                width="100%"
-              />
-            </div>
+            {/* eslint-disable */}
+            <div
+              className="map-container"
+              dangerouslySetInnerHTML={{__html: config.eventAddress.googleMapEmbed}} />
+            {/* eslint-enable */}
           </div>
         </div>
       </Section>

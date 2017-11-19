@@ -1,5 +1,5 @@
-@import "../../variables.scss";
-@import "../../mixins.scss";
+@import "~src/variables.scss";
+@import "~src/mixins.scss";
 
 .line-organizers {
   .organizers-content {
@@ -106,11 +106,7 @@
     h2 {
       display: inline-block;
     }
-    .calendar_event {
-      color: $color-orange;
-      text-decoration: none;
-      text-align: center;
-    }
+
 
     &__title {
       font-size: 1.1em;
