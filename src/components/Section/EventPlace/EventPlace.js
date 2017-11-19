@@ -21,6 +21,11 @@ export default class EventPlace extends Component {
     className: PropTypes.string,
 
     /**
+     * config - configuration object
+     */
+    config: PropTypes.object.isRequired,
+
+    /**
      * theme - theme of the renderign
      */
     theme: PropTypes.oneOf([EP_THEME.WHITE, EP_THEME.YELLOW])
@@ -38,13 +43,22 @@ export default class EventPlace extends Component {
 
 
   render() {
-    const {className, theme} = this.props;
+    const {
+      className,
+      theme,
+      config
+    } = this.props;
 
     return (
       <div className={cx(CN, className, `${CN}--${theme}`)}>
-        <h3>Communa</h3>
-        <h3>м. Львів, вул. Галицька, 1, 2-й поверх</h3>
-        <h3>(на розі Площі Ринок)</h3>
+        {
+          config
+            .eventAddress
+            .addressLines
+            .map((addressLine, i)=> (
+              <h3 key={i}>{addressLine}</h3>
+            ))
+        }
       </div>
     );
   }

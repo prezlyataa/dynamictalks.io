@@ -7,6 +7,8 @@ import { Footer } from '../Footer';
 import { Nav } from '../Nav';
 import './App.scss';
 
+import { config } from 'src/config/config';
+
 export const SECTIONS = {
   TOP: 'top',
   MEETUP: 'meetup',
@@ -19,11 +21,25 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Top id={SECTIONS.TOP}/>
-        <Meetup id={SECTIONS.MEETUP}/>
-        <Speakers id={SECTIONS.SPEAKERS}/>
-        <Organizers id={SECTIONS.ORGANIZERS}/>
-        <Footer/>
+        <Top
+          config={config}
+          id={SECTIONS.TOP}
+        />
+        <Meetup
+          config={config}
+          id={SECTIONS.MEETUP}
+        />
+        <Speakers
+          config={config}
+          id={SECTIONS.SPEAKERS}
+        />
+        <Organizers
+          config={config}
+          id={SECTIONS.ORGANIZERS}
+        />
+        <Footer
+          config={config}
+        />
 
         <Nav
           items={[

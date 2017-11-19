@@ -23,6 +23,11 @@ export default class SectionHeader extends Component {
     className: PropTypes.string,
 
     /**
+     * config - configuration object
+     */
+    config: PropTypes.object.isRequired,
+
+    /**
      * id - id of the section
      */
     id: PropTypes.string,
@@ -86,6 +91,7 @@ export default class SectionHeader extends Component {
   render() {
     const {
       className,
+      config,
       id,
       title,
       shape,
@@ -98,7 +104,14 @@ export default class SectionHeader extends Component {
       <div className={cx(CN, className)}>
         <div className={`${CN}__col ${CN}__col--left`}>
           <Logo theme={themes.logoTheme}/>
-          { showDateAndLocation && <EventDate theme={themes.eventDateTheme}/> }
+          {
+            showDateAndLocation &&
+            <EventDate
+              city={config.eventDate.city}
+              theme={themes.eventDateTheme}
+              timeString={config.eventDate.timeString}
+            />
+          }
         </div>
 
 
@@ -110,10 +123,17 @@ export default class SectionHeader extends Component {
 
         <div className={`${CN}__col ${CN}__col--right`}>
           <RegistrationButton
+            config={config}
             id={id}
             theme={themes.regButtonTheme}
           />
-          { showDateAndLocation && <EventPlace theme={themes.eventPlaceTheme}/> }
+          {
+            showDateAndLocation &&
+            <EventPlace
+              config={config}
+              theme={themes.eventPlaceTheme}
+            />
+          }
         </div>
       </div>
     );

@@ -26,6 +26,11 @@ export default class Section extends Component {
     className: PropTypes.string,
 
     /**
+     * config - configuration object
+     */
+    config: PropTypes.object.isRequired,
+
+    /**
      * id - id of the section
      */
     id: PropTypes.string,
@@ -66,6 +71,7 @@ export default class Section extends Component {
     const {
       className,
       children,
+      config,
       id,
       shape,
       showDateAndLocation,
@@ -80,6 +86,7 @@ export default class Section extends Component {
       >
         <div className={`${CN}__inner`}>
           <SectionHeader
+            config={config}
             id={id}
             shape={shape}
             showDateAndLocation={showDateAndLocation}

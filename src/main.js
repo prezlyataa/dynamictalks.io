@@ -22,6 +22,11 @@ if (module.hot) {
 }
 
 
+/**
+ * tubs
+ * todo: implement react component for this
+ */
+
 (function() {
   let tabs = document.getElementById('events-tabs');
   let tabsHead = tabs.firstElementChild;

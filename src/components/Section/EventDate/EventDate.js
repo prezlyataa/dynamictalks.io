@@ -17,6 +17,11 @@ export default class EventDate extends Component {
   static propTypes = {
 
     /**
+     * city - city of the event
+     */
+    city: PropTypes.string.isRequired,
+
+    /**
      * className - classes which can be passed from parent
      */
     className: PropTypes.string,
@@ -24,7 +29,12 @@ export default class EventDate extends Component {
     /**
      * theme - theme of the renderign
      */
-    theme: PropTypes.oneOf([ED_THEME.WHITE, ED_THEME.YELLOW])
+    theme: PropTypes.oneOf([ED_THEME.WHITE, ED_THEME.YELLOW]),
+
+    /**
+     * time - time string of the event
+     */
+    timeString: PropTypes.string.isRequired,
   };
 
   static defaultProps = {
@@ -37,14 +47,18 @@ export default class EventDate extends Component {
     autoBind(this);
   }
 
-
   render() {
-    const {className, theme} = this.props;
+    const {
+      className,
+      theme,
+      city,
+      timeString
+    } = this.props;
 
     return (
       <div className={cx(CN, className, `${CN}--${theme}`)}>
-        <h3>Львів</h3>
-        <time>21 жовтня, 2017</time>
+        <h3>{city}</h3>
+        <time>{timeString}</time>
       </div>
     );
   }
