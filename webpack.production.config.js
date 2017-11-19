@@ -44,6 +44,7 @@ const config = {
     new ExtractTextPlugin({ filename: './styles/[name].[hash].css', disable: false, allChunks: true }),
     new CopyWebpackPlugin([
       { from: './images/*', to: './images/[name].[hash].[ext]' },
+      { from: './images/speakers', to: './images/speakers' },
       { from: './public', to: './'}
     ]),
   ],
