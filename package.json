@@ -1,6 +1,6 @@
 {
   "name": "dynamictalks.io",
-  "version": "2.0.20",
+  "version": "2.0.21",
   "description": "Meetup page",
   "scripts": {
     "start": "webpack-dev-server",
