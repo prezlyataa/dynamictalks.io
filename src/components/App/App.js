@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import { config } from 'src/config/config';
 import { Top } from '../Top';
 import { Meetup } from '../Meetup';
 import { Speakers } from '../Speakers';
 import { Organizers } from '../Organizers';
 import { Footer } from '../Footer';
 import { Nav } from '../Nav';
+/*import { Promo } from 'src/components/Promo';*/
 import './App.scss';
-
-import { config } from 'src/config/config';
 
 export const SECTIONS = {
   TOP: 'top',
@@ -25,6 +25,9 @@ export default class App extends Component {
           config={config}
           id={SECTIONS.TOP}
         />
+
+        {/*<Promo/>*/}
+
         <Meetup
           config={config}
           id={SECTIONS.MEETUP}
