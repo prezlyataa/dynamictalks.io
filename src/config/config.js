@@ -30,7 +30,11 @@ export const config = {
       specialGuest: false,
       link: 'https://www.linkedin.com/in/igor-tomov-b0584675',
       imageSrc: 'images/speakers/it.jpg',
-      bullets: []
+      bullets: [
+        'Evolution from Web sites to Web applications',
+        'The pitfalls of lack of Server Side Rendering',
+        'Which tools you can use for SSR nowadays'
+      ]
     },
     {
       name: 'Володимир Фльонц',
