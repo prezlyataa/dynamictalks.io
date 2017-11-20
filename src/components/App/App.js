@@ -6,7 +6,7 @@ import { Speakers } from '../Speakers';
 import { Organizers } from '../Organizers';
 import { Footer } from '../Footer';
 import { Nav } from '../Nav';
-/*import { Promo } from 'src/components/Promo';*/
+import { Promo } from 'src/components/Promo';
 import './App.scss';
 
 export const SECTIONS = {
@@ -26,7 +26,7 @@ export default class App extends Component {
           id={SECTIONS.TOP}
         />
 
-        {/*<Promo/>*/}
+        <Promo/>
 
         <Meetup
           config={config}

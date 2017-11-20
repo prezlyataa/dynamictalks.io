@@ -1,11 +1,13 @@
-@import "../../variables.scss";
-@import "../../mixins.scss";
+@import "~src/variables.scss";
+@import "~src/mixins.scss";
 @import "./tablet_header.scss";
 
 .main {
   position: relative;
   background-color: $color-orange;
   overflow: hidden;
+  box-sizing: border-box;
+  min-height: 101vh;
 
   .container_dekstop {
     width: 100%;

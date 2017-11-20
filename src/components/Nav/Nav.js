@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
 import { Anchor } from 'src/components/Anchor';
+import { SECTIONS } from 'src/components/App';
+import { throttle } from 'src/utils/_';
+import { isElementVisible } from 'src/utils/isElementVisible';
 import './Nav.scss';
-import {SECTIONS} from 'src/components/App/App';
 
 
 export const CN = 'nav';
@@ -34,36 +36,38 @@ export default class Nav extends Component {
     };
 
     autoBind(this);
+
+    this.onScroll = throttle(this._onScroll, 200, this);
   }
 
   componentDidMount() {
+    document.addEventListener('scroll', this.onScroll);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.onScroll);
+  }
+
+  _onScroll() {
     const { items } = this.props;
+
     const itemsEl = items.map(item => ({
       el: document.getElementById(item),
       id: item
     }));
 
-    document.addEventListener('scroll', () => {
-      const activeEl = itemsEl
-        .reduce((el, nextEl) => {
-          if (this.isActive(nextEl.el)) {
-            return nextEl;
-          }
+    const activeEl = itemsEl
+      .reduce((el, nextEl) => {
+        if (isElementVisible(nextEl.el)) {
+          return nextEl;
+        }
 
-          return el;
-        });
+        return el;
+      });
 
-      this.setState({active: activeEl.id});
-    });
+    this.setState({active: activeEl.id});
   }
 
-  isActive(element) {
-    const rect = element.getBoundingClientRect();
-    const html = document.documentElement;
-    const viewportHeight = window.innerHeight || html.clientHeight;
-
-    return rect.top <= (viewportHeight) * .3;
-  }
 
   renderItems() {
     const { items } = this.props;
