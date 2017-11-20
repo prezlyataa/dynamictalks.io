@@ -15,6 +15,7 @@ export function isElementOnView(element) {
 
   return (
     (rect.top >= 0 && rect.top - viewportHeight <=0) ||
-    (rect.bottom <= viewportHeight && rect.bottom >= 0)
+    (rect.bottom <= viewportHeight && rect.bottom >= 0) ||
+    (rect.top <= 0 && rect.bottom >= viewportHeight)
   );
 }

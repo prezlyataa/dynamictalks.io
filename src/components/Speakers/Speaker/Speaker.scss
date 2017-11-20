@@ -73,6 +73,10 @@
     font-size: $font-size-regular-res;
   }
 
+  li {
+    padding-top: 5px;
+  }
+
   .text-wrapper {
     position: relative;
     display: inline-grid;
