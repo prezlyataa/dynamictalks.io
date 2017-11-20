@@ -14,7 +14,12 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-109822910-1');
+      gtag('config', 'UA-109822910-1', {
+        'custom_map': {
+          'dimension1': 'id',
+          'dimension2': 'href',
+        }
+      });
     </script>
 
 
