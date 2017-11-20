@@ -3,20 +3,21 @@ import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
 import { Section, SHAPE, SECTION_THEME } from 'src/components/Section';
+import { Tabs } from 'src/components/Tabs';
 import slack from 'src/images/slack_icon.png';
 import facebook from 'src/images/facebook-logo.png';
 import './Meetup.scss';
 
-
-import { Tabs } from 'src/components/Tabs';
-
-const tabs = [{
-  name: 'РОЗКЛАД',
-  content: 'Content for 1'
-}, {
-  name: 'ПРО «DYNAMIC TALKS»',
-  content: 'Content for 2'
-}];
+const tabs = [
+  {
+    name: 'РОЗКЛАД',
+    content: 'Content for 1'
+  },
+  {
+    name: 'ПРО «DYNAMIC TALKS»',
+    content: 'Content for 2'
+  }
+];
 
 const TabComponent = (props) => {
   return (
@@ -37,7 +38,6 @@ const TabComponent = (props) => {
 const Pane = (props) => {
   return <div>{props.children}</div>;
 };
-
 
 export const CN = 'line-meetup';
 

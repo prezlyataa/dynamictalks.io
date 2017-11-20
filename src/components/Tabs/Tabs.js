@@ -13,30 +13,26 @@ export default class Tabs extends Component {
       let activeClass = (this.state.selected === idx ? 'is-active' : '');
       return (
         <div
-          aria-controls={`panel${idx}`}
+          className="tabs__item"
           key={idx}
-          role="tab"
+          onClick={this.onClick.bind(this, idx)}
         >
-          <a
+          <span
             className={activeClass}
-            href="#"
-            onClick={this.onClick.bind(this, idx)}
           >
             {child.props.label}
-          </a>
+          </span>
         </div>
       );
     }
     return (
       <div
-        className="tabs__labels"
-        role="tablist"
+        className="tabs__head"
       >
         {this.props.children.map(labels.bind(this))}
       </div>
     );
   }
-
 
   onClick(index, event) {
     event.preventDefault();
