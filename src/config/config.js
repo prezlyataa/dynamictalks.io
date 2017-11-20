@@ -44,7 +44,7 @@ export const config = {
     {
       name: 'Дмитро Вербовий',
       position: 'UI engineer / Grid Dynamics',
-      topic: 'HTTP/2 for web developers. Why is it important to migrate?',
+      topic: 'Key things that every front-end developer should know about HTTP/2. Why is it important to migrate?',
       specialGuest: false,
       link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
       imageSrc: 'images/speakers/dv_2.jpg',
