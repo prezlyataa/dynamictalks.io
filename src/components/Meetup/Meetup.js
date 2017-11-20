@@ -8,8 +8,38 @@ import facebook from 'src/images/facebook-logo.png';
 import './Meetup.scss';
 
 
-export const CN = 'line-meetup';
+import { Tabs } from 'src/components/Tabs';
 
+const tabs = [{
+  name: 'РОЗКЛАД',
+  content: 'Content for 1'
+}, {
+  name: 'ПРО «DYNAMIC TALKS»',
+  content: 'Content for 2'
+}];
+
+const TabComponent = (props) => {
+  return (
+    <Tabs selected={props.firstSelect || 0}>
+
+      {props.tabs.map(tab =>
+        <Pane
+          className="tabs__head"
+          label={tab.name}
+        >
+          {tab.content}
+        </Pane>)
+      }
+    </Tabs>
+  );
+};
+
+const Pane = (props) => {
+  return <div>{props.children}</div>;
+};
+
+
+export const CN = 'line-meetup';
 
 export default class Meetup extends Component {
 
@@ -116,6 +146,9 @@ export default class Meetup extends Component {
             </div>
           </div>
         </div>
+
+        <TabComponent tabs={tabs} firstSelect={1}/>
+
         <div className="add_to_us">
           <h3>Приєднюйтесь до спільноти:</h3>
           <div className="add_to_us_links">
@@ -141,7 +174,6 @@ export default class Meetup extends Component {
             </a>
           </div>
         </div>
-
       </Section>
     );
   }
