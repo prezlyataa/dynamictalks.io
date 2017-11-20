@@ -48,7 +48,11 @@ export const config = {
       specialGuest: false,
       link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
       imageSrc: 'images/speakers/dv_2.jpg',
-      bullets: []
+      bullets: [
+        'HTTP2 is stable and actually proven in production',
+        'It has set of critical features that might improve performance of your web application',
+        'Lets see how we can use it with NodeJS'
+      ]
     }
   ]
 };
