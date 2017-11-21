@@ -23,16 +23,14 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTAMP:20171119T152914Z
-UID:20171119T152914Z-1495110203@marudot.com
+DTSTAMP:20171121T145356Z
+UID:20171121T145356Z-1668660925@marudot.com
 DTSTART;TZID="Asia/Beirut":20171202T103000
 DTEND;TZID="Asia/Beirut":20171202T160000
 SUMMARY:JS Dynamic Talks meetup
 URL:http%3A%2F%2Fdynamictalks.io
-DESCRIPTION:JS Dynamic Talks meetup #2
+DESCRIPTION:JS Dynamic Talks meetup #2\n\n\n10:30 - Реєстрація\n11:00 - Відкриття\, декілька слів про ідею івенту\n11:15 - Доповідь «How We Lost Server Side Rendering\, and Why We Should Concern About That» (Ігор Томов)\n12:30 - Кава\n12:45 - Доповідь «Key things every front-end developer should know about HTTP/2. Why is it important to migrate?» (Дмитро Вербовий)\n14:00 - Напої та снеки\n14:15 - Доповідь «Чи можна електрифікувати демократію?» (Володимир Фльонц)\n15:30 - Networking
 LOCATION:ITEA HUB 79018\, ЛЬВІВ\, ВУЛ. ГЕРОЇВ УПА\, 80
-TRANSP:OPAQUE
-X-MICROSOFT-CDO-BUSYSTATUS:BUSY
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:JS Dynamic Talks meetup
