@@ -11,7 +11,12 @@ import './Meetup.scss';
 const tabs = [
   {
     name: 'РОЗКЛАД',
-    content: 'hello!'
+    content:
+      <div className="tabs__content-container">
+        <ul className="schedule">
+
+        </ul>
+      </div>
   },
   {
     name: 'ПРО «DYNAMIC TALKS»',
