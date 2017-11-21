@@ -1,9 +1,11 @@
 @import "~src/variables.scss";
 
 .time-counter {
+  position: relative;
   display: flex;
   align-items: center;
   padding-top: 25px;
+  z-index: 100;
 
   .times {
     margin-right: 5px;

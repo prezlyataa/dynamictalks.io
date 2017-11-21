@@ -28,27 +28,35 @@ export const config = {
       position: 'UI engineer / Grid Dynamics',
       topic: 'How We Lost Server Side Rendering, and Why We Should Concern About That',
       specialGuest: false,
-      link: '',
+      link: 'https://www.linkedin.com/in/igor-tomov-b0584675',
       imageSrc: 'images/speakers/it.jpg',
-      bullets: []
+      bullets: [
+        'Evolution from Web sites to Web applications',
+        'The pitfalls of lack of Server Side Rendering',
+        'Which tools you can use for SSR nowadays'
+      ]
     },
     {
       name: 'Володимир Фльонц',
       position: 'Розробник ProZorro, засновник ГО «Електронна демократія», IT-євангеліст',
       topic: 'Чи можна електрифікувати демократію?',
       specialGuest: true,
-      link: '',
+      link: 'https://www.linkedin.com/in/flyonts',
       imageSrc: 'images/speakers/vf.jpg',
       bullets: []
     },
     {
       name: 'Дмитро Вербовий',
       position: 'UI engineer / Grid Dynamics',
-      topic: 'HTTP2',
+      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
       specialGuest: false,
-      link: 'https://www.facebook.com/dmitriy.verbovoy',
-      imageSrc: 'images/speakers/dv.jpg',
-      bullets: []
+      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
+      imageSrc: 'images/speakers/dv_2.jpg',
+      bullets: [
+        'HTTP2 is stable and actually proven in production',
+        'It has set of critical features that might improve performance of your web application',
+        'Lets see how we can use it with NodeJS'
+      ]
     }
   ]
 };
