@@ -10,15 +10,14 @@ export default class Tabs extends Component {
 
   _renderTitles() {
     function labels(child, idx) {
-      let activeClass = (this.state.selected === idx ? 'is-active' : '');
+      let activeClass = (this.state.selected === idx ? 'tabs__item is-active' : 'tabs__item');
       return (
         <div
-          className="tabs__item"
+          className={activeClass}
           key={idx}
           onClick={this.onClick.bind(this, idx)}
         >
           <span
-            className={activeClass}
           >
             {child.props.label}
           </span>

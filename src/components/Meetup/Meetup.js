@@ -147,7 +147,7 @@ export default class Meetup extends Component {
           </div>
         </div>
 
-        <TabComponent tabs={tabs} firstSelect={1}/>
+        <TabComponent tabs={tabs} firstSelect={0}/>
 
         <div className="add_to_us">
           <h3>Приєднюйтесь до спільноти:</h3>
