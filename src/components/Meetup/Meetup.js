@@ -3,31 +3,11 @@ import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
 import { Section, SHAPE, SECTION_THEME } from 'src/components/Section';
-import { Tabs } from 'src/components/Tabs';
+import { TabComponent }  from 'src/components/Tabs/TabComponent';
 import { SocialLinks } from 'src/components/SocialLinks';
 import './Meetup.scss';
 
 
-
-const TabComponent = (props) => {
-  return (
-    <Tabs selected={props.firstSelect || 0}>
-
-      {props.tabs.map(tab =>
-        <Pane
-          className="tabs__head"
-          label={tab.name}
-        >
-          {tab.content}
-        </Pane>)
-      }
-    </Tabs>
-  );
-};
-
-const Pane = (props) => {
-  return <div>{props.children}</div>;
-};
 
 export const CN = 'line-meetup';
 
@@ -81,10 +61,12 @@ export default class Meetup extends Component {
       {
         name: 'РОЗКЛАД',
         content:
-          <div className="tabs__content-container">
-            <ul className="schedule">
-              {this.renderAgenda()}
-            </ul>
+          <div className="tabs__text-content  active">
+            <div className="tabs__content-container">
+              <ul className="schedule">
+                {this.renderAgenda()}
+              </ul>
+            </div>
           </div>
       },
       {
@@ -126,51 +108,10 @@ export default class Meetup extends Component {
         theme={SECTION_THEME.WHITE}
         title="Meetup"
       >
-
-        <div className="events__content">
-          <div className="tabs"
-            id="events-tabs"
-          >
-            <div className="tabs__head">
-              <div className="tabs__item active">
-                <span>Розклад</span>
-              </div>
-              <div className="tabs__item">
-                <span>Про «Dynamic Talks»</span>
-              </div>
-            </div>
-            <div className="tabs__content">
-
-              <div className="tabs__text-content  active">
-                <div className="tabs__content-container">
-                  <ul className="schedule">
-                    {this.renderAgenda()}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="tabs__text-content">
-                <div className="tabs__content-container">
-                  <div className="tabs-info">
-                    <p>JS Dynamic Talks - це серія регулярних мітапів, де спеціалісти будуть ділитись своїм
-          досвідом і розкривати актуальні теми, обговорювати поточні тренди та існуючі проблеми,
-          шукати варіанти їх вирішення. Ми бачимо Dynamic Talks як платформу публічного обміну знаннями
-          та досвідом. Якщо вам є чим поділитись і ви бажаєте це робити - зв'яжіться з нами, ми додамо
-          вас в один з наступних мітапів. Якщо треба, ми допоможемо пропрацювати презентацію та
-          відточити доповідь.</p>
-                    <p>Перші декілька мітапів плануються у форматі: дві доповіді по напрямку front-end, плюс один
-          спеціальний гість, який не обов'язково пов'язаний з фронтендом, але може розповісти щось
-          цікаве для всіх. Цього разу до нас прийде Любомир Семків, який займається розробкою
-          одного з провідних геолокаційних сервісів. Любомир розповість багато цікавих фактів про
-          поточний стан розвитку геолокаційних сервісів та існуючи проблеми.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <TabComponent tabs={this.getTabs()} firstSelect={0}/>
+        <TabComponent
+          firstSelect={0}
+          tabs={this.getTabs()}
+        />
 
         <div className="add_to_us">
           <h3>Приєднюйтесь до спільноти:</h3>

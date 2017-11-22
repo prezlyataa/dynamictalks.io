@@ -1,40 +1,37 @@
 import React, { Component } from 'react';
-import './Tabs.scss';
+import autoBind from 'react-autobind';
+import {TabTitle} from 'src/components/Tabs/TabTitle';
 
-export default class Tabs extends Component {
+export class Tabs extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { selected: this.props.selected };
+    this.state = {
+      selected: this.props.selected
+    };
+
+    autoBind(this);
   }
 
   _renderTitles() {
-    function labels(child, idx) {
-      let activeClass = (this.state.selected === idx ? 'tabs__item is-active' : 'tabs__item');
-      return (
-        <div
-          className={activeClass}
-          key={idx}
-          onClick={this.onClick.bind(this, idx)}
-        >
-          <span
-          >
-            {child.props.label}
-          </span>
-        </div>
-      );
-    }
     return (
       <div
         className="tabs__head"
       >
-        {this.props.children.map(labels.bind(this))}
+        {this.props.children.map((children, index) => (
+          <TabTitle
+            children={children}
+            idx={index}
+            key={index}
+            onClick={this.onClick}
+            selected={this.state.selected === index}
+          />
+        ))}
       </div>
     );
   }
 
-  onClick(index, event) {
-    event.preventDefault();
+  onClick(index) {
     this.setState({
       selected: index
     });
@@ -43,6 +40,7 @@ export default class Tabs extends Component {
   render() {
     return (
       <div className="tabs">
+
         {this._renderTitles()}
 
         <div className="tabs__content">
