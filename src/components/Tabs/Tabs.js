@@ -1,8 +1,23 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import {TabTitle} from 'src/components/Tabs/TabTitle';
 
 export class Tabs extends Component {
+
+  static propTypes = {
+
+    /**
+     * children - array of tabs pane
+     */
+    children: PropTypes.array,
+    /**
+     * selected - set selected state
+     */
+    selected: PropTypes.number
+
+  };
+
   constructor(props) {
     super(props);
 

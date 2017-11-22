@@ -1,7 +1,31 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 
 export class  TabTitle extends Component {
+
+  static propTypes = {
+    /**
+     * children - object of tabs pane
+     */
+    children: PropTypes.object,
+
+    /**
+     * idx - idx of the event
+     */
+    idx: PropTypes.number,
+
+    /**
+     * onClick - function click on idx
+     */
+    onClick: PropTypes.func,
+
+    /**
+     * selected - If true then add active class
+     */
+    selected: PropTypes.bool
+  };
+
   constructor(props) {
     super(props);
     autoBind(this);

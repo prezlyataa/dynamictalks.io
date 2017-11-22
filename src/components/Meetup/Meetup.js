@@ -7,8 +7,6 @@ import { TabComponent }  from 'src/components/Tabs/TabComponent';
 import { SocialLinks } from 'src/components/SocialLinks';
 import './Meetup.scss';
 
-
-
 export const CN = 'line-meetup';
 
 export default class Meetup extends Component {
