@@ -52,8 +52,26 @@
     }
 
     .footer_links {
+      flex-flow: wrap;
+      justify-content: center;
       order: -1;
       padding-bottom: 15px;
+
+      .social-links {
+        flex-shrink: 0;
+        justify-content: center;
+      }
+
+      a {
+        flex-shrink: 0;
+      }
     }
   }
 }
+
+@media only screen and (max-width: 385px) {
+  .social-links {
+    margin-bottom: 15px;
+  }
+}
+
