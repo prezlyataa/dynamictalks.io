@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Tabs } from 'src/components/Tabs/Tabs';
 import { TabPane } from 'src/components/Tabs/TabPane';
 
+import './TabComponent.scss';
+
 export class TabComponent extends Component {
   constructor(props) {
     super(props);
