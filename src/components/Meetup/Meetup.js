@@ -4,8 +4,7 @@ import autoBind from 'react-autobind';
 import cx from 'classnames';
 import { Section, SHAPE, SECTION_THEME } from 'src/components/Section';
 import { Tabs } from 'src/components/Tabs';
-import slack from 'src/images/slack_icon.png';
-import facebook from 'src/images/facebook-logo.png';
+import { SocialLinks } from 'src/components/SocialLinks';
 import './Meetup.scss';
 
 const tabs = [
@@ -171,28 +170,7 @@ export default class Meetup extends Component {
 
         <div className="add_to_us">
           <h3>Приєднюйтесь до спільноти:</h3>
-          <div className="add_to_us_links">
-            <a className="slack_logo"
-              data-gtag="join-slack-details"
-              href="https://dynamictalks.slack.com/join/shared_invite/enQtMjU0OTkwNjY0MjYzLTQxZmJkNjk2OTZjNTQ1OTc4N2ExYmQwZDZjYTBlYWUyNzA2NmJjMDc0ZGIxZWQ3OTkyNmZjMDQxN2RmNzA2ODc"
-              id="join-slack-details"
-              target="_blank"
-            >
-              <img alt="slack-icon"
-                src={slack}
-              />
-            </a>
-            <a className="facebook_logo"
-              data-gtag="join-facebook-details"
-              href="https://www.facebook.com/dynamictalks/"
-              id="join-facebook-details"
-              target="_blank"
-            >
-              <img alt="facebook-logo"
-                src={facebook}
-              />
-            </a>
-          </div>
+          <SocialLinks config={config}/>
         </div>
       </Section>
     );

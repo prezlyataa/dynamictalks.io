@@ -9,7 +9,7 @@
   align-items: center;
   width: 30%;
   padding-bottom: 200px;
-  background-color: $color-grey;
+  background-color: $color-primary2;
 
   .portrait {
     position: absolute;
@@ -19,7 +19,7 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      border: 12px solid $color-orange;
+      border: 12px solid $color-primary;
     }
   }
 
@@ -27,7 +27,7 @@
     @include font-family-opensans-bold;
 
     text-align: center;
-    color: $color-black;
+    color: $color-white;
     font-size: 1.5em;
     text-transform: uppercase;
     position: relative;
@@ -48,7 +48,7 @@
     .special-guest {
       font-family: $font-family-opensans-regular;
       margin-bottom: 20px;
-      color: $color-orange;
+      color: $color-white;
       font-size: 0.7em;
       text-align: left;
       text-transform: none;
@@ -64,11 +64,11 @@
 
   p {
     font-family: $font-family-opensans-regular;
-    color: $color-black;
     font-size: 1.3em;
   }
 
   p, ul {
+    color: $color-white;
     padding: 10px 20px;
     font-size: $font-size-regular-res;
   }

@@ -19,7 +19,11 @@ export const config = {
     registrationUrl: 'https://goo.gl/forms/x9AwECPkGUwCQm4Y2',
     materialsUrl: 'https://dynamictalks.io/js-meetup-2-materials',
     vacanciesUrl: 'https://www.griddynamics.com/careers',
-    icalUrl: '/JS_Dynamic_Talks_meetup_Dec_2017.ics'
+    icalUrl: '/JS_Dynamic_Talks_meetup_Dec_2017.ics',
+    youtube: 'https://goo.gl/CsBDhE',
+    slack: 'https://dynamictalks.slack.com/join/shared_invite/enQtMjU0OTkwNjY0MjYzLTQxZmJkNjk2OTZjNTQ1OTc4N2ExYmQwZDZjYTBlYWUyNzA2NmJjMDc0ZGIxZWQ3OTkyNmZjMDQxN2RmNzA2ODc',
+    facebook: 'https://www.facebook.com/dynamictalks/'
+
   },
 
   speakers: [
@@ -43,7 +47,11 @@ export const config = {
       specialGuest: true,
       link: 'https://www.linkedin.com/in/flyonts',
       imageSrc: 'images/speakers/vf.jpg',
-      bullets: []
+      bullets: [
+        'Електронні вибори — це перше, що згадують обговорюючи електронну демократію майбутнього',
+        'Моделі електронних голосувань, що вже використовуються в світі, та тих що тільки вважаються перспектвними',
+        'Проведемо практичне голосування за системою Prêt à Voter та розберемо три офіційних інтернет-голосування, що вже відбулись в Україні'
+      ]
     },
     {
       name: 'Дмитро Вербовий',

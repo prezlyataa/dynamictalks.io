@@ -11,6 +11,10 @@ import './SectionHeader.scss';
 
 
 export const CN = 'section-header';
+export const TITLE_THEMES = {
+  PRIMARY: 'primary',
+  SECONDERY: 'secondery'
+};
 
 
 export default class SectionHeader extends Component {
@@ -74,15 +78,17 @@ export default class SectionHeader extends Component {
           logoTheme: LOGO_THEME.COLORED,
           eventDateTheme: ED_THEME.YELLOW,
           regButtonTheme: BUTTON_THEME.YELLOW,
-          eventPlaceTheme: EP_THEME.YELLOW
+          eventPlaceTheme: EP_THEME.YELLOW,
+          titleTheme: TITLE_THEMES.PRIMARY
         };
       case SECTION_THEME.YELLOW:
       default:
         return {
           logoTheme: LOGO_THEME.BW,
           eventDateTheme: ED_THEME.WHITE,
-          regButtonTheme: BUTTON_THEME.WHITE,
-          eventPlaceTheme: EP_THEME.WHITE
+          regButtonTheme: BUTTON_THEME.YELLOW,
+          eventPlaceTheme: EP_THEME.WHITE,
+          titleTheme: TITLE_THEMES.SECONDERY
         };
     }
   }
@@ -116,7 +122,7 @@ export default class SectionHeader extends Component {
 
 
         <div className={`${CN}__col ${CN}__col--middle`}>
-          { title && <h2 className={`${CN}__title`}>{title}</h2> }
+          { title && <h2 className={`${CN}__title ${CN}__title--${themes.titleTheme}`}>{title}</h2> }
           { shape && <div className={`${CN}__shape ${CN}__shape--${shape}`}/> }
         </div>
 

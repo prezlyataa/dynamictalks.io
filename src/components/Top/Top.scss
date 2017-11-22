@@ -4,7 +4,6 @@
 
 .main {
   position: relative;
-  background-color: $color-orange;
   overflow: hidden;
   box-sizing: border-box;
   min-height: 101vh;
@@ -38,7 +37,7 @@
       p {
         @include font-family-opensans-bold();
         text-transform: uppercase;
-        color: $color-white;
+        color: $color-secondary;
         font-size: 3rem;
         letter-spacing: .95rem;
       }
