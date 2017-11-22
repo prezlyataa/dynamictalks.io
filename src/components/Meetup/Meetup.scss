@@ -190,6 +190,11 @@
     }
     .add_to_us {
       padding-bottom: 20px;
+      display: block;
+
+      h3 {
+        padding-bottom: 15px;
+      }
     }
 
     .tabs__text-content .schedule li {
