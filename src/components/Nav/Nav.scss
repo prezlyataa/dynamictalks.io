@@ -10,7 +10,7 @@
 
   z-index: 100;
 
-  @include respond-to($phone){
+  @include respond-to($tablet-portrait){
     display: none;
   }
 
