@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import {RegisterBlock} from '../RegisterBlock';
 import './Schedule.scss';
 
 export const CN = 'schedule';
@@ -53,6 +54,7 @@ export default class Schedule extends Component {
             {this.renderAgenda()}
           </div>
         </div>
+        <RegisterBlock/>
       </div>
     );
   }
