@@ -46,6 +46,7 @@ export default class Schedule extends Component {
   }
 
   render() {
+    const {config} = this.props;
     return(
       <div className={cx(CN)}>
         <div className={cx(`${CN}_container`)}>
@@ -54,7 +55,7 @@ export default class Schedule extends Component {
             {this.renderAgenda()}
           </div>
         </div>
-        <RegisterBlock/>
+        <RegisterBlock config={config}/>
       </div>
     );
   }
