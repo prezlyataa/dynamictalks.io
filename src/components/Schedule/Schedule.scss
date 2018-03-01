@@ -1,0 +1,86 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.schedule {
+  background-color: $color-deep-black;
+
+  &_container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 74px 97px;
+    color: $color-white;
+    font-size: 16px;
+    font-weight: bold;
+
+    @include respond-to($tablet-portrait) {
+      padding: 50px 20px;
+    }
+
+    @include respond-to($tablet-portrait) {
+      text-align: center;
+    }
+
+      &_title {
+      font-size: 30px;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+
+    &_program {
+      padding: 50px 0 20px;
+
+      &_event {
+        display: flex;
+        padding: 20px 0 25px;
+
+        @include respond-to($tablet-portrait) {
+          flex-direction: column;
+        }
+
+        &_time {
+          min-width: 135px;
+          font-size: 22px;
+          color: $color-lightgray;
+          font-weight: 500;
+        }
+
+        &_description {
+          display: flex;
+          flex-direction: column;
+          align-self: center;
+          padding-left: 70px;
+
+          @include respond-to($tablet-portrait) {
+            padding-left: 0;
+            padding-top: 8px;
+          }
+
+          .topic {
+            padding-top: 8px;
+            font-size: 20px;
+            color: #27ee7c;
+            width: 70%;
+
+            @include respond-to($tablet-portrait) {
+              width: 100%;
+            }
+          }
+        }
+      }
+      &_underline {
+        width: 75%;
+        height: 1px;
+        background-color: $schedule-underline;
+
+        @include respond-to($tablet-portrait) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+

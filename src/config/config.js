@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const config = {
   eventAddress: {
     addressLines: [
@@ -70,16 +72,21 @@ export const config = {
 };
 
 config.agenda = [
-  { time: '10:30', description: 'Реєстрація' },
-  { time: '11:00', description: 'Відкриття, декілька слів про ідею івенту' },
-  { time: '11:15', description: speakerToDescription(config.speakers[0]) },
-  { time: '12:30', description: 'Кава' },
-  { time: '12:45', description: speakerToDescription(config.speakers[2]) },
-  { time: '14:00', description: 'Напої та снеки' },
-  { time: '14:15', description: speakerToDescription(config.speakers[1]) },
-  { time: '15:30', description: 'Networking' }
+  { time: '10:30-11:00', description: 'Реєстрація, нетворкінг' },
+  { time: '11:00-11:15', description: 'Відкриття, декілька слів про ідею івенту' },
+  { time: '11:15-12:30', description: speakerToDescription(config.speakers[0]) },
+  { time: '12:30-12:45', description: 'Кава' },
+  { time: '12:45-14:00', description: speakerToDescription(config.speakers[2]) },
+  { time: '14:00-14:15', description: 'Напої та снеки' },
+  { time: '14:15-15:30', description: speakerToDescription(config.speakers[1]) },
+  { time: '15:30', description: 'Afterparty, Networking' }
 ];
 
 function speakerToDescription(speaker) {
-  return `Доповідь «${speaker.topic}» (${speaker.name})`;
+  return (
+    <div>
+      <p className="name">{speaker.name}</p>
+      <p className="topic">«{speaker.topic}»</p>
+    </div>
+  );
 }
