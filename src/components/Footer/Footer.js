@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
 import cx from 'classnames';
-import { SocialLinks } from 'src/components/SocialLinks';
 import './Footer.scss';
 
 
@@ -39,13 +38,6 @@ export default class Footer extends Component {
     return (
       <footer className={cx(CN, className)} >
         <p>© 2017 Dynamic Talks</p>
-        <div className="footer_links">
-          <SocialLinks
-            config={config}
-            trackingSuffix="footer"
-          />
-          <a href="mailto:info@dynamictalks.io">info@dynamictalks.io</a>
-        </div>
       </footer>
     );
   }
