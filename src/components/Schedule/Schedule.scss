@@ -3,17 +3,46 @@
 
 .schedule {
   background-color: $color-deep-black;
+  position: relative;
+  background-size: 100% 100%;
+
+  .register-block {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: -100px;
+
+    .register-block_content {
+      @include respond-to($tablet-portrait) {
+        padding: 25px;
+        background-size: 60% 80%;
+        background-position: 135%
+      }
+
+      &_regbtn {
+        @include respond-to($tablet-portrait) {
+          width: 90%;
+        }
+      }
+    }
+
+    @include respond-to($tablet-portrait) {
+      width: 90%;
+    }
+  }
 
   &_container {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 74px 97px;
+    padding: 74px 97px 170px;
     color: $color-white;
     font-size: 16px;
     font-weight: bold;
 
     @include respond-to($tablet-portrait) {
-      padding: 50px 20px;
+      padding: 50px 20px 150px;
     }
 
       &_title {
