@@ -1,0 +1,11 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.registration-button {
+  padding: 17px 25px;
+  background: $color-black;
+  @include font-family-gothamPro-bold();
+  text-transform: uppercase;
+  color: $color-white;
+  cursor: pointer;
+}
