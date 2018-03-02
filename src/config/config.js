@@ -90,7 +90,7 @@ export const config = {
       topic: 'The story about good and bad decisions on the way to develop new UI platform for enterprise',
       specialGuest: false,
       link: 'https://www.linkedin.com/in/georgiy-podsvetov-86898945/',
-      imageSrc: 'images/speakers/podsvyetov.jpg',
+      imageSrc: 'images/speakers/dscf3957_1024.jpg',
       bullets: [
         'Story how our team made impossible within one year',
         'Tough decision',
