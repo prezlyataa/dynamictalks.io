@@ -37,7 +37,7 @@ export default class Footer extends Component {
 
 
   render() {
-    const {className} = this.props;
+    const {className, config} = this.props;
 
     return (
       <footer className={cx(CN, className)} >
@@ -47,14 +47,14 @@ export default class Footer extends Component {
         <div className='info'>
           <div className='info_email'>
             <p>Пишіть нам на:</p>
-            <a href="info@dynamictalks.io">info@dynamictalks.io</a>
+            <a href="mailto:info@dynamictalks.io">info@dynamictalks.io</a>
           </div>
           <div className='info_socials'>
             <p>Ми в соцмережах</p>
             <div className='info_socials__networks'>
-              <a href=""><img src={twitter} alt="twitter"/></a>
-              <a href=""><img src={instagram} alt="instagram"/></a>
-              <a href=""><img src={facebook} alt="facebook"/></a>
+              <a href={config.socialNetworks[2].link}><img src={twitter} alt="twitter"/></a>
+              <a href={config.socialNetworks[3].link}><img src={instagram} alt="instagram"/></a>
+              <a href={config.socialNetworks[0].link}><img src={facebook} alt="facebook"/></a>
             </div>
           </div>
         </div>

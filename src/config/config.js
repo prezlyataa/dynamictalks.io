@@ -4,7 +4,9 @@ export const config = {
     addressLines: [
       'м.Львів, вул.Галицька, 1,',
       'COMMUNA',
-      'Офісний центр, вхід праворуч від стоянки, конференц-зал знаходиться ліворуч від рецепції.'
+      '2-й поверх\n' +
+      '(на розі Площі Ринок)\n' +
+      'com@communa.net.ua'
     ],
     googleMapEmbed:'<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.076540122793!2d24.029019415632334!3d49.84101933896939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6dca0c9b13%3A0x2797b7e6a216b902!2z0LLRg9C70LjRhtGPINCT0LDQu9C40YbRjNC60LAsIDEsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1520001652497" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'
   },
@@ -25,11 +27,19 @@ export const config = {
   socialNetworks : [
     {
       name: 'facebook',
-      link: 'https://www.facebook.com'
+      link: 'https://www.facebook.com/dynamictalks/'
     },
     {
       name: 'slack',
-      link: 'https://www.slack.com'
+      link: 'https://griddynamics.slack.com'
+    },
+    {
+      name:'twitter',
+      link:'https://twitter.com/griddynamics'
+    },
+    {
+      name:'instagram',
+      link:'https://www.instagram.com/griddynamics_ua'
     }
   ],
 
@@ -71,16 +81,17 @@ export const config = {
 
   speakers: [
     {
-      name: 'Ярослав Заблоцький',
-      state:'спеціальний гість',
-      position: 'Професор, керівник приватної Академії, практикуючий лікар. Власник мережі стоматологічних клінік TM "Клініка Заблоцького".' +
-      'Власник одного з найдорожчих брендів в Україні у сфері професійних медичних послуг.' +
-      ' Автор книги «Як я став Заблоцьким. Пригоди стоматолога в червоному метелику». Автор та ведучий  медіа-проекту про 100  заможних українців  «Як я став…». ',
-      topic: 'Бізнес від нуля до мільйона',
+      name: 'Георгій Подсвєтов',
+      state:'',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'The story about good and bad decisions on the way to develop new UI platform for enterprise',
       specialGuest: false,
-      link: 'https://www.linkedin.com/in/igor-tomov-b0584675',
-      imageSrc: 'images/speakers/DDV_8093 copy.jpg',
+      link: 'https://www.linkedin.com/in/georgiy-podsvetov-86898945/',
+      imageSrc: 'images/speakers/podsvyetov.jpg',
       bullets: [
+        'Story how our team made impossible within one year',
+        'Tough decision',
+        'Thoughts on how to survive and deliver results in highly politicized environment'
       ]
     },
     {
@@ -88,8 +99,8 @@ export const config = {
       state:'',
       position: 'UI engineer / Grid Dynamics',
       topic: 'Build Hybrid Web Application',
-      link: 'https://www.linkedin.com/in/flyonts',
-      imageSrc: 'images/speakers/Facebook.jpg',
+      link: 'https://www.linkedin.com/in/vovavoevidka/',
+      imageSrc: 'images/speakers/vv.jpg',
       bullets: [
         'Share experience of `injection` new web application into existing enterprise infrastructure.',
         'Deliver understanding of possible issues',
@@ -97,17 +108,16 @@ export const config = {
       ]
     },
     {
-      name: 'Дмитро Вербовий',
-      state:'',
-      position: 'UI engineer / Grid Dynamics',
-      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
+      name: 'Ярослав Заблоцький',
+      state:'спеціальний гість',
+      position: 'Професор, керівник приватної Академії, практикуючий лікар. Власник мережі стоматологічних клінік TM "Клініка Заблоцького".' +
+      'Власник одного з найдорожчих брендів в Україні у сфері професійних медичних послуг.' +
+      ' Автор книги «Як я став Заблоцьким. Пригоди стоматолога в червоному метелику». Автор та ведучий  медіа-проекту про 100  заможних українців  «Як я став…». ',
+      topic: 'Бізнес від нуля до мільйона',
       specialGuest: false,
-      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
-      imageSrc: 'images/speakers/Facebook.jpg',
+      link: 'https://www.facebook.com/yaroslav.zablotskyy',
+      imageSrc: 'images/speakers/DDV_8093 copy.jpg',
       bullets: [
-        'HTTP2 is stable and actually proven in production',
-        'It has set of critical features that might improve performance of your web application',
-        'Lets see how we can use it with NodeJS'
       ]
     }
   ]
