@@ -53,9 +53,13 @@ export default class Schedule extends Component {
   }
 
   render() {
-    const {config} = this.props;
+    const {config,id} = this.props;
     return(
-      <section className={cx(CN)}>
+      <section
+        className={cx(CN)}
+        id={id}
+    
+      >
         <div className={cx(`${CN}_container`)}>
           <h3 className={cx(`${CN}_container_title`)}>Програма</h3>
           <div className={cx(`${CN}_container_program`)}>

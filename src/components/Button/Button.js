@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import cx from 'classnames';
-import './RegistrationButton.scss';
+import './Button.scss';
 import Anchor from 'src/components/Anchor/Anchor';
 
 
+export const CN = 'button';
 
-export const CN = 'registration-button';
 
-
-export default class Header extends Component {
+export default class Button extends Component {
   
   static propTypes = {
+    
+    
+    theme: PropTypes.string,
+    // content:PropTypes.any
     
     /**
      * className - classes which can be passed from parent
@@ -22,7 +25,8 @@ export default class Header extends Component {
     /**
      * config - configuration object
      */
-    config: PropTypes.object.isRequired,
+    config: PropTypes.object.isRequired
+    
   };
   
   static defaultProps = {};
@@ -34,7 +38,7 @@ export default class Header extends Component {
   
   
   render() {
-    const {className, config} = this.props;
+    const {className, children, config} = this.props;
     
     return <Anchor
       className={cx(CN, className)}
@@ -42,7 +46,7 @@ export default class Header extends Component {
       id={CN}
       target="_blank"
     >
-      {config.buttonsText.registration}
+      {children}
     </Anchor>;
     
   }

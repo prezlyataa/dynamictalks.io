@@ -49,19 +49,27 @@ export const config = {
     timeString: '10 березня, 2018'
   },
 
-  registrationButton: {
-    text: 'Реєстрація'
+  buttonsText: {
+    registration: 'Реєстрація',
+    playDemo: 'Дивитися промо-відео'
   },
 
   loadmoreButton: {
     text: 'Показати ще'
   },
 
-  headerNavigationLinks: ['Хто', 'Програма', 'Коли і де', 'Про нас', 'Партнери'],
+  headerNavigationLinks: [
+    {title: 'Хто', href: '#speakers'},
+    {title: 'Програма', href: '#schedule'},
+    {title: 'Коли і де', href: '#contacts'},
+    {title: 'Про нас', href: '#about'},
+    {title: 'Партнери', href: '#partners'}
+  ],
 
   eventInformation: {
     title: 'Dynamic js talks #2',
     slogan: 'The frontend conference for experienced developers',
+    partnerText: 'Генеральний партнер',
     eventDate: {
       city: 'Львів',
       time: '2018-10-03T10:00',
@@ -79,7 +87,9 @@ export const config = {
     slack: 'https://dynamictalks.slack.com/join/shared_invite/enQtMjU0OTkwNjY0MjYzLTQxZmJkNjk2OTZjNTQ1OTc4N2ExYmQwZDZjYTBlYWUyNzA2NmJjMDc0ZGIxZWQ3OTkyNmZjMDQxN2RmNzA2ODc',
     facebook: 'https://www.facebook.com/dynamictalks/',
     linkedIn: 'https://www.linkedin.com/company/250774/',
-    location:'https://www.google.com.ua/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%93%D0%B0%D0%BB%D0%B8%D1%86%D1%8C%D0%BA%D0%B0,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+79000/@49.8401876,24.0293324,17z/data=!3m1!4b1!4m5!3m4!1s0x473add6c2e097db9:0x777fab7d561f976c!8m2!3d49.8401842!4d24.0315211'
+    location:'https://www.google.com.ua/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%93%D0%B0%D0%BB%D0%B8%D1%86%D1%8C%D0%BA%D0%B0,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+79000/@49.8401876,24.0293324,17z/data=!3m1!4b1!4m5!3m4!1s0x473add6c2e097db9:0x777fab7d561f976c!8m2!3d49.8401842!4d24.0315211',
+    site: 'https://www.griddynamics.com/',
+    promoVideo:'https://www.youtube.com/watch?v=fpVmtc2A3H8&feature=youtu.be'
   },
 
   speakers: [
@@ -115,6 +125,10 @@ export const config = {
       state:'спеціальний гість',
       position: 'Власник мережі стоматологічних клінік TM "Клініка Заблоцького"',
       topic: 'Як побудувати бізнес від нуля до мільйона в Україні',
+      position: 'Професор, керівник приватної Академії, практикуючий лікар. Власник мережі стоматологічних клінік TM "Клініка Заблоцького".' +
+      'Власник одного з найдорожчих брендів в Україні у сфері професійних медичних послуг.' +
+      ' Автор книги «Як я став Заблоцьким. Пригоди стоматолога в червоному метелику». Автор та ведучий  медіа-проекту про 100  заможних українців  «Як я став…». ',
+      topic: 'Бізнес від нуля до мільйона',
       specialGuest: false,
       link: 'https://www.facebook.com/yaroslav.zablotskyy',
       imageSrc: 'images/speakers/DDV_8093 copy.jpg',

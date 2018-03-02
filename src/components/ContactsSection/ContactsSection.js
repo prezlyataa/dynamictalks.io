@@ -35,11 +35,15 @@ export default class ContactsSection extends Component {
     const {
       eventAddress,
       eventDate,
-      titles
+      titles,
+
     } = this.props.config;
 
     return (
-      <section className='contacts_section'>
+      <section
+        className="contacts_section"
+        id="contacts"
+      >
 
         <div className='address-info'>
 
