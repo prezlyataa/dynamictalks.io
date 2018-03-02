@@ -48,7 +48,7 @@ export const config = {
     time: '2017-03-10T10:00',
     timeString: '10 березня, 2018'
   },
-  
+
   buttonsText: {
     registration: 'Реєстрація',
     playDemo: 'Дивитися промо-відео'
@@ -57,7 +57,7 @@ export const config = {
   loadmoreButton: {
     text: 'Показати ще'
   },
-  
+
   headerNavigationLinks: [
     {title: 'Хто', href: '#speakers'},
     {title: 'Програма', href: '#schedule'},
@@ -65,7 +65,7 @@ export const config = {
     {title: 'Про нас', href: '#about'},
     {title: 'Партнери', href: '#partners'}
   ],
-  
+
   eventInformation: {
     title: 'Dynamic js talks #2',
     slogan: 'The frontend conference for experienced developers',
@@ -77,7 +77,7 @@ export const config = {
       place: 'Львів, вул. Героїв УПА, 80'
     },
   },
-  
+
   externalEndpoints: {
     registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe98SDjiuK5F-0GQe3yV08TllaFMBd419E7Ogjb5h7mcQsTSQ/viewform',
     materialsUrl: 'https://dynamictalks.io/public-materials',
@@ -91,7 +91,7 @@ export const config = {
     site: 'https://www.griddynamics.com/',
     promoVideo:'https://www.youtube.com/watch?v=fpVmtc2A3H8&feature=youtu.be'
   },
-  
+
   speakers: [
     {
       name: 'Георгій Подсвєтов',
@@ -212,9 +212,9 @@ config.agenda = [
   { time: '11:00-11:15', description: 'Відкриття, декілька слів про ідею івенту' },
   { time: '11:15-12:30', topic: speakerToDescription(config.speakers[0]), speaker: speaker(config.speakers[0])},
   { time: '12:30-12:45', description: 'Кава' },
-  { time: '12:45-14:00', topic: speakerToDescription(config.speakers[2]), speaker: speaker(config.speakers[1]) },
+  { time: '12:45-14:00', topic: speakerToDescription(config.speakers[1]), speaker: speaker(config.speakers[1]) },
   { time: '14:00-14:15', description: 'Напої та снеки' },
-  { time: '14:15-15:30', topic: speakerToDescription(config.speakers[1]), speaker: speaker(config.speakers[2]) },
+  { time: '14:15-15:30', topic: speakerToDescription(config.speakers[2]), speaker: speaker(config.speakers[2]) },
   { time: '15:30', description: 'Afterparty, Networking' }
 ];
 
