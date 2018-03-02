@@ -88,7 +88,7 @@
           .topic {
             padding-top: 8px;
             font-size: 20px;
-            color: #27ee7c;
+            color: $color-lightgreen;
             width: 70%;
 
             @include respond-to($tablet-portrait) {

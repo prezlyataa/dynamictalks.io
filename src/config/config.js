@@ -24,8 +24,8 @@ export const config = {
     icalUrl: '/JS_Dynamic_Talks_meetup_Dec_2017.ics',
     youtube: 'https://goo.gl/CsBDhE',
     slack: 'https://dynamictalks.slack.com/join/shared_invite/enQtMjU0OTkwNjY0MjYzLTQxZmJkNjk2OTZjNTQ1OTc4N2ExYmQwZDZjYTBlYWUyNzA2NmJjMDc0ZGIxZWQ3OTkyNmZjMDQxN2RmNzA2ODc',
-    facebook: 'https://www.facebook.com/dynamictalks/'
-
+    facebook: 'https://www.facebook.com/dynamictalks/',
+    linkedIn: 'https://www.linkedin.com/company/250774/'
   },
 
   speakers: [

@@ -15,7 +15,7 @@ export default class RegisterBlock extends Component {
     /**
      * config - configuration object
      */
-    config: PropTypes.object.isRequired,
+    config: PropTypes.object.isRequired
   };
 
   constructor(props) {

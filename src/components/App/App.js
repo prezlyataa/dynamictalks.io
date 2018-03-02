@@ -18,7 +18,7 @@ export default class App extends Component {
     return (
       <div>
         <Schedule config={config}/>
-        <Partners/>
+        <Partners config={config}/>
       </div>
     );
   }

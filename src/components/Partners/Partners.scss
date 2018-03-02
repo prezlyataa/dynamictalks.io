@@ -6,13 +6,74 @@
   max-width: 1140px;
   margin: 0 auto;
 
-  &_title {
-    padding-left: 97px;
+  &_general {
+    background-color: $color-lightgreen;
+    padding: 55px 97px 80px;
 
-    &_block {
-      font-size: 30px;
-      font-weight: 900;
-      text-transform: uppercase;
+    &_title {
+      padding-bottom: 25px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    &_content {
+      background-color: $color-white;
+      display: flex;
+
+      &_desc {
+
+        &_title {
+          font-size: 24px;
+          font-weight: 900;
+          letter-spacing: 1px;
+        }
+
+        &_text {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.5;
+          padding: 15px 0;
+        }
+
+        &_icons {
+          a:first-child {
+            margin-right: 25px;
+          }
+          padding-bottom: 18px;
+        }
+
+        &_btn {
+
+          &_regbtn {
+            display: inline-block;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: $color-deep-black;
+            border: 2px solid $color-deep-black;
+            padding: 15px 13px;
+            text-decoration: none;
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_informational {
+    padding: 50px 97px 70px;
+
+    &_title {
+      font-size: 18px;
+      font-weight: bold;
     }
   }
 }
