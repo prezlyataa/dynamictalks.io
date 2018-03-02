@@ -5,6 +5,7 @@
   background-color: $color-deep-black;
   position: relative;
   background-size: 100% 100%;
+  margin-top:70px;
 
   .register-block {
     position: absolute;
@@ -14,11 +15,21 @@
     right: 0;
     bottom: -100px;
 
+    @include respond-to($tablet-portrait) {
+      bottom: -70px;
+    }
+
     .register-block_content {
       @include respond-to($tablet-portrait) {
         padding: 25px;
         background-size: 60% 80%;
         background-position: 135%
+      }
+
+      &_bg {
+        @include respond-to($tablet-portrait) {
+          padding: 0;
+        }
       }
 
       &_regbtn {
@@ -61,6 +72,7 @@
       &_event {
         display: flex;
         padding: 20px 0 25px;
+        border-bottom: 1px solid $schedule-underline;
 
         @include respond-to($tablet-portrait) {
           flex-direction: column;
@@ -79,31 +91,18 @@
           align-self: center;
           padding-left: 70px;
 
+          &_topic {
+            color: $color-lightgreen;
+            font-size: 20px;
+            font-weight: bold;
+            padding-top: 10px;
+          }
+
           @include respond-to($tablet-portrait) {
             padding-left: 0;
             padding-top: 8px;
             align-self: flex-start;
           }
-
-          .topic {
-            padding-top: 8px;
-            font-size: 20px;
-            color: $color-lightgreen;
-            width: 70%;
-
-            @include respond-to($tablet-portrait) {
-              width: 100%;
-            }
-          }
-        }
-      }
-      &_underline {
-        width: 75%;
-        height: 1px;
-        background-color: $schedule-underline;
-
-        @include respond-to($tablet-portrait) {
-          width: 100%;
         }
       }
     }

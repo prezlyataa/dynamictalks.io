@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { Heading } from '../Heading';
 import './PreviousSpeakers.scss';
 
 const CN = 'previous-speakers';
@@ -41,9 +42,10 @@ export default class PreviousSpeakers extends Component {
   }
 
   render() {
+    const { config } = this.props;
     return(
       <section className={cx(CN)}>
-        <h3>Speakers</h3>
+        <Heading title={config.titles.previous_speakers_section}/>
         <div className={cx(`${CN}_list`)}>
           {this.renderSpeakers()}
         </div>

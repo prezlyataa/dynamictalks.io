@@ -2,7 +2,11 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import cx  from 'classnames';
 import { Anchor } from '../Anchor';
+import { Heading } from '../Heading';
 import './Partners.scss';
+import facebook from 'src/images/facebook.png';
+import linkedin from 'src/images/linkedin-1.png';
+import gd from 'src/images/gd-logo.png';
 
 const CN = 'partners';
 
@@ -27,13 +31,14 @@ export default class Partners extends Component {
     const {config} = this.props;
     return(
       <section className={cx(CN)}>
+        <Heading title={config.titles.partners_section}/>
         <div className={cx(`${CN}_general`)}>
           <p className={cx(`${CN}_general_title`)}>Генеральний</p>
           <div className={cx(`${CN}_general_content`)}>
             <div className={cx(`${CN}_general_content_logo`)}>
               <img
                 alt="logo"
-                src="../../images/gd-logo.png"
+                src={gd}
               />
             </div>
             <div className={cx(`${CN}_general_content_desc`)}>
@@ -45,13 +50,13 @@ export default class Partners extends Component {
                 <Anchor href={config.externalEndpoints.facebook}>
                   <img
                     alt="icon"
-                    src="../../images/facebook.png"
+                    src={facebook}
                   />
                 </Anchor>
                 <Anchor href={config.externalEndpoints.linkedIn}>
                   <img
                     alt="icon"
-                    src="../../images/linkedin-1.png"
+                    src={linkedin}
                   />
                 </Anchor>
               </div>

@@ -9,6 +9,7 @@
   &_general {
     background-color: $color-lightgreen;
     padding: 55px 97px 80px;
+    margin-top: 36px;
 
     @include respond-to($tablet-portrait) {
       padding: 55px 15px 80px;
@@ -64,6 +65,11 @@
             margin-right: 25px;
           }
           padding-bottom: 18px;
+
+          img {
+            width: 24px;
+            height: 24px;
+          }
         }
 
         &_btn {

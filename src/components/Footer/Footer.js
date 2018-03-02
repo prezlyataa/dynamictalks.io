@@ -37,7 +37,7 @@ export default class Footer extends Component {
 
     return (
       <footer className={cx(CN, className)} >
-        <p>© 2017 Dynamic Talks</p>
+        <div className='logo'></div>
       </footer>
     );
   }
