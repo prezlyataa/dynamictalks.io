@@ -1,8 +1,13 @@
+@import "./functions";
+
 $font-family-opensans-regular: 'Open Sans', sans-serif;
 
 $html-font-size: 16px;
 
 $font-size-regular-res: 1.1em;
+
+$font-size-large: em(24px, $html-font-size);
+$font-size-xx-large: em(74px, $html-font-size);
 
 $container-width: 1140px;
 
@@ -10,7 +15,7 @@ $color-primary-green: #00f87b;
 $color-black: #000000;
 $color-white: #FFF;
 
-$navigation-bar-height:120px;
+$navigation-bar-height: 120px;
 
 $phone: '(max-width: 480px)';
 $tablet-portrait: '(max-width: 767px)';

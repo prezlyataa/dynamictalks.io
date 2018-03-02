@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { RegistrationButton } from '../RegistrationButton';
 import { Anchor } from 'src/components/Anchor';
 import cx from 'classnames';
+import pointer from 'src/images/header/pointer.svg';
+import calendar from 'src/images/header/calendar.svg';
+import snake from 'src/images/header/snake.svg';
 import './Header.scss';
 
 
@@ -32,6 +35,13 @@ export default class Header extends Component {
     
   }
   
+  renderIcon(path, altText, content) {
+    let img = ( <img
+      alt={altText}
+      src={path}/>);
+    return content ? <span> {img} {content}</span> : img;
+  }
+  
   renderNavLinks() {
     const {config: {headerNavigationLinks}} = this.props;
     return headerNavigationLinks.map((link, i) => {
@@ -45,13 +55,24 @@ export default class Header extends Component {
     });
   }
   
+  renderEventInfo() {
+    const {config: {eventInformation: einfo}} = this.props;
+    // const time = Date.parse(einfo.eventDate.time);
+    return (
+      <div className="event-info">
+        <div className="event-info__top">
+          {this.renderIcon(calendar, 'calendar', '10.03.2018')}
+          {this.renderIcon(pointer, 'pointer', einfo.eventDate.place)}
+        </div>
+        <h1 className="event-info__title">{einfo.title}</h1>
+        <h2 className="event-info__slogan">{einfo.slogan}</h2>
+      </div>
+    );
+  }
+  
   
   render() {
-    const {
-      className,
-      config: {eventInformation: einfo},
-      config
-    } = this.props;
+    const {className, config} = this.props;
     
     return (
       <div>
@@ -71,8 +92,10 @@ export default class Header extends Component {
             </div>
           </div>
           <div className={cx(`${CN}__event-info`)}>
-            
-            <h1>{einfo.title}</h1>
+            {this.renderEventInfo()}
+          </div>
+          <div className="snake">
+            {this.renderIcon(snake, 'snake-picture')}
           </div>
         </section>
       
