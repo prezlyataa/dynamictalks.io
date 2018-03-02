@@ -104,6 +104,7 @@ export default class PreviousSpeakers extends Component {
           </div>
           <RegisterBlock config={config}/>
         </div>
+        <RegisterBlock config={config}/>
       </section>
     );
   }
