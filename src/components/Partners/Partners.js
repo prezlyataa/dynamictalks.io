@@ -31,7 +31,9 @@ export default class Partners extends Component {
     const {config} = this.props;
     return(
       <section className={cx(CN)}>
-        <Heading title={config.titles.partners_section}/>
+        <div className={cx(`${CN}_header`)}>
+          <Heading title={config.titles.partners_section}/>
+        </div>
         <div className={cx(`${CN}_general`)}>
           <p className={cx(`${CN}_general_title`)}>Генеральний</p>
           <div className={cx(`${CN}_general_content`)}>
