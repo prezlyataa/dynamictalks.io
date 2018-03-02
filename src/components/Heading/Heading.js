@@ -33,7 +33,7 @@ export default class Heading extends Component {
     const {title} = this.props;
 
     return (
-      <div className='rectangle'>
+      <div className="rectangle">
         <h3>{title}</h3>
       </div>
     );

@@ -110,6 +110,10 @@
             margin: 10px;
           }
 
+          @include respond-to($phone) {
+            font-size: 12px;
+          }
+
         }
 
       }
@@ -139,9 +143,10 @@
 
       @include respond-to($tablet-portrait) {
         align-items: flex-start;
+        margin-bottom: 30px;
 
         &__top {
-          width: 400px;
+          width: 390px;
           justify-content: flex-start;
         }
 
