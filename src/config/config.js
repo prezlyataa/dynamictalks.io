@@ -49,17 +49,16 @@ export const config = {
 
   speakers: [
     {
-      name: 'Ігор Томов',
+      name: 'Ярослав Заблоцький',
       state:'спеціальний гість',
-      position: 'UI engineer / Grid Dynamics',
-      topic: 'How We Lost Server Side Rendering, and Why We Should Concern About That',
+      position: 'Професор, керівник приватної Академії, практикуючий лікар. Власник мережі стоматологічних клінік TM "Клініка Заблоцького".' +
+      'Власник одного з найдорожчих брендів в Україні у сфері професійних медичних послуг.' +
+      ' Автор книги «Як я став Заблоцьким. Пригоди стоматолога в червоному метелику». Автор та ведучий  медіа-проекту про 100  заможних українців  «Як я став…». ',
+      topic: 'Бізнес від нуля до мільйона',
       specialGuest: false,
       link: 'https://www.linkedin.com/in/igor-tomov-b0584675',
-      imageSrc: 'images/speakers/Facebook.jpg',
+      imageSrc: 'images/speakers/DDV_8093 copy.jpg',
       bullets: [
-        'Evolution from Web sites to Web applications',
-        'The pitfalls of lack of Server Side Rendering',
-        'Which tools you can use for SSR nowadays'
       ]
     },
     {
