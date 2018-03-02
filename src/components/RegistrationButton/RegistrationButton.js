@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import cx from 'classnames';
 import './RegistrationButton.scss';
+import Anchor from 'src/components/Anchor/Anchor';
+
 
 
 export const CN = 'registration-button';
@@ -34,10 +36,14 @@ export default class Header extends Component {
   render() {
     const {className, config} = this.props;
     
-    return (
-      <button className={cx(CN, className)}>
-        {config.registrationButton.text}
-      </button>
-    );
+    return <Anchor
+      className={cx(CN, className)}
+      href={config.externalEndpoints.registrationUrl}
+      id={CN}
+      target="_blank"
+    >
+      {config.registrationButton.text}
+    </Anchor>;
+    
   }
 }
