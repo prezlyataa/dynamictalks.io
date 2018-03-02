@@ -74,7 +74,7 @@ export const config = {
       city: 'Львів',
       time: '2018-10-03T10:00',
       timeString: '10 березня, 2018',
-      place: 'Львів, вул. Героїв УПА, 80'
+      place: 'м.Львів, вул.Галицька, 1, COMMUNA'
     },
   },
   
