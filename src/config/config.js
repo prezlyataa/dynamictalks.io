@@ -48,7 +48,7 @@ export const config = {
     time: '2017-03-10T10:00',
     timeString: '10 березня, 2018'
   },
-  
+
   buttonsText: {
     registration: 'Реєстрація',
     playDemo: 'Дивитися промо-відео'
@@ -57,7 +57,7 @@ export const config = {
   loadmoreButton: {
     text: 'Показати ще'
   },
-  
+
   headerNavigationLinks: [
     {title: 'Хто', href: '#speakers'},
     {title: 'Програма', href: '#schedule'},
@@ -65,7 +65,7 @@ export const config = {
     {title: 'Про нас', href: '#about'},
     {title: 'Партнери', href: '#partners'}
   ],
-  
+
   eventInformation: {
     title: 'Dynamic js talks #2',
     slogan: 'The frontend conference for experienced developers',
@@ -77,7 +77,7 @@ export const config = {
       place: 'Львів, вул. Героїв УПА, 80'
     },
   },
-  
+
   externalEndpoints: {
     registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe98SDjiuK5F-0GQe3yV08TllaFMBd419E7Ogjb5h7mcQsTSQ/viewform',
     materialsUrl: 'https://dynamictalks.io/public-materials',
@@ -91,7 +91,7 @@ export const config = {
     site: 'https://www.griddynamics.com/',
     promoVideo:'https://www.youtube.com/watch?v=fpVmtc2A3H8&feature=youtu.be'
   },
-  
+
   speakers: [
     {
       name: 'Георгій Подсвєтов',
@@ -122,7 +122,9 @@ export const config = {
     },
     {
       name: 'Ярослав Заблоцький',
-      state: 'спеціальний гість',
+      state:'спеціальний гість',
+      position: 'Власник мережі стоматологічних клінік TM "Клініка Заблоцького"',
+      topic: 'Як побудувати бізнес від нуля до мільйона в Україні',
       position: 'Професор, керівник приватної Академії, практикуючий лікар. Власник мережі стоматологічних клінік TM "Клініка Заблоцького".' +
       'Власник одного з найдорожчих брендів в Україні у сфері професійних медичних послуг.' +
       ' Автор книги «Як я став Заблоцьким. Пригоди стоматолога в червоному метелику». Автор та ведучий  медіа-проекту про 100  заможних українців  «Як я став…». ',
@@ -130,7 +132,9 @@ export const config = {
       specialGuest: false,
       link: 'https://www.facebook.com/yaroslav.zablotskyy',
       imageSrc: 'images/speakers/DDV_8093 copy.jpg',
-      bullets: [
+      bullets: ['Ярослав Заблоцький – д.м.н., професор, керівник приватної Академії, практикуючий лікар. Власник мережі стоматологічних клінік TM “Клініка Заблоцького” – сервісної компанії №1 за версією «DYB Business Club» і KMBS. Власник одного з найдорожчих брендів в Україні у сфері професійних медичних послуг, вивів клініку на рівень франчайзингу та разом з франчайзі реалізував проекти в Одесі та Софії, у Києві та Львові відкрив Центри турботи про зуби – Dental Care Offices, де надається лише одна послуга – професійне чищення зубів.\n' +
+      '\n' +
+      'Автор книги «Як я став Заблоцьким. Пригоди стоматолога в червоному метелику». Автор та ведучий  медіа-проекту про 100  заможних українців  «Як я став…».'
       ]
     }
   ],
