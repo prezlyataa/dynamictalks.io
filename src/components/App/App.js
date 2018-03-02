@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { config } from 'src/config/config';
-import {Schedule} from '../Schedule';
-
+import { Schedule } from '../Schedule';
+import { Partners } from '../Partners';
 import './App.scss';
+
 
 export const SECTIONS = {
   TOP: 'top',
@@ -17,6 +18,7 @@ export default class App extends Component {
     return (
       <div>
         <Schedule config={config}/>
+        <Partners/>
       </div>
     );
   }

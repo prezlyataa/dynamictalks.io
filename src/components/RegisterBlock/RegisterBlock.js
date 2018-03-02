@@ -25,12 +25,15 @@ export default class RegisterBlock extends Component {
   render() {
     const {config} = this.props;
     return(
-      <div className={cx(CN)}>
+      <section className={cx(CN)}>
         <div className={cx(`${CN}_content`)}>
           <h3 className={cx(`${CN}_content_title`)}>Захоплюючі речі попереду, реєструйся щоб отримати квиток на івент</h3>
-          <a className={cx(`${CN}_content_regbtn`)} href={config.externalEndpoints.registrationUrl}>Реєстрація</a>
+          <a
+            className={cx(`${CN}_content_regbtn`)}
+            href={config.externalEndpoints.registrationUrl}
+          >Реєстрація</a>
         </div>
-      </div>
+      </section>
     );
   }
 }

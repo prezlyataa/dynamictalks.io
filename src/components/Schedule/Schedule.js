@@ -48,7 +48,7 @@ export default class Schedule extends Component {
   render() {
     const {config} = this.props;
     return(
-      <div className={cx(CN)}>
+      <section className={cx(CN)}>
         <div className={cx(`${CN}_container`)}>
           <h3 className={cx(`${CN}_container_title`)}>Програма</h3>
           <div className={cx(`${CN}_container_program`)}>
@@ -56,7 +56,7 @@ export default class Schedule extends Component {
           </div>
         </div>
         <RegisterBlock config={config}/>
-      </div>
+      </section>
     );
   }
 }
