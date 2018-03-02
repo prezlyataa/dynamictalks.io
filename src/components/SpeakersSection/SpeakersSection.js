@@ -54,9 +54,9 @@ export default class SpeakersSection extends Component {
     const {config} = this.props;
 
     return (
-      <section className='speakers_section'>
+      <section className="speakers_section">
         <Heading title={config.titles.speakers_section}/>
-        <div className='speakers_block'>
+        <div className="speakers_block">
           {this.renderSpeakers()}
         </div>
       </section>

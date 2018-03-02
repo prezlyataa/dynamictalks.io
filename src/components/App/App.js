@@ -3,12 +3,11 @@ import {config} from 'src/config/config';
 import {SpeakersSection} from '../SpeakersSection';
 import {ContactsSection} from '../ContactsSection';
 import {SocialNetwork} from '../SocialNetwork';
-import {Header} from '../Header';
-import {Schedule} from '../Schedule';
-import {Partners} from '../Partners';
+import { Header } from '../Header';
+import { Schedule } from '../Schedule';
+import { Partners } from '../Partners';
+import { PreviousSpeakers } from '../PreviousSpeakers';
 import {Footer} from '../Footer';
-
-
 import './App.scss';
 
 
@@ -34,7 +33,9 @@ export default class App extends Component {
           id={SECTIONS.SPEAKERS}
         />
 
-        <Schedule config={config}/>
+        <Schedule
+          config={config}
+        />
 
         <ContactsSection
           config={config}
@@ -44,7 +45,13 @@ export default class App extends Component {
           config={config}
         />
 
-        <Partners config={config}/>
+        <Partners
+          config={config}
+        />
+
+        <PreviousSpeakers
+          config={config}
+        />
 
         <Footer config={config}/>
       </div>

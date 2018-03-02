@@ -13,7 +13,9 @@ export const config = {
 
   titles:{
     speakers_section:'наші спікери',
-    contacts_section:'Dynamic JS Talks #2'
+    contacts_section:'Dynamic JS Talks #2',
+    partners_section:'НАШІ ПАРТНЕРИ',
+    previous_speakers_section: 'ПОПЕРЕДНІ СПІКЕРИ'
   },
 
   iconUrl:{
@@ -42,7 +44,6 @@ export const config = {
   registrationButton: {
     text: 'Реєстрація'
   },
-
 
   headerNavigationLinks: ['Хто', 'Програма', 'Коли і де', 'Про нас', 'Партнери'],
 
@@ -108,6 +109,45 @@ export const config = {
         'It has set of critical features that might improve performance of your web application',
         'Lets see how we can use it with NodeJS'
       ]
+    },
+    {
+      name: 'Ігор Томов',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'How We Lost Server Side Rendering, and Why We Should Concern About That',
+      specialGuest: false,
+      link: 'https://www.linkedin.com/in/igor-tomov-b0584675',
+      imageSrc: 'images/speakers/it.jpg',
+      bullets: [
+        'Evolution from Web sites to Web applications',
+        'The pitfalls of lack of Server Side Rendering',
+        'Which tools you can use for SSR nowadays'
+      ]
+    },
+    {
+      name: 'Володимир Фльонц',
+      position: 'Розробник ProZorro, засновник ГО «Електронна демократія», IT-євангеліст',
+      topic: 'Чи можна електрифікувати демократію?',
+      specialGuest: true,
+      link: 'https://www.linkedin.com/in/flyonts',
+      imageSrc: 'images/speakers/vf.jpg',
+      bullets: [
+        'Електронні вибори — це перше, що згадують обговорюючи електронну демократію майбутнього',
+        'Моделі електронних голосувань, що вже використовуються в світі, та тих що тільки вважаються перспектвними',
+        'Проведемо практичне голосування за системою Prêt à Voter та розберемо три офіційних інтернет-голосування, що вже відбулись в Україні'
+      ]
+    },
+    {
+      name: 'Дмитро Вербовий',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
+      specialGuest: false,
+      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
+      imageSrc: 'images/speakers/dv_2.jpg',
+      bullets: [
+        'HTTP2 is stable and actually proven in production',
+        'It has set of critical features that might improve performance of your web application',
+        'Lets see how we can use it with NodeJS'
+      ]
     }
   ]
 };
@@ -115,19 +155,18 @@ export const config = {
 config.agenda = [
   { time: '10:30-11:00', description: 'Реєстрація, нетворкінг' },
   { time: '11:00-11:15', description: 'Відкриття, декілька слів про ідею івенту' },
-  { time: '11:15-12:30', description: speakerToDescription(config.speakers[0]) },
+  { time: '11:15-12:30', topic: speakerToDescription(config.speakers[0]), speaker: speaker(config.speakers[0])},
   { time: '12:30-12:45', description: 'Кава' },
-  { time: '12:45-14:00', description: speakerToDescription(config.speakers[2]) },
+  { time: '12:45-14:00', topic: speakerToDescription(config.speakers[2]), speaker: speaker(config.speakers[1]) },
   { time: '14:00-14:15', description: 'Напої та снеки' },
-  { time: '14:15-15:30', description: speakerToDescription(config.speakers[1]) },
+  { time: '14:15-15:30', topic: speakerToDescription(config.speakers[1]), speaker: speaker(config.speakers[2]) },
   { time: '15:30', description: 'Afterparty, Networking' }
 ];
 
 function speakerToDescription(speaker) {
-  return (
-    <div>
-      <p className="name">{speaker.name}</p>
-      <p className="topic">«{speaker.topic}»</p>
-    </div>
-  );
+  return `«${speaker.topic}»)`;
+}
+
+function speaker(speaker) {
+  return `${speaker.name}`;
 }
