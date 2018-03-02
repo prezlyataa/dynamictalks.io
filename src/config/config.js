@@ -126,6 +126,7 @@ export const config = {
   ],
 
   previousSpeakers: [
+   
     {
       name: 'Любомир Семків',
       state:'спеціальний гість',
