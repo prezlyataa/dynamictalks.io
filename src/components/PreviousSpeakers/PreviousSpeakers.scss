@@ -6,20 +6,6 @@
   margin: 0 auto;
   padding: 70px 15px 64px;
 
-  .mobile {
-    display: none;
-  }
-
-  @include respond-to($tablet-portrait) {
-    .desktop {
-      display: none;
-    }
-
-    .mobile {
-      display: block;
-    }
-  }
-  
   &_list {
     display: flex;
     flex-flow: row wrap;
