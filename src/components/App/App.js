@@ -8,6 +8,7 @@ import {Schedule} from '../Schedule';
 import {Partners} from '../Partners';
 import {Footer} from '../Footer';
 
+
 import './App.scss';
 
 
@@ -33,7 +34,6 @@ export default class App extends Component {
           id={SECTIONS.SPEAKERS}
         />
 
-
         <Schedule config={config}/>
 
         <ContactsSection
@@ -45,7 +45,7 @@ export default class App extends Component {
         />
 
         <Partners config={config}/>
-        
+
         <Footer config={config}/>
       </div>
     );

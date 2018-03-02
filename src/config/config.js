@@ -43,6 +43,7 @@ export const config = {
     text: 'Реєстрація'
   },
 
+
   headerNavigationLinks: ['Хто', 'Програма', 'Коли і де', 'Про нас', 'Партнери'],
 
   eventInformation: {
