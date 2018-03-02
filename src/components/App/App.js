@@ -9,7 +9,7 @@ import { Partners } from '../Partners';
 import { PreviousSpeakers } from '../PreviousSpeakers';
 import {Footer} from '../Footer';
 import './App.scss';
-
+import {AboutUsSection} from '../AboutUsSection';
 
 export const SECTIONS = {
   HEADER: 'header',
@@ -42,6 +42,10 @@ export default class App extends Component {
         />
 
         <SocialNetwork
+          config={config}
+        />
+
+        <AboutUsSection
           config={config}
         />
 

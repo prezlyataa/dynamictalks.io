@@ -4,8 +4,7 @@ export const config = {
       'м.Львів, вул.Галицька, 1,',
       'COMMUNA',
       '2-й поверх\n' +
-      '(на розі Площі Ринок)\n' +
-      'com@communa.net.ua'
+      '(на розі Площі Ринок)'
     ],
     googleMapEmbed:'<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.076540122793!2d24.029019415632334!3d49.84101933896939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6dca0c9b13%3A0x2797b7e6a216b902!2z0LLRg9C70LjRhtGPINCT0LDQu9C40YbRjNC60LAsIDEsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1520001652497" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'
   },
@@ -15,7 +14,8 @@ export const config = {
     speakers_section:'наші спікери',
     contacts_section:'Dynamic JS Talks #2',
     partners_section:'НАШІ ПАРТНЕРИ',
-    previous_speakers_section: 'ПОПЕРЕДНІ СПІКЕРИ'
+    previous_speakers_section: 'ПОПЕРЕДНІ СПІКЕРИ',
+    about_us:'Про нас'
   },
 
   iconUrl:{
@@ -99,7 +99,7 @@ export const config = {
       position: 'UI engineer / Grid Dynamics',
       topic: 'Build Hybrid Web Application',
       link: 'https://www.linkedin.com/in/vovavoevidka/',
-      imageSrc: 'images/speakers/vv.jpg',
+      imageSrc: 'images/speakers/vova.jpg',
       bullets: [
         'Share experience of `injection` new web application into existing enterprise infrastructure.',
         'Deliver understanding of possible issues',
