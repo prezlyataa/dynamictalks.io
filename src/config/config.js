@@ -38,7 +38,13 @@ export const config = {
     playDemo: 'Дивитися промо-відео'
   },
   
-  headerNavigationLinks: ['Хто', 'Програма', 'Коли і де', 'Про нас', 'Партнери'],
+  headerNavigationLinks: [
+    {title: 'Хто', href: '#speakers'},
+    {title: 'Програма', href: '#schedule'},
+    {title: 'Коли і де', href: '#contacts'},
+    {title: 'Про нас', href: '#about'},
+    {title: 'Партнери', href: '#partners'}
+  ],
   
   eventInformation: {
     title: 'Dynamic js talks #2',
@@ -61,7 +67,7 @@ export const config = {
     slack: 'https://dynamictalks.slack.com/join/shared_invite/enQtMjU0OTkwNjY0MjYzLTQxZmJkNjk2OTZjNTQ1OTc4N2ExYmQwZDZjYTBlYWUyNzA2NmJjMDc0ZGIxZWQ3OTkyNmZjMDQxN2RmNzA2ODc',
     facebook: 'https://www.facebook.com/dynamictalks/',
     linkedIn: 'https://www.linkedin.com/company/250774/',
-    site:'https://www.griddynamics.com/'
+    site: 'https://www.griddynamics.com/'
   },
   
   speakers: [

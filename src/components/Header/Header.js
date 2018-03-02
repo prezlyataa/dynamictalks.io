@@ -56,13 +56,14 @@ export default class Header extends Component {
   
   renderNavLinks() {
     const {config: {headerNavigationLinks}} = this.props;
-    return headerNavigationLinks.map((link, i) => {
+    return headerNavigationLinks.map((item, i) => {
       return <Anchor
         className={cx(`${NAV}__link`)}
-        id={link}
+        href={item.href}
+        id={item.title}
         key={i}
       >
-        {link}
+        {item.title}
       </Anchor>;
     });
   }
@@ -86,7 +87,7 @@ export default class Header extends Component {
     return (
       <div className="play-btn">
         <Anchor
-          id={'play'}
+          id="play"
         >
           {this.renderIcon(playDemoPath, 'play-demo')}
           {buttonsText.playDemo}
@@ -96,12 +97,9 @@ export default class Header extends Component {
   }
   
   onMenuClick() {
-    const {isMenuOpen} = this.state;
     this.setState((prevState) => {
       return {isMenuOpen: !prevState.isMenuOpen};
     });
-    
-    console.info(isMenuOpen);
   }
   
   render() {
@@ -109,11 +107,18 @@ export default class Header extends Component {
     const {isMenuOpen} = this.state;
     
     return (
-      <section className={cx(CN, className)}>
+      <section
+        className={cx(CN, className)}
+        id="header"
+       
+      >
         <div className={cx(`${NAV}__wrapper`)}>
           <div className="container">
             <div className={cx(NAV)}>
-              <Anchor id={'logo'}>
+              <Anchor
+                href="#header"
+                id="logo"
+              >
                 <img
                   src={mainLogoTitlePath}/>
               </Anchor>
