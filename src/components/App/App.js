@@ -7,6 +7,7 @@ import { Header } from '../Header';
 import { Schedule } from '../Schedule';
 import { Partners } from '../Partners';
 import { PreviousSpeakers } from '../PreviousSpeakers';
+import {Footer} from '../Footer';
 import './App.scss';
 
 
@@ -51,6 +52,8 @@ export default class App extends Component {
         <PreviousSpeakers
           config={config}
         />
+
+        <Footer config={config}/>
       </div>
     );
   }
