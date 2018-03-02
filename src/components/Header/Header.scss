@@ -32,6 +32,7 @@
     }
   }
 
+  // ___________ NAVIGATION-BAR______________ //
   .navbar__wrapper {
     position: fixed;
     display: flex;
@@ -75,6 +76,7 @@
 
   }
 
+  // ___________ MAIN-INFORMATION-BLOCK______________ //
   &__event-info {
     width: 70%;
     z-index: 100;
@@ -85,6 +87,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
+      margin-bottom: 20px;
 
       &__top {
         width: 600px;
@@ -140,29 +143,18 @@
 
       }
 
-
     }
 
-    @include respond-to($phone){
+    @include respond-to($phone) {
+      width: 90%;
+    }
+    @include respond-to($tablet-portrait) {
       width: 90%;
     }
 
   }
 
-  .snake {
-    right: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-
-    @include respond-to($tablet-portrait) {
-      right: -300px;
-    }
-    @include respond-to($phone) {
-      right: -490px;
-    }
-  }
-
+  // ___________ DROP-DOWN-MENU ______________ //
   .collapse-menu {
     box-sizing: border-box;
     position: absolute;
@@ -204,6 +196,56 @@
     }
 
   }
+
+  // ___________ DECORATION______________ //
+  .snake {
+    right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include respond-to($tablet-portrait) {
+      right: -300px;
+    }
+    @include respond-to($phone) {
+      right: -490px;
+      img {
+        width: 65%;
+      }
+    }
+  }
+
+  .play-btn {
+    display: flex;
+    justify-content: center;
+
+    & > a {
+      display: flex;
+      align-items: center;
+      align-self: center;
+      padding: 20px 22px;
+      border: 2px solid $color-black;
+      cursor: pointer;
+     text-transform: uppercase;
+      @include font-family-gothamPro-bold();
+
+      & > img {
+        margin-right: 15px;
+      }
+
+      &:hover {
+        color: $color-primary-green;
+        background: $color-black;
+      }
+
+      &:active {
+        color: $color-hover-green;
+      }
+
+    }
+  }
+
+
 
 }
 
