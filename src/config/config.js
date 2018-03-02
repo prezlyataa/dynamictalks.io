@@ -1,4 +1,3 @@
-
 export const config = {
   eventAddress: {
     addressLines: [
@@ -120,6 +119,93 @@ export const config = {
       bullets: [
       ]
     }
+  ],
+
+  previousSpeakers: [
+    {
+      name: 'Дмитро Вербовий',
+      state:'',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
+      specialGuest: false,
+      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
+      imageSrc: 'images/speakers/Facebook.jpg',
+      bullets: [
+        'HTTP2 is stable and actually proven in production',
+        'It has set of critical features that might improve performance of your web application',
+        'Lets see how we can use it with NodeJS'
+      ]
+    },
+    {
+      name: 'Дмитро Вербовий',
+      state:'',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
+      specialGuest: false,
+      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
+      imageSrc: 'images/speakers/Facebook.jpg',
+      bullets: [
+        'HTTP2 is stable and actually proven in production',
+        'It has set of critical features that might improve performance of your web application',
+        'Lets see how we can use it with NodeJS'
+      ]
+    },
+    {
+      name: 'Дмитро Вербовий',
+      state:'',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
+      specialGuest: false,
+      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
+      imageSrc: 'images/speakers/Facebook.jpg',
+      bullets: [
+        'HTTP2 is stable and actually proven in production',
+        'It has set of critical features that might improve performance of your web application',
+        'Lets see how we can use it with NodeJS'
+      ]
+    },
+    {
+      name: 'Дмитро Вербовий',
+      state:'',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
+      specialGuest: false,
+      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
+      imageSrc: 'images/speakers/Facebook.jpg',
+      bullets: [
+        'HTTP2 is stable and actually proven in production',
+        'It has set of critical features that might improve performance of your web application',
+        'Lets see how we can use it with NodeJS'
+      ]
+    },
+    {
+      name: 'Дмитро Вербовий',
+      state:'',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
+      specialGuest: false,
+      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
+      imageSrc: 'images/speakers/Facebook.jpg',
+      bullets: [
+        'HTTP2 is stable and actually proven in production',
+        'It has set of critical features that might improve performance of your web application',
+        'Lets see how we can use it with NodeJS'
+      ]
+    },
+    {
+      name: 'Дмитро Вербовий',
+      state:'',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
+      specialGuest: false,
+      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
+      imageSrc: 'images/speakers/Facebook.jpg',
+      bullets: [
+        'HTTP2 is stable and actually proven in production',
+        'It has set of critical features that might improve performance of your web application',
+        'Lets see how we can use it with NodeJS'
+      ]
+    }
   ]
 };
 
@@ -135,7 +221,7 @@ config.agenda = [
 ];
 
 function speakerToDescription(speaker) {
-  return `«${speaker.topic}»)`;
+  return `«${speaker.topic}»`;
 }
 
 function speaker(speaker) {

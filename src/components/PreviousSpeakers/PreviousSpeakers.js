@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Heading } from '../Heading';
+import { RegisterBlock } from '../RegisterBlock';
 import './PreviousSpeakers.scss';
 
 const CN = 'previous-speakers';
@@ -24,7 +25,7 @@ export default class PreviousSpeakers extends Component {
     const { config } = this.props;
 
     return config
-      .speakers
+      .previousSpeakers
       .map(({name, position, imageSrc}, index) => (
         <div
           className={cx(`${CN}_list_speaker`)}
@@ -49,6 +50,7 @@ export default class PreviousSpeakers extends Component {
         <div className={cx(`${CN}_list`)}>
           {this.renderSpeakers()}
         </div>
+        <RegisterBlock config={config}/>
       </section>
     );
   }
