@@ -101,7 +101,7 @@ export const config = {
       name: 'Володимир Воєвідка',
       state:'',
       position: 'UI engineer / Grid Dynamics',
-      topic: 'Build Hybrid Web Application',
+      topic: 'Hidden obstacles of bringing new technology stack to enterprise organization',
       link: 'https://www.linkedin.com/in/vovavoevidka/',
       imageSrc: 'images/speakers/vova.jpg',
       bullets: [
@@ -126,7 +126,7 @@ export const config = {
   ],
 
   previousSpeakers: [
-   
+
     {
       name: 'Любомир Семків',
       state:'спеціальний гість',
