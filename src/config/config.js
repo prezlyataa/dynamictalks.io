@@ -3,11 +3,11 @@ import React from 'react';
 export const config = {
   eventAddress: {
     addressLines: [
-      '79018, Львів, вул. Героїв УПА, 80',
-      'ITEA HUB',
+      'м.Львів, вул.Галицька, 1,',
+      'COMMUNA',
       'Офісний центр, вхід праворуч від стоянки, конференц-зал знаходиться ліворуч від рецепції.'
     ],
-    googleMapEmbed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.683742244445!2d23.990492951681013!3d49.829608979293404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae77e64398c81%3A0xa1e0acfdc00dfddd!2sITEA+Hub!5e0!3m2!1sen!2sus!4v1511097076401" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'
+    googleMapEmbed:'<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.076540122793!2d24.029019415632334!3d49.84101933896939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6dca0c9b13%3A0x2797b7e6a216b902!2z0LLRg9C70LjRhtGPINCT0LDQu9C40YbRjNC60LAsIDEsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1520001652497" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'
   },
 
 
@@ -37,8 +37,8 @@ export const config = {
 
   eventDate: {
     city: 'Львів',
-    time: '2017-12-02T10:00',
-    timeString: '31 березня, 2018'
+    time: '2017-03-10T10:00',
+    timeString: '10 березня, 2018'
   },
 
   registrationButton: {

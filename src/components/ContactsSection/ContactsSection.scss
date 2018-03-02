@@ -28,6 +28,7 @@
     z-index: -1;
     top: 40px;
     line-height: 1.6;
+    @include font-family-gothamPro-bold();
 
     .rectangle {
       margin: 60px 0 0 90px;
@@ -69,6 +70,7 @@
 
     .contacts_info {
       padding: 0 145px 0 90px;
+      @include font-family-gothamPro-bold();
 
       @media screen and (min-width: 1000px) and (max-width:1200px) {
         padding: 0 90px 0 50px;
@@ -133,6 +135,8 @@
       &__description {
         margin-top: 10px;
         padding-left: 50px;
+        font-weight: normal;
+        @include font-family-gothamPro-medium();
 
         @media screen and (min-width: 320px) and (max-width:1000px){
           text-align: left;
