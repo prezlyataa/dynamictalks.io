@@ -1,2 +1,13 @@
 @import "../../variables.scss";
 @import "../../mixins.scss";
+
+
+.footer{
+  border-top:1px solid $color-light-gray;
+  display: flex;
+  flex-direction: row;
+
+  div{
+    margin:40px 0 45px;
+  }
+}
