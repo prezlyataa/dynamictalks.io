@@ -1,25 +1,16 @@
 $font-family-opensans-regular: 'Open Sans', sans-serif;
 
 
-$color-pink: #8725FB;
-$color-pink-light: #9B2DFB;
-$color-orange: #FFCB09;
-
-$color-primary: $color-pink;
-$color-primary2: $color-pink-light;
-$color-secondary: $color-orange;
-
-$color-white: #fff;
-$color-black: #000;
-$color-grey: rgba(248, 248, 248, 0.86);
 
 $html-font-size: 16px;
 
 $font-size-regular-res: 1.1em;
+
+$color-primary-green: #00f87b;
+$color-light-gray:#dbdbdb;
 
 $phone: '(max-width: 480px)';
 $tablet-portrait: '(max-width: 767px)';
 $tablet-landscape: '(min-width: 768px) and (max-width: 979px)';
 $desktop: "(min-width: 1024px)";
 $large-desktop: '(min-width: 1200px)';
-
