@@ -31,13 +31,13 @@ export default class AboutUsSection extends Component {
 
 
   render() {
-    const {config} = this.props;
+    const {config,id} = this.props;
 
 
 
 
     return (
-      <section className='about_us_section'>
+      <section className='about_us_section' id={id}>
         <div className='text-wrapper'>
           <Heading title={config.titles.about_us}/>
 

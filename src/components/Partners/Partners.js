@@ -28,9 +28,12 @@ export default class Partners extends Component {
     super(props);
   }
   render() {
-    const {config} = this.props;
+    const {config,id} = this.props;
     return(
-      <section className={cx(CN)}>
+      <section
+        className={cx(CN)}
+        id={id}
+      >
         <div className={cx(`${CN}_header`)}>
           <Heading title={config.titles.partners_section}/>
         </div>
@@ -65,13 +68,11 @@ export default class Partners extends Component {
               <div className={cx(`${CN}_general_content_desc_btn`)}>
                 <Anchor
                   className={cx(`${CN}_general_content_desc_btn_regbtn`)}
-                  id={cx(`${CN}_general_content_desc_btn`)}
                   href={config.externalEndpoints.vacanciesUrl}
                 >
                   Відкриті вакансії
                 </Anchor>
               </div>
-
             </div>
           </div>
         </div>
