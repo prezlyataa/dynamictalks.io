@@ -53,6 +53,10 @@ export const config = {
     text: 'Реєстрація'
   },
 
+  loadmoreButton: {
+    text: 'Показати ще'
+  },
+
   headerNavigationLinks: ['Хто', 'Програма', 'Коли і де', 'Про нас', 'Партнери'],
 
   eventInformation: {
@@ -67,7 +71,7 @@ export const config = {
   },
 
   externalEndpoints: {
-    registrationUrl: 'https://goo.gl/forms/x9AwECPkGUwCQm4Y2',
+    registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe98SDjiuK5F-0GQe3yV08TllaFMBd419E7Ogjb5h7mcQsTSQ/viewform',
     materialsUrl: 'https://dynamictalks.io/public-materials',
     vacanciesUrl: 'https://www.griddynamics.com/careers',
     icalUrl: '/JS_Dynamic_Talks_meetup_Dec_2017.ics',
@@ -123,17 +127,43 @@ export const config = {
 
   previousSpeakers: [
     {
-      name: 'Дмитро Вербовий',
+      name: 'Любомир Семків',
+      state:'спеціальний гість',
+      position: 'Senior software engineer / Intellias',
+      specialGuest: true,
+      imageSrc: 'images/speakers/semkiv.jpg',
+      bullets: [
+      ]
+    },
+    {
+      name: 'Володимир Воєвідка',
       state:'',
       position: 'UI engineer / Grid Dynamics',
-      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
       specialGuest: false,
-      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
-      imageSrc: 'images/speakers/Facebook.jpg',
+      imageSrc: 'images/speakers/volodymyr_voyevidka.jpg',
       bullets: [
-        'HTTP2 is stable and actually proven in production',
-        'It has set of critical features that might improve performance of your web application',
-        'Lets see how we can use it with NodeJS'
+      ]
+    },
+    {
+      name: 'Георгій Подсвєтов',
+      state:'',
+      position: 'Practice director UI technologies / Grid Dynamics',
+      specialGuest: false,
+      imageSrc: 'images/speakers/podsvyetov.jpg',
+      bullets: [
+      ]
+    },
+    {
+      name: 'Ігор Томов',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'How We Lost Server Side Rendering, and Why We Should Concern About That',
+      specialGuest: false,
+      link: 'https://www.linkedin.com/in/igor-tomov-b0584675',
+      imageSrc: 'images/speakers/it.jpg',
+      bullets: [
+        'Evolution from Web sites to Web applications',
+        'The pitfalls of lack of Server Side Rendering',
+        'Which tools you can use for SSR nowadays'
       ]
     },
     {
@@ -143,7 +173,7 @@ export const config = {
       topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
       specialGuest: false,
       link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
-      imageSrc: 'images/speakers/Facebook.jpg',
+      imageSrc: 'images/speakers/dv_2.jpg',
       bullets: [
         'HTTP2 is stable and actually proven in production',
         'It has set of critical features that might improve performance of your web application',
@@ -151,59 +181,16 @@ export const config = {
       ]
     },
     {
-      name: 'Дмитро Вербовий',
-      state:'',
-      position: 'UI engineer / Grid Dynamics',
-      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
-      specialGuest: false,
-      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
-      imageSrc: 'images/speakers/Facebook.jpg',
+      name: 'Володимир Фльонц',
+      state:'дебют',
+      position: 'Розробник ProZorro, засновник ГО «Електронна демократія», IT-євангеліст',
+      topic: 'Чи можна електрифікувати демократію?',
+      link: 'https://www.linkedin.com/in/flyonts',
+      imageSrc: 'images/speakers/vf.jpg',
       bullets: [
-        'HTTP2 is stable and actually proven in production',
-        'It has set of critical features that might improve performance of your web application',
-        'Lets see how we can use it with NodeJS'
-      ]
-    },
-    {
-      name: 'Дмитро Вербовий',
-      state:'',
-      position: 'UI engineer / Grid Dynamics',
-      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
-      specialGuest: false,
-      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
-      imageSrc: 'images/speakers/Facebook.jpg',
-      bullets: [
-        'HTTP2 is stable and actually proven in production',
-        'It has set of critical features that might improve performance of your web application',
-        'Lets see how we can use it with NodeJS'
-      ]
-    },
-    {
-      name: 'Дмитро Вербовий',
-      state:'',
-      position: 'UI engineer / Grid Dynamics',
-      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
-      specialGuest: false,
-      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
-      imageSrc: 'images/speakers/Facebook.jpg',
-      bullets: [
-        'HTTP2 is stable and actually proven in production',
-        'It has set of critical features that might improve performance of your web application',
-        'Lets see how we can use it with NodeJS'
-      ]
-    },
-    {
-      name: 'Дмитро Вербовий',
-      state:'',
-      position: 'UI engineer / Grid Dynamics',
-      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
-      specialGuest: false,
-      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
-      imageSrc: 'images/speakers/Facebook.jpg',
-      bullets: [
-        'HTTP2 is stable and actually proven in production',
-        'It has set of critical features that might improve performance of your web application',
-        'Lets see how we can use it with NodeJS'
+        'Електронні вибори — це перше, що згадують обговорюючи електронну демократію майбутнього',
+        'Моделі електронних голосувань, що вже використовуються в світі, та тих що тільки вважаються перспектвними',
+        'Проведемо практичне голосування за системою Prêt à Voter та розберемо три офіційних інтернет-голосування, що вже відбулись в Україні'
       ]
     }
   ]
