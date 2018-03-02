@@ -1,11 +1,14 @@
+@import "./functions";
+
 $font-family-opensans-regular: 'Open Sans', sans-serif;
 
-
-
 $html-font-size: 16px;
+
 $font-size-regular-res: 1.1em;
-$font-size-large: em(24px, $html-font-size);
-$font-size-xx-large: em(74px, $html-font-size);
+$font-size-medium: 20px;
+$font-size-large: 24px;
+$font-size-x-large: 42px;
+$font-size-xx-large: 74px;
 
 $container-width: 1140px;
 
@@ -14,14 +17,13 @@ $color-black: #000000;
 $color-white: #FFF;
 $color-lightgray: #c3c3c3;
 $color-lightgreen: #00f87b;
-$color-light-gray:#dbdbdb;
+$color-light-gray: #dbdbdb;
 $color-primary-green: #00f87b;
 $schedule-underline: rgba(216, 216, 216, 0.2);
 
+$navigation-bar-height: 80px;
 
-$navigation-bar-height: 120px;
-
-$phone: '(max-width: 480px)';
+$phone: '(max-width: 320px)';
 $tablet-portrait: '(max-width: 767px)';
 $tablet-landscape: '(min-width: 768px) and (max-width: 979px)';
 $desktop: "(min-width: 1024px)";
