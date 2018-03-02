@@ -11,6 +11,7 @@ export default class Speaker extends Component {
 
   static propTypes = {
 
+    bullets: PropTypes.array,
     /**
      * className - classes which can be passed from parent
      */
@@ -20,7 +21,6 @@ export default class Speaker extends Component {
      * config - configuration object
      */
     id: PropTypes.string,
-    bullets: PropTypes.array,
     imageSrc: PropTypes.string,
 
     /**
