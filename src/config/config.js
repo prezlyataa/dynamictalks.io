@@ -65,7 +65,8 @@ export const config = {
     youtube: 'https://goo.gl/CsBDhE',
     slack: 'https://dynamictalks.slack.com/join/shared_invite/enQtMjU0OTkwNjY0MjYzLTQxZmJkNjk2OTZjNTQ1OTc4N2ExYmQwZDZjYTBlYWUyNzA2NmJjMDc0ZGIxZWQ3OTkyNmZjMDQxN2RmNzA2ODc',
     facebook: 'https://www.facebook.com/dynamictalks/',
-    linkedIn: 'https://www.linkedin.com/company/250774/'
+    linkedIn: 'https://www.linkedin.com/company/250774/',
+    location:'https://www.google.com.ua/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%93%D0%B0%D0%BB%D0%B8%D1%86%D1%8C%D0%BA%D0%B0,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+79000/@49.8401876,24.0293324,17z/data=!3m1!4b1!4m5!3m4!1s0x473add6c2e097db9:0x777fab7d561f976c!8m2!3d49.8401842!4d24.0315211'
   },
 
   speakers: [
@@ -83,16 +84,16 @@ export const config = {
       ]
     },
     {
-      name: 'Володимир Фльонц',
-      state:'дебют',
-      position: 'Розробник ProZorro, засновник ГО «Електронна демократія», IT-євангеліст',
-      topic: 'Чи можна електрифікувати демократію?',
+      name: 'Володимир Воєвідка',
+      state:'',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'Build Hybrid Web Application',
       link: 'https://www.linkedin.com/in/flyonts',
       imageSrc: 'images/speakers/Facebook.jpg',
       bullets: [
-        'Електронні вибори — це перше, що згадують обговорюючи електронну демократію майбутнього',
-        'Моделі електронних голосувань, що вже використовуються в світі, та тих що тільки вважаються перспектвними',
-        'Проведемо практичне голосування за системою Prêt à Voter та розберемо три офіційних інтернет-голосування, що вже відбулись в Україні'
+        'Share experience of `injection` new web application into existing enterprise infrastructure.',
+        'Deliver understanding of possible issues',
+        'Timeline / estimation visibility.'
       ]
     },
     {
