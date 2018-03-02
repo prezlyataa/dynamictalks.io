@@ -7,7 +7,7 @@
   margin: 0 auto;
 
   &_general {
-    background-color: $color-lightgreen;
+    background-color: $color-primary-green;
     padding: 55px 97px 80px;
 
     @include respond-to($tablet-portrait) {
