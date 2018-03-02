@@ -2,29 +2,36 @@
 
 $font-family-opensans-regular: 'Open Sans', sans-serif;
 
-$html-font-size: 16px;
+// main configuration
 
+$html-font-size: 16px;
+$container-width: 1140px;
 $font-size-regular-res: 1.1em;
+
+// font sizes
+
 $font-size-medium: 20px;
 $font-size-large: 24px;
 $font-size-x-large: 42px;
 $font-size-xx-large: 74px;
 
-$container-width: 1140px;
+//colors
 
-$color-deep-black: #111;
+$color-light-green: #00f87b;
+$color-light-gray:#dbdbdb;
+$color-white: #fff;
 $color-black: #000000;
-$color-white: #FFF;
-$color-lightgray: #c3c3c3;
-$color-lightgreen: #00f87b;
-$color-light-gray: #dbdbdb;
-$color-primary-green: #00f87b;
-$schedule-underline: rgba(216, 216, 216, 0.2);
+$color-deep-black: #111;
 
-$navigation-bar-height: 80px;
+//breakpoints
 
 $phone: '(max-width: 320px)';
 $tablet-portrait: '(max-width: 767px)';
 $tablet-landscape: '(min-width: 768px) and (max-width: 979px)';
 $desktop: "(min-width: 1024px)";
 $large-desktop: '(min-width: 1200px)';
+
+// miscs
+
+$schedule-underline: rgba(216, 216, 216, 0.2);
+$navigation-bar-height: 80px; // for top navigation bar

@@ -63,10 +63,10 @@ export default class Speaker extends Component {
 
     return (
       <Anchor
-        className="portrait"
+        className='portrait'
         href={link}
         id={`speaker--${name}`}
-        target="_blank"
+        target='_blank'
         key={name}
       >
         <img

@@ -1,4 +1,5 @@
 import React from 'react';
+
 export const config = {
   eventAddress: {
     addressLines: [
@@ -41,9 +42,10 @@ export const config = {
   registrationButton: {
     text: 'Реєстрація'
   },
-  
+
+
   headerNavigationLinks: ['Хто', 'Програма', 'Коли і де', 'Про нас', 'Партнери'],
-  
+
   eventInformation: {
     title: 'Dynamic js talks #2',
     slogan: 'The frontend conference for experienced developers',
@@ -54,7 +56,7 @@ export const config = {
       place: 'Львів, вул. Героїв УПА, 80'
     },
   },
-  
+
   externalEndpoints: {
     registrationUrl: 'https://goo.gl/forms/x9AwECPkGUwCQm4Y2',
     materialsUrl: 'https://dynamictalks.io/public-materials',
@@ -65,7 +67,7 @@ export const config = {
     facebook: 'https://www.facebook.com/dynamictalks/',
     linkedIn: 'https://www.linkedin.com/company/250774/'
   },
-  
+
   speakers: [
     {
       name: 'Ярослав Заблоцький',
