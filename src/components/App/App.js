@@ -18,7 +18,8 @@ export const SECTIONS = {
   ORGANIZERS: 'organizers',
   CONTACTS: 'contacts',
   SOCIALNETWORKS: 'socialnetwork',
-  PARTNERS: 'partners'
+  PARTNERS: 'partners',
+  ABOUT:'about'
   
 };
 
@@ -30,7 +31,7 @@ export default class App extends Component {
         <Header
           config={config}
           id={SECTIONS.HEADER}
-          items={[SECTIONS.SPEAKERS, SECTIONS.SCHEDULE, SECTIONS.CONTACTS, SECTIONS.PARTNERS]}
+          items={[SECTIONS.SPEAKERS, SECTIONS.SCHEDULE, SECTIONS.CONTACTS, SECTIONS.PARTNERS,SECTIONS.ABOUT]}
         />
         
         <SpeakersSection
@@ -50,12 +51,11 @@ export default class App extends Component {
         
         <SocialNetwork
           config={config}
-        
         />
         
-
         <AboutUsSection
           config={config}
+          id={SECTIONS.ABOUT}
         />
 
         <Partners

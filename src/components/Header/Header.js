@@ -83,11 +83,13 @@ export default class Header extends Component {
   }
   
   renderPlayButton() {
-    const {config: {buttonsText}} = this.props;
+    const {config: {buttonsText,externalEndpoints}} = this.props;
     return (
       <div className="play-btn">
         <Anchor
+          href={externalEndpoints.promoVideo}
           id="play"
+          target="_blank"
         >
           {this.renderIcon(playDemoPath, 'play-demo')}
           {buttonsText.playDemo}
