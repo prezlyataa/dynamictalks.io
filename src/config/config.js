@@ -53,14 +53,15 @@ export const config = {
   },
   
   externalEndpoints: {
-    registrationUrl: 'https://goo.gl/forms/x9AwECPkGUwCQm4Y2',
+    registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe98SDjiuK5F-0GQe3yV08TllaFMBd419E7Ogjb5h7mcQsTSQ/viewform',
     materialsUrl: 'https://dynamictalks.io/public-materials',
     vacanciesUrl: 'https://www.griddynamics.com/careers',
     icalUrl: '/JS_Dynamic_Talks_meetup_Dec_2017.ics',
     youtube: 'https://goo.gl/CsBDhE',
     slack: 'https://dynamictalks.slack.com/join/shared_invite/enQtMjU0OTkwNjY0MjYzLTQxZmJkNjk2OTZjNTQ1OTc4N2ExYmQwZDZjYTBlYWUyNzA2NmJjMDc0ZGIxZWQ3OTkyNmZjMDQxN2RmNzA2ODc',
     facebook: 'https://www.facebook.com/dynamictalks/',
-    linkedIn: 'https://www.linkedin.com/company/250774/'
+    linkedIn: 'https://www.linkedin.com/company/250774/',
+    site:'https://www.griddynamics.com/'
   },
   
   speakers: [

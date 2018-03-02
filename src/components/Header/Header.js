@@ -10,7 +10,7 @@ import menuBurgerClosePath from 'src/images/header/burger.svg';
 import menuBurgerOpenPath from 'src/images/header/burger-close.svg';
 import mainLogoTitlePath from 'src/images/dt-logo.svg';
 import playDemoPath from 'src/images/header/play-sign.svg';
-import partnerLogoPath from 'src/images/gd-logo.png';
+import partnerLogoPath from 'src/images/header/logo-gd1.svg';
 import './Header.scss';
 
 
@@ -153,9 +153,14 @@ export default class Header extends Component {
           }
         </div>
         <div className="partner">
-          <div className="">
+          <div className="partner__wrap">
             <h2>{config.eventInformation.partnerText}</h2>
-            {this.renderIcon(partnerLogoPath, 'partner-logotype')}
+            <Anchor
+              href={config.externalEndpoints.site}
+              id="partner"
+            >
+              {this.renderIcon(partnerLogoPath, 'partner-logotype')}
+            </Anchor>
           </div>
         </div>
       </section>
