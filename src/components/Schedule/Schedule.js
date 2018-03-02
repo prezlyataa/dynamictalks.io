@@ -38,9 +38,15 @@ export default class Schedule extends Component {
               <p>{time}</p>
             </div>
             <div className={cx(`${CN}_container_program_event_description`)}>
-              <p className={cx(`${CN}_container_program_event_description_name`)}>{speaker}</p>
-              <p className={cx(`${CN}_container_program_event_description_desc`)}>{description}</p>
-              <p className={cx(`${CN}_container_program_event_description_topic`)}>{topic}</p>
+              {speaker &&
+                <p className={cx(`${CN}_container_program_event_description_name`)}>{speaker}</p>
+              }
+              {description &&
+                <p className={cx(`${CN}_container_program_event_description_desc`)}>{description}</p>
+              }
+              {topic &&
+                <p className={cx(`${CN}_container_program_event_description_topic`)}>{topic}</p>
+              }
             </div>
           </div>
         </div>));

@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.about_us_section{
+  width: 720px;
+  display: flex;
+  flex-direction: row;
+  margin:50px auto;
+
+  div{
+    width: 50%;
+  }
+
+  .text-wrapper{
+    h2{
+      font-size:36px;
+      @include font-family-gothamPro-bold();
+      line-height: normal;
+      text-transform: uppercase;
+      margin-top: 40px;
+    }
+
+    p{
+      padding-top: 15px;
+      font-size:16px;
+      line-height: 2;
+      @include font-family-gothamPro-regular();
+    }
+  }
+
+  .about_us_photo img{
+    width: 400px;
+    height: 300px;
+    padding: 125px 0 0 40px;
+  }
+}

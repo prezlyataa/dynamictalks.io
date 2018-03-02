@@ -1,41 +1,63 @@
+import React from 'react';
+
 export const config = {
   eventAddress: {
     addressLines: [
-      '79018, Львів, вул. Героїв УПА, 80',
-      'ITEA HUB',
-      'Офісний центр, вхід праворуч від стоянки, конференц-зал знаходиться ліворуч від рецепції.'
+      'м.Львів, вул.Галицька, 1,',
+      'COMMUNA',
+      '2-й поверх\n' +
+      '(на розі Площі Ринок)'
     ],
-    googleMapEmbed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.683742244445!2d23.990492951681013!3d49.829608979293404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae77e64398c81%3A0xa1e0acfdc00dfddd!2sITEA+Hub!5e0!3m2!1sen!2sus!4v1511097076401" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'
+    googleMapEmbed:'<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.076540122793!2d24.029019415632334!3d49.84101933896939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6dca0c9b13%3A0x2797b7e6a216b902!2z0LLRg9C70LjRhtGPINCT0LDQu9C40YbRjNC60LAsIDEsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1520001652497" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>'
   },
-  
-  
-  titles: {
-    speakers_section: 'наші спікери',
-    contacts_section: 'Dynamic JS Talks #2',
-    partners_section: 'НАШІ ПАРТНЕРИ',
-    previous_speakers_section: 'ПОПЕРЕДНІ СПІКЕРИ'
+
+
+  titles:{
+    speakers_section:'наші спікери',
+    contacts_section:'Dynamic JS Talks #2',
+    partners_section:'НАШІ ПАРТНЕРИ',
+    previous_speakers_section: 'ПОПЕРЕДНІ СПІКЕРИ',
+    about_us:'Про нас'
   },
-  
-  socialNetworks: [
+
+  iconUrl:{
+    calendar: 'images/icon@2x.png',
+    map:'images/icon copy.png'
+  },
+
+  socialNetworks : [
     {
       name: 'facebook',
-      link: 'https://www.facebook.com'
+      link: 'https://www.facebook.com/dynamictalks/'
     },
     {
       name: 'slack',
-      link: 'https://www.slack.com'
+      link: 'https://griddynamics.slack.com'
+    },
+    {
+      name:'twitter',
+      link:'https://twitter.com/griddynamics'
+    },
+    {
+      name:'instagram',
+      link:'https://www.instagram.com/griddynamics_ua'
     }
   ],
-  
+
+
   eventDate: {
     city: 'Львів',
-    time: '2017-12-02T10:00',
-    timeString: '31 березня, 2018'
+    time: '2017-03-10T10:00',
+    timeString: '10 березня, 2018'
   },
   
   buttonsText: {
     registration: 'Реєстрація',
     playDemo: 'Дивитися промо-відео'
+  },
+
+  loadmoreButton: {
+    text: 'Показати ще'
   },
   
   headerNavigationLinks: [
@@ -67,10 +89,38 @@ export const config = {
     slack: 'https://dynamictalks.slack.com/join/shared_invite/enQtMjU0OTkwNjY0MjYzLTQxZmJkNjk2OTZjNTQ1OTc4N2ExYmQwZDZjYTBlYWUyNzA2NmJjMDc0ZGIxZWQ3OTkyNmZjMDQxN2RmNzA2ODc',
     facebook: 'https://www.facebook.com/dynamictalks/',
     linkedIn: 'https://www.linkedin.com/company/250774/',
+    location:'https://www.google.com.ua/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%93%D0%B0%D0%BB%D0%B8%D1%86%D1%8C%D0%BA%D0%B0,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+79000/@49.8401876,24.0293324,17z/data=!3m1!4b1!4m5!3m4!1s0x473add6c2e097db9:0x777fab7d561f976c!8m2!3d49.8401842!4d24.0315211'
     site: 'https://www.griddynamics.com/'
   },
   
   speakers: [
+    {
+      name: 'Георгій Подсвєтов',
+      state:'',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'The story about good and bad decisions on the way to develop new UI platform for enterprise',
+      specialGuest: false,
+      link: 'https://www.linkedin.com/in/georgiy-podsvetov-86898945/',
+      imageSrc: 'images/speakers/podsvyetov.jpg',
+      bullets: [
+        'Story how our team made impossible within one year',
+        'Tough decision',
+        'Thoughts on how to survive and deliver results in highly politicized environment'
+      ]
+    },
+    {
+      name: 'Володимир Воєвідка',
+      state:'',
+      position: 'UI engineer / Grid Dynamics',
+      topic: 'Build Hybrid Web Application',
+      link: 'https://www.linkedin.com/in/vovavoevidka/',
+      imageSrc: 'images/speakers/vova.jpg',
+      bullets: [
+        'Share experience of `injection` new web application into existing enterprise infrastructure.',
+        'Deliver understanding of possible issues',
+        'Timeline / estimation visibility.'
+      ]
+    },
     {
       name: 'Ярослав Заблоцький',
       state: 'спеціальний гість',
@@ -79,35 +129,40 @@ export const config = {
       ' Автор книги «Як я став Заблоцьким. Пригоди стоматолога в червоному метелику». Автор та ведучий  медіа-проекту про 100  заможних українців  «Як я став…». ',
       topic: 'Бізнес від нуля до мільйона',
       specialGuest: false,
-      link: 'https://www.linkedin.com/in/igor-tomov-b0584675',
+      link: 'https://www.facebook.com/yaroslav.zablotskyy',
       imageSrc: 'images/speakers/DDV_8093 copy.jpg',
-      bullets: []
-    },
-    {
-      name: 'Володимир Фльонц',
-      state: 'дебют',
-      position: 'Розробник ProZorro, засновник ГО «Електронна демократія», IT-євангеліст',
-      topic: 'Чи можна електрифікувати демократію?',
-      link: 'https://www.linkedin.com/in/flyonts',
-      imageSrc: 'images/speakers/Facebook.jpg',
       bullets: [
-        'Електронні вибори — це перше, що згадують обговорюючи електронну демократію майбутнього',
-        'Моделі електронних голосувань, що вже використовуються в світі, та тих що тільки вважаються перспектвними',
-        'Проведемо практичне голосування за системою Prêt à Voter та розберемо три офіційних інтернет-голосування, що вже відбулись в Україні'
+      ]
+    }
+  ],
+
+  previousSpeakers: [
+   
+    {
+      name: 'Любомир Семків',
+      state:'спеціальний гість',
+      position: 'Senior software engineer / Intellias',
+      specialGuest: true,
+      imageSrc: 'images/speakers/semkiv.jpg',
+      bullets: [
       ]
     },
     {
-      name: 'Дмитро Вербовий',
-      state: '',
+      name: 'Володимир Воєвідка',
+      state:'',
       position: 'UI engineer / Grid Dynamics',
-      topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
       specialGuest: false,
-      link: 'https://www.linkedin.com/in/dmytro-verbovyi-867bb34b',
-      imageSrc: 'images/speakers/Facebook.jpg',
+      imageSrc: 'images/speakers/volodymyr_voyevidka.jpg',
       bullets: [
-        'HTTP2 is stable and actually proven in production',
-        'It has set of critical features that might improve performance of your web application',
-        'Lets see how we can use it with NodeJS'
+      ]
+    },
+    {
+      name: 'Георгій Подсвєтов',
+      state:'',
+      position: 'Practice director UI technologies / Grid Dynamics',
+      specialGuest: false,
+      imageSrc: 'images/speakers/podsvyetov.jpg',
+      bullets: [
       ]
     },
     {
@@ -124,20 +179,8 @@ export const config = {
       ]
     },
     {
-      name: 'Володимир Фльонц',
-      position: 'Розробник ProZorro, засновник ГО «Електронна демократія», IT-євангеліст',
-      topic: 'Чи можна електрифікувати демократію?',
-      specialGuest: true,
-      link: 'https://www.linkedin.com/in/flyonts',
-      imageSrc: 'images/speakers/vf.jpg',
-      bullets: [
-        'Електронні вибори — це перше, що згадують обговорюючи електронну демократію майбутнього',
-        'Моделі електронних голосувань, що вже використовуються в світі, та тих що тільки вважаються перспектвними',
-        'Проведемо практичне голосування за системою Prêt à Voter та розберемо три офіційних інтернет-голосування, що вже відбулись в Україні'
-      ]
-    },
-    {
       name: 'Дмитро Вербовий',
+      state:'',
       position: 'UI engineer / Grid Dynamics',
       topic: 'Key things every front-end developer should know about HTTP/2. Why is it important to migrate?',
       specialGuest: false,
@@ -148,23 +191,36 @@ export const config = {
         'It has set of critical features that might improve performance of your web application',
         'Lets see how we can use it with NodeJS'
       ]
+    },
+    {
+      name: 'Володимир Фльонц',
+      state:'дебют',
+      position: 'Розробник ProZorro, засновник ГО «Електронна демократія», IT-євангеліст',
+      topic: 'Чи можна електрифікувати демократію?',
+      link: 'https://www.linkedin.com/in/flyonts',
+      imageSrc: 'images/speakers/vf.jpg',
+      bullets: [
+        'Електронні вибори — це перше, що згадують обговорюючи електронну демократію майбутнього',
+        'Моделі електронних голосувань, що вже використовуються в світі, та тих що тільки вважаються перспектвними',
+        'Проведемо практичне голосування за системою Prêt à Voter та розберемо три офіційних інтернет-голосування, що вже відбулись в Україні'
+      ]
     }
   ]
 };
 
 config.agenda = [
-  {time: '10:30-11:00', description: 'Реєстрація, нетворкінг'},
-  {time: '11:00-11:15', description: 'Відкриття, декілька слів про ідею івенту'},
-  {time: '11:15-12:30', topic: speakerToDescription(config.speakers[0]), speaker: speaker(config.speakers[0])},
-  {time: '12:30-12:45', description: 'Кава'},
-  {time: '12:45-14:00', topic: speakerToDescription(config.speakers[2]), speaker: speaker(config.speakers[1])},
-  {time: '14:00-14:15', description: 'Напої та снеки'},
-  {time: '14:15-15:30', topic: speakerToDescription(config.speakers[1]), speaker: speaker(config.speakers[2])},
-  {time: '15:30', description: 'Afterparty, Networking'}
+  { time: '10:30-11:00', description: 'Реєстрація, нетворкінг' },
+  { time: '11:00-11:15', description: 'Відкриття, декілька слів про ідею івенту' },
+  { time: '11:15-12:30', topic: speakerToDescription(config.speakers[0]), speaker: speaker(config.speakers[0])},
+  { time: '12:30-12:45', description: 'Кава' },
+  { time: '12:45-14:00', topic: speakerToDescription(config.speakers[2]), speaker: speaker(config.speakers[1]) },
+  { time: '14:00-14:15', description: 'Напої та снеки' },
+  { time: '14:15-15:30', topic: speakerToDescription(config.speakers[1]), speaker: speaker(config.speakers[2]) },
+  { time: '15:30', description: 'Afterparty, Networking' }
 ];
 
 function speakerToDescription(speaker) {
-  return `«${speaker.topic}»)`;
+  return `«${speaker.topic}»`;
 }
 
 function speaker(speaker) {

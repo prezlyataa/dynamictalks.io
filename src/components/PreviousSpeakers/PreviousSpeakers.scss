@@ -4,13 +4,27 @@
 .previous-speakers {
   max-width: 1140px;
   margin: 0 auto;
-  padding-top: 70px;
+  padding: 70px 15px 64px;
 
+  .mobile {
+    display: none;
+  }
+
+  @include respond-to($tablet-portrait) {
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+    }
+  }
+  
   &_list {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 65px 10px;
+    padding: 65px 10px 30px;
 
     &_speaker {
       width: 165px;
@@ -37,7 +51,64 @@
 
       &_position {
         font-size: 14px;
-        color: $colot-gray;
+        color: $color-gray;
+      }
+    }
+  }
+
+  &_btn {
+    text-align: center;
+    padding-bottom: 60px;
+
+    &_loadmore {
+      @include font-family-gothamPro-bold();
+      background-color: transparent;
+      display: inline-block;
+      letter-spacing: 0.5px;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $color-deep-black;
+      border: 2px solid $color-deep-black;
+      padding: 15px 13px;
+      text-decoration: none;
+
+      @include respond-to($tablet-portrait) {
+        width: 80%;
+        text-align: center;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .register-block {
+    background-color: $color-lightgreen;
+
+    &_content {
+      background: url("../../images/shape-white.png") no-repeat 110%;
+      @include respond-to($tablet-portrait) {
+        padding: 25px;
+        background-size: 60% 80%;
+        background-position: 135%
+      }
+
+      &_bg {
+        @include respond-to($tablet-portrait) {
+          padding: 0;
+        }
+
+        &_regbtn {
+          @include respond-to($tablet-portrait) {
+            display: block;
+            width: 90%;
+          }
+        }
       }
     }
   }
