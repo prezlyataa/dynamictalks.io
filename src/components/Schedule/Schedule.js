@@ -29,7 +29,7 @@ export default class Schedule extends Component {
 
     return config
       .agenda
-      .map(({time, description}, index) => (
+      .map(({time, description, speaker, topic}, index) => (
         <div key={index}>
           <div
             className={cx(`${CN}_container_program_event`)}
@@ -38,10 +38,11 @@ export default class Schedule extends Component {
               <p>{time}</p>
             </div>
             <div className={cx(`${CN}_container_program_event_description`)}>
-              <div>{description}</div>
+              <p className={cx(`${CN}_container_program_event_description_name`)}>{speaker}</p>
+              <p className={cx(`${CN}_container_program_event_description_desc`)}>{description}</p>
+              <p className={cx(`${CN}_container_program_event_description_topic`)}>{topic}</p>
             </div>
           </div>
-          <div className={cx(`${CN}_container_program_underline`)}/>
         </div>));
   }
 
