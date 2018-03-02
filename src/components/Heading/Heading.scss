@@ -17,10 +17,10 @@
 
   h3{
     position: relative;
-    font-family: $font-family-opensans-regular;
     font-size: 28px;
     padding-right: 27px;
     top:-12px;
+    @include font-family-gothamPro-bold();
   }
 }
 
