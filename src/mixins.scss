@@ -1,6 +1,17 @@
+@import "./variables";
+
 @mixin font-family-opensans-bold() {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
+}
+
+
+@mixin font-family-gothamPro-bold() {
+  font-family: 'GothamProBold', sans-serif;
+}
+
+@mixin font-family-gothamPro-medium() {
+  font-family: 'GothamProMedium', sans-serif;
 }
 
 @mixin respond-to($media) {
