@@ -33,11 +33,13 @@ export default class Footer extends Component {
 
 
   render() {
-    const {className, config} = this.props;
+    const {className} = this.props;
 
     return (
       <footer className={cx(CN, className)} >
-        <div className='logo'></div>
+        <div className='logo'>logo</div>
+        <div className='email'>email</div>
+        <div className='socials'>socials</div>
       </footer>
     );
   }
