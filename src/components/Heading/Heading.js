@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import autoBind from 'react-autobind';
-import cx from 'classnames';
-import './Footer.scss';
+import './Heading.scss';
 
 
-export const CN = 'footer';
 
-
-export default class Footer extends Component {
+export default class Heading extends Component {
 
   static propTypes = {
 
@@ -20,7 +17,7 @@ export default class Footer extends Component {
     /**
      * config - configuration object
      */
-    config: PropTypes.object.isRequired,
+    title: PropTypes.string.isRequired,
   };
 
   static defaultProps = {};
@@ -33,12 +30,12 @@ export default class Footer extends Component {
 
 
   render() {
-    const {className, config} = this.props;
+    const {title} = this.props;
 
     return (
-      <footer className={cx(CN, className)} >
-        <div className='logo'></div>
-      </footer>
+      <div className='rectangle'>
+        <h3>{title}</h3>
+      </div>
     );
   }
 }

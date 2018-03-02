@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
-import { config } from 'src/config/config';
-
+import React, {Component} from 'react';
+import {config} from 'src/config/config';
+import {SpeakersSection} from '../SpeakersSection';
+import {ContactsSection} from '../ContactsSection';
+import {SocialNetwork} from '../SocialNetwork';
 import { Header } from '../Header';
 import { Schedule } from '../Schedule';
 import { Partners } from '../Partners';
@@ -24,7 +26,22 @@ export default class App extends Component {
           config={config}
           id={SECTIONS.HEADER}
         />
+
+        <SpeakersSection
+          config={config}
+          id={SECTIONS.SPEAKERS}
+        />
+
         <Schedule config={config}/>
+
+        <ContactsSection
+          config={config}
+        />
+
+        <SocialNetwork
+          config={config}
+        />
+
         <Partners config={config}/>
       </div>
     );
