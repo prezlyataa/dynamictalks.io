@@ -65,11 +65,13 @@ export default class Partners extends Component {
               <div className={cx(`${CN}_general_content_desc_btn`)}>
                 <Anchor
                   className={cx(`${CN}_general_content_desc_btn_regbtn`)}
+                  id={cx(`${CN}_general_content_desc_btn`)}
                   href={config.externalEndpoints.vacanciesUrl}
                 >
                   Відкриті вакансії
                 </Anchor>
               </div>
+
             </div>
           </div>
         </div>

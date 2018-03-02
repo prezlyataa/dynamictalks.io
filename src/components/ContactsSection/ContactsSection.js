@@ -6,6 +6,7 @@ import {Heading} from 'src/components/Heading';
 import map_icon from 'src/images/map.svg';
 import calendar_icon from 'src/images/icon@2x.png';
 
+
 export default class ContactsSection extends Component {
 
   static propTypes = {
@@ -59,15 +60,17 @@ export default class ContactsSection extends Component {
             <div className='contacts_info__description'>
               <h5>{eventAddress.addressLines[1]}</h5>
               <p>{eventAddress.addressLines[2]}</p>
+
             </div>
 
-
           </div>
+
         </div>
 
         <div
           className="map-container"
           dangerouslySetInnerHTML={{__html: eventAddress.googleMapEmbed}}/>
+
 
       </section>
     );
