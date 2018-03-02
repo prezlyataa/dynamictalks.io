@@ -52,13 +52,19 @@ export default class Partners extends Component {
                 Grid Dynamics is the engineering IT services company known for transformative, mission-critical cloud solutions for retail, finance and technology sectors.
               </p>
               <div className={cx(`${CN}_general_content_desc_icons`)}>
-                <Anchor href={config.externalEndpoints.facebook}>
+                <Anchor
+                  href={config.externalEndpoints.facebook}
+                  id="facebook"
+                >
                   <img
                     alt="icon"
                     src={facebook}
                   />
                 </Anchor>
-                <Anchor href={config.externalEndpoints.linkedIn}>
+                <Anchor
+                  href={config.externalEndpoints.linkedIn}
+                  id="linkedIn"
+                >
                   <img
                     alt="icon"
                     src={linkedin}
@@ -69,6 +75,7 @@ export default class Partners extends Component {
                 <Anchor
                   className={cx(`${CN}_general_content_desc_btn_regbtn`)}
                   href={config.externalEndpoints.vacanciesUrl}
+                  id="vacancies"
                 >
                   Відкриті вакансії
                 </Anchor>

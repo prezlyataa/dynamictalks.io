@@ -44,9 +44,10 @@ export default class Speaker extends Component {
     return socialNetworks.map((socialNetwork, i) => (
       <Anchor
         href={socialNetwork.link}
-        target="_blank"
         id={socialNetwork.link}
         key={i}
+        target="_blank"
+    
       >
         <img
           alt={socialNetwork.name}
@@ -61,14 +62,14 @@ export default class Speaker extends Component {
     const {socialNetworks} = this.props.config;
 
     return (
-      <section className='social_network'>
+      <section className="social_network">
         <p>Приєднюйся до івенту в соцмережах</p>
-        <div className='socials_container'>
+        <div className="socials_container">
           <Anchor
             href={socialNetworks[0].link}
-            target="_blank"
             id={socialNetworks[0].link}
             key={socialNetworks[0].name}
+            target="_blank"
           >
             <img
               alt={socialNetworks.name}
@@ -78,9 +79,9 @@ export default class Speaker extends Component {
 
           <Anchor
             href={socialNetworks[1].link}
-            target="_blank"
             id={socialNetworks[1].link}
             key={socialNetworks[1].name}
+            target="_blank"
           >
             <img
               alt={socialNetworks.name}

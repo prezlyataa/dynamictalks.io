@@ -38,9 +38,12 @@ export default class AboutUsSection extends Component {
 
 
     return (
-      <section className='about_us' id={id}>
-        <div className='about_us_section'>
-          <div className='text-wrapper'>
+      <section
+        className="about_us"
+        id={id}
+      >
+        <div className="about_us_section">
+          <div className="text-wrapper">
             <Heading title={config.titles.about_us}/>
 
             <h2>dynamics talks</h2>
@@ -51,7 +54,7 @@ export default class AboutUsSection extends Component {
 
           </div>
 
-          <div className='about_us_photo'>
+          <div className="about_us_photo">
             <img
               alt="img"
               src={meetUp}

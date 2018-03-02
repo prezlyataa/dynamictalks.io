@@ -57,14 +57,15 @@ export default class Header extends Component {
   renderNavLinks() {
     const {config: {headerNavigationLinks}} = this.props;
     return headerNavigationLinks.map((item, i) => {
-      return <Anchor
-        className={cx(`${NAV}__link`)}
-        href={item.href}
-        id={item.title}
-        key={i}
-      >
-        {item.title}
-      </Anchor>;
+      return (
+        <Anchor
+          className={cx(`${NAV}__link`)}
+          href={item.href}
+          id={item.title}
+          key={i}
+        >
+          {item.title}
+        </Anchor>);
     });
   }
   
@@ -83,7 +84,7 @@ export default class Header extends Component {
   }
   
   renderPlayButton() {
-    const {config: {buttonsText,externalEndpoints}} = this.props;
+    const {config: {buttonsText, externalEndpoints}} = this.props;
     return (
       <div className="play-btn">
         <Anchor
@@ -112,7 +113,7 @@ export default class Header extends Component {
       <section
         className={cx(CN, className)}
         id="header"
-       
+      
       >
         <div className={cx(`${NAV}__wrapper`)}>
           <div className="container">
@@ -121,8 +122,7 @@ export default class Header extends Component {
                 href="#header"
                 id="logo"
               >
-                <img
-                  src={mainLogoTitlePath}/>
+                <img src={mainLogoTitlePath}/>
               </Anchor>
               <nav className={cx(`${NAV}__menu`)}>
                 {this.renderNavLinks()}

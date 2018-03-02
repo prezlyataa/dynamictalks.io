@@ -16,22 +16,22 @@ export default class Speaker extends Component {
      * className - classes which can be passed from parent
      */
     className: PropTypes.string,
-
+  
     /**
      * config - configuration object
      */
     id: PropTypes.string,
+    imagePosition: PropTypes.string,
+  
     imageSrc: PropTypes.string,
-
     /**
      * link - speaker's link in media
      */
     link: PropTypes.string,
     name: PropTypes.string,
     position: PropTypes.string,
-    topic: PropTypes.string,
     state: PropTypes.string,
-    imagePosition: PropTypes.string
+    topic: PropTypes.string
 
   };
 
@@ -63,11 +63,11 @@ export default class Speaker extends Component {
 
     return (
       <Anchor
-        className='portrait'
+        className="portrait"
         href={link}
         id={`speaker--${name}`}
-        target='_blank'
         key={name}
+        target="_blank"
       >
         <img
           alt={name}
@@ -91,16 +91,16 @@ export default class Speaker extends Component {
     return (
       <div className={imagePosition === 'LEFT' ? 'speaker_item' : 'speaker_item_reverse'}>
 
-        <div className='image_container'>{this.renderImage()}</div>
+        <div className="image_container">{this.renderImage()}</div>
 
-        <div className='text-wrapper'>
-          <div className='text-wrapper_state'>{state}</div>
-          <div className='text-wrapper_name'>
+        <div className="text-wrapper">
+          <div className="text-wrapper_state">{state}</div>
+          <div className="text-wrapper_name">
             <h3>{name}</h3>
-            <h4 className='text-wrapper_position'>{position}</h4>
+            <h4 className="text-wrapper_position">{position}</h4>
             <span/>
           </div>
-          <p className='text-wrapper_topic'>«{topic}»</p>
+          <p className="text-wrapper_topic">«{topic}»</p>
           {this.renderKeyPoints()}
         </div>
 
