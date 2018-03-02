@@ -102,7 +102,6 @@ export default class PreviousSpeakers extends Component {
               {config.loadmoreButton.text}
             </button>
           </div>
-          <RegisterBlock config={config}/>
         </div>
         <RegisterBlock config={config}/>
       </section>
