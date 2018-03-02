@@ -66,7 +66,6 @@ export default class Header extends Component {
   
   renderEventInfo() {
     const {config: {eventInformation: einfo}} = this.props;
-    // const time = Date.parse(einfo.eventDate.time);
     return (
       <div className="event-info">
         <div className="event-info__top">

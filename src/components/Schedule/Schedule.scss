@@ -70,7 +70,7 @@
         &_time {
           min-width: 135px;
           font-size: 22px;
-          color: $color-lightgray;
+          color: $color-light-gray;
           font-weight: 500;
         }
 
@@ -89,7 +89,7 @@
           .topic {
             padding-top: 8px;
             font-size: 20px;
-            color: $color-lightgreen;
+            color: $color-primary-green;
             width: 70%;
 
             @include respond-to($tablet-portrait) {
