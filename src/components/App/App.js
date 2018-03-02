@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { config } from 'src/config/config';
 import { Schedule } from '../Schedule';
 import { Partners } from '../Partners';
+import { PreviousSpeakers } from '../PreviousSpeakers';
 import './App.scss';
 
 
@@ -19,6 +20,7 @@ export default class App extends Component {
       <div>
         <Schedule config={config}/>
         <Partners config={config}/>
+        <PreviousSpeakers config={config}/>
       </div>
     );
   }

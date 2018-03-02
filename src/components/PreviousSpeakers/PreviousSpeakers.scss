@@ -1,0 +1,44 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.previous-speakers {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 70px;
+
+  &_list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 65px 10px;
+
+    &_speaker {
+      width: 165px;
+      margin: 5px;
+
+      @include respond-to($tablet-portrait) {
+        width: 120px;
+      }
+
+      &_img {
+        width: 160px;
+        height: auto;
+
+        @include respond-to($tablet-portrait) {
+          width: 120px;
+        }
+      }
+
+      &_name {
+        padding: 15px 0;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      &_position {
+        font-size: 14px;
+        color: $colot-gray;
+      }
+    }
+  }
+}

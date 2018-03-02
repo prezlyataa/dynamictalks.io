@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import cx  from 'classnames';
+import { Anchor } from '../Anchor';
 import './Partners.scss';
 
 const CN = 'partners';
@@ -41,26 +42,26 @@ export default class Partners extends Component {
                 Grid Dynamics is the engineering IT services company known for transformative, mission-critical cloud solutions for retail, finance and technology sectors.
               </p>
               <div className={cx(`${CN}_general_content_desc_icons`)}>
-                <a href={config.externalEndpoints.facebook}>
+                <Anchor href={config.externalEndpoints.facebook}>
                   <img
                     alt="icon"
                     src="../../images/facebook.png"
                   />
-                </a>
-                <a href={config.externalEndpoints.linkedIn}>
+                </Anchor>
+                <Anchor href={config.externalEndpoints.linkedIn}>
                   <img
                     alt="icon"
                     src="../../images/linkedin-1.png"
                   />
-                </a>
+                </Anchor>
               </div>
               <div className={cx(`${CN}_general_content_desc_btn`)}>
-                <a
+                <Anchor
                   className={cx(`${CN}_general_content_desc_btn_regbtn`)}
                   href={config.externalEndpoints.vacanciesUrl}
                 >
                   Відкриті вакансії
-                </a>
+                </Anchor>
               </div>
             </div>
           </div>
